@@ -1,0 +1,8 @@
+---
+title: "gailR_newfile"
+editor: visual
+---
+
+#Gail's new file
+
+Hi! Quarto is new for me. Happy to be learning about it today.
