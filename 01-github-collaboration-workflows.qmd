@@ -143,7 +143,8 @@ Let's make an edit to someone else's page on a new `branch` and use the collabor
           <li>Open and edit an existing file in the <code>practice</code> folder</li>
           <li>Make your edits and save</li>
           <li>When you are ready, select the file you changed, commit it (you will need to add a message), and push it. There will be an extra step to set up the branch in the repository we are all using depending on your software</li>          
-          <li>Then go to GitHub.com and go to the [pull request tab](https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls)</li> Select your branch to "compare" with the main branch and then the button create pull request        
+          <li>Then go to GitHub.com and go to the <a href="https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls">pull request tab</a></li> 
+          <li>Select your branch to "compare" with the main branch and then the button create pull request</li>
       </ol>
       </div>
     </div>
@@ -172,15 +173,15 @@ Although this repo will not have branch protection rules applied, we can practic
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li>First, navigate to the [pull request tab](https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls) of the GitHub repository.</li>
+          <li>First, navigate to the <a href="https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls">pull request tab</a> of the GitHub repository.</li>
           <li>Click on the PR you want to review. For this activity, it is the one named "PR Review Practice". Note that Issues and PRs are numbered in the same sequence.</li>
           <li>On the PR's page, you can first start with the "Conversation" tab and read through the PR author's description of the changes. You can follow any conversation that might have already happened and also see a history of commits, all in chronological order. Read through the existing comments and add a hello of your own.</li>
           <li>On the "Commits" tab, you can see just the commit history for the branch that is the subject of the pull request. Note that as the review and conversation progresses, further pushes to this branch will also update the pull request. That is, the pull request is for a *branch* to be pulled into another, not a specific commit. </li>          
-          <li>We can skip the "Checks" tab for this practice. For repos with Continuous Integration/Continuous Deployment (aka [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)), the history of the output of all automated checking and unit testing scripts will appear here. For workflows that use it, it can help the collaborators answer the question "Does this code work?"</li>
+          <li>We can skip the "Checks" tab for this practice. For repos with Continuous Integration/Continuous Deployment (aka <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd">CI/CD</a>), the history of the output of all automated checking and unit testing scripts will appear here. For workflows that use it, it can help the collaborators answer the question "Does this code work?"</li>
           <li>The "Files changed" tab is where you will do most of the reviewing. For each file changed, you can see the "diff" of the original and proposed changes. For long files, only the changed lines are displayed, but you can expand the collapsed lines if you need to see the context. Here are some review activities to try:</li>
           <ol>
             <li> Notice that there is a review interface in the upper right (that will stay on top as you scroll) showing how many files you have reviewed and a green button to finalise your review. But first, let's just read through the first file.</li>
-            <li>Find a line with a spelling error and add a line-specific comment. You can do this by mousing over the space between the line number and the line of code. A blue + sign will appear. Click on it. You can type a comment (e.g. a correction of the spelling) and then add your comment with either "add single comment" or "Start a review". For this practice, we will "Start a Review".</li>
+            <li>Find a line with a spelling error and add a line-specific comment. You can do this by mousing over the space between the line number and the line of code. A blue + sign will appear. Click on it. You can type a comment (e.g. a correction of the spelling) and then add your comment with either "add single comment" or "Start a review" (choose this for this activity).</li>
             <li>You can also add a comment to the entire file rather than a specific line. In the upper right area of the box that contains this file, there is a speech bubble icon to click on and add a comment. Write a comment and then "Add review comment".
             <li>When you are finished with the file, you can click the "Viewed" box to indicate that you have reviewed the file. It will close/collapse the container and you can move on to the next file. It's not necessary to check this box but it can help you keep track and indicate to others that you reviewed it without having to leave a comment that just says "looks good".</li>
             <li>Repeat with any other files and then click "Finish your review". You can write one additional "final review" comment if you want. You also have three options with your review: just comment, approve, or indicate that more changes are needed before you can approve. Submit an approve review.</li>
