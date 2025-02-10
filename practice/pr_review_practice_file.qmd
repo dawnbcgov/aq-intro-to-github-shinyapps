@@ -10,12 +10,15 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	acid
 -	acorn
 -	acre
+-	acts
 -	afar
 -	affix
 -	aged
 -	agent
 -	agile
+-	aging
 -	agony
+-	ahead
 -	aide
 -	aids
 -	aim
@@ -25,6 +28,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	alibi
 -	alien
 -	alike
+-	alive
 -	aloe
 -	aloft
 -	aloha
@@ -171,9 +175,11 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	cheek
 -	cheer
 -	chef
+-	chess
 -	chest
 -	chew
 -	chief
+-	chili
 -	chill
 -	chip
 -	chomp
@@ -242,11 +248,13 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	crane
 -	crank
 -	crate
+-	crave
 -	crawl
 -	crazy
 -	creme
 -	crepe
 -	crept
+-	crib
 -	cried
 -	crisp
 -	crook
@@ -341,6 +349,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	drive
 -	drone
 -	droop
+-	drove
 -	drown
 -	drum
 -	dry
@@ -409,6 +418,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	feast
 -	feed
 -	femur
+-	fence
 -	fend
 -	ferry
 -	fetal
@@ -472,6 +482,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	gas
 -	gave
 -	gear
+-	gecko
 -	geek
 -	gem
 -	genre
@@ -515,6 +526,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	grip
 -	grit
 -	groom
+-	grope
 -	growl
 -	grub
 -	grunt
@@ -596,6 +608,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	jump
 -	junky
 -	juror
+-	jury
 -	keep
 -	keg
 -	kept
@@ -614,6 +627,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	lair
 -	lake
 -	lance
+-	land
 -	lapel
 -	large
 -	lash
@@ -641,12 +655,14 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	lint
 -	lion
 -	lip
+-	list
 -	lived
 -	liver
 -	lunar
 -	lunch
 -	lung
 -	lurch
+-	lure
 -	lurk
 -	lying
 -	lyric
@@ -660,6 +676,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	map
 -	march
 -	mardi
+-	marry
 -	mash
 -	match
 -	mate
@@ -743,6 +760,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	paper
 -	park
 -	party
+-	pasta
 -	patch
 -	path
 -	patio
@@ -762,6 +780,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	plant
 -	plaza
 -	plead
+-	plot
 -	plow
 -	pluck
 -	plug
@@ -839,6 +858,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	rank
 -	rant
 -	rash
+-	raven
 -	reach
 -	react
 -	ream
@@ -891,6 +911,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	saint
 -	salad
 -	salon
+-	salsa
 -	salt
 -	same
 -	sandy
@@ -1008,12 +1029,14 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	smirk
 -	smog
 -	snack
+-	snap
 -	snare
 -	snarl
 -	sneak
 -	sneer
 -	sniff
 -	snore
+-	snort
 -	snout
 -	snowy
 -	snub
@@ -1089,6 +1112,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	swab
 -	swan
 -	swarm
+-	sway
 -	swear
 -	sweat
 -	sweep
@@ -1139,6 +1163,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	tile
 -	tilt
 -	tint
+-	tiny
 -	trace
 -	track
 -	trade
@@ -1214,6 +1239,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	wad
 -	wafer
 -	wager
+-	wages
 -	wagon
 -	wake
 -	walk
@@ -1263,6 +1289,8 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	year
 -	yeast
 -	yelp
+-	yield
+-	yo-yo
 -	yodel
 -	yoga
 -	yoyo
