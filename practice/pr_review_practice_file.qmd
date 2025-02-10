@@ -9,12 +9,14 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 
 -	acid
 -	acorn
+-	acorn
 -	acre
 -	acts
 -	afar
 -	affix
 -	aged
 -	agent
+-	agile
 -	agile
 -	aging
 -	agony
@@ -24,6 +26,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	aim
 -	ajar
 -	alarm
+-	alarm
 -	alias
 -	alibi
 -	alien
@@ -32,6 +35,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	aloe
 -	aloft
 -	aloha
+-	alone
 -	alone
 -	amend
 -	amino
@@ -47,6 +51,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	aqua
 -	area
 -	arena
+-	argue
 -	argue
 -	arise
 -	armed
@@ -81,6 +86,8 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	bash
 -	basil
 -	bask
+-	bask
+-	batch
 -	batch
 -	bath
 -	baton
@@ -163,6 +170,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	carry
 -	carve
 -	case
+-	case
 -	cash
 -	cause
 -	cedar
@@ -230,6 +238,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	colt
 -	coma
 -	come
+-	comic
 -	comic
 -	comma
 -	cone
@@ -405,6 +414,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	evil
 -	evoke
 -	exact
+-	exact
 -	exit
 -	fable
 -	faced
@@ -455,6 +465,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	foil
 -	folic
 -	folk
+-	food
 -	food
 -	fool
 -	found
@@ -549,6 +560,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	hatch
 -	hate
 -	haven
+-	haven
 -	hazel
 -	hazy
 -	heap
@@ -556,6 +568,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	heave
 -	hedge
 -	hefty
+-	help
 -	help
 -	herbs
 -	hers
@@ -631,6 +644,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	lapel
 -	large
 -	lash
+-	lasso
 -	lasso
 -	last
 -	latch
@@ -802,6 +816,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	poppy
 -	pork
 -	poser
+-	poser
 -	pouch
 -	pound
 -	pout
@@ -846,6 +861,8 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	rack
 -	radar
 -	radio
+-	radio
+-	raft
 -	raft
 -	rage
 -	raid
@@ -897,6 +914,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	rope
 -	rover
 -	royal
+-	ruby
 -	ruby
 -	rug
 -	ruin
@@ -978,6 +996,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	shrug
 -	shun
 -	shush
+-	shush
 -	shut
 -	shy
 -	sift
@@ -1028,6 +1047,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	smile
 -	smirk
 -	smog
+-	snack
 -	snack
 -	snap
 -	snare
@@ -1080,6 +1100,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	steep
 -	stem
 -	step
+-	step
 -	stew
 -	stick
 -	sting
@@ -1130,6 +1151,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	tag
 -	take
 -	tall
+-	talon
 -	talon
 -	tamer
 -	tank
@@ -1253,6 +1275,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	whole
 -	whoop
 -	wick
+-	wick
 -	widen
 -	widow
 -	width
@@ -1285,6 +1308,7 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	xerox
 -	yahoo
 -	yam
+-	yam
 -	yard
 -	year
 -	yeast
@@ -1300,4 +1324,5 @@ This is a word list from [EFF](https://www.eff.org/deeplinks/2016/07/new-wordlis
 -	zesty
 -	zippy
 -	zone
+-	zoom
 -	zoom
