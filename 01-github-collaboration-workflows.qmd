@@ -173,17 +173,30 @@ Although this repo will not have branch protection rules applied, we can practic
       <div class="accordion-body">
         <ol>
           <li>First, navigate to the [pull request tab](https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls) of the GitHub repository.</li>
-          <li>Step 2</li>
-          <li>Step 3</li>
-          <li>Step 4</li>          
-          <li>Step 5</li>
+          <li>Click on the PR you want to review. For this activity, it is the one named "PR Review Practice". Note that Issues and PRs are numbered in the same sequence.</li>
+          <li>On the PR's page, you can first start with the "Conversation" tab and read through the PR author's description of the changes. You can follow any conversation that might have already happened and also see a history of commits, all in chronological order. Read through the existing comments and add a hello of your own.</li>
+          <li>On the "Commits" tab, you can see just the commit history for the branch that is the subject of the pull request. Note that as the review and conversation progresses, further pushes to this branch will also update the pull request. That is, the pull request is for a *branch* to be pulled into another, not a specific commit. </li>          
+          <li>We can skip the "Checks" tab for this practice. For repos with Continuous Integration/Continuous Deployment (aka [CI/CD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)), the history of the output of all automated checking and unit testing scripts will appear here. For workflows that use it, it can help the collaborators answer the question "Does this code work?"</li>
+          <li>The "Files changed" tab is where you will do most of the reviewing. For each file changed, you can see the "diff" of the original and proposed changes. For long files, only the changed lines are displayed, but you can expand the collapsed lines if you need to see the context. Here are some review activities to try:</li>
+          <ol>
+            <li> Notice that there is a review interface in the upper right (that will stay on top as you scroll) showing how many files you have reviewed and a green button to finalise your review. But first, let's just read through the first file.</li>
+            <li>Find a line with a spelling error and add a line-specific comment. You can do this by mousing over the space between the line number and the line of code. A blue + sign will appear. Click on it. You can type a comment (e.g. a correction of the spelling) and then add your comment with either "add single comment" or "Start a review". For this practice, we will "Start a Review".</li>
+            <li>You can also add a comment to the entire file rather than a specific line. In the upper right area of the box that contains this file, there is a speech bubble icon to click on and add a comment. Write a comment and then "Add review comment".
+            <li>When you are finished with the file, you can click the "Viewed" box to indicate that you have reviewed the file. It will close/collapse the container and you can move on to the next file. It's not necessary to check this box but it can help you keep track and indicate to others that you reviewed it without having to leave a comment that just says "looks good".</li>
+            <li>Repeat with any other files and then click "Finish your review". You can write one additional "final review" comment if you want. You also have three options with your review: just comment, approve, or indicate that more changes are needed before you can approve. Submit an approve review.</li>
+            
+          </ol>
       </ol>
       </div>
     </div>
   </div>
 </div>
 ```
+The GitHub review interface is very handy. All review comments go into the "Conversation" tab. When specific lines of codes are mentioned, a preview appears. Each comment can have its own thread to help discuss the details of the code. Conversations can be "resolved" when you have iterated enough to meet the requirements.
 
+If you come back to the PR after having reviewed it and changes have been made, the interface remembers what you have seen and you can just review the new changes. Files that you have clicked as "Viewed" will be unclicked if there were changes. If you need to see the full context and history, those are available as well, in the tabs mentioned above. You can also use `diff` tools on GitHub or on your own software to make more comparisons.
+
+Finally, testing the code is not part of this activity, but if you wanted to run the code on the pull request locally, you would check out the branch of the PR and then you have a copy of the code being reviewed as well.
 
 
 ::: callout-note
