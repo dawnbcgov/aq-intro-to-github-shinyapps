@@ -1,0 +1,3235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>file_to_review – Intro to GitHub and ShinyApps.io</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5027bf1c1f92ac6615724d89c8213d6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intro to GitHub and ShinyApps.io</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice/index.html">Practice</a></li><li class="breadcrumb-item"><a href="../practice/pr_review_practice_file.html">file_to_review</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop Outline</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-github-collaboration-workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop 1. GitHub Collaboration Workflows</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preparation/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preparation and installation instructions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preparation/markdown-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Markdown Reference</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../practice/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/another.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Another Page</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/dawn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">dawn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/henry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Henry’s practice page</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/pr_review_practice_file.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">file_to_review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/sahil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">sahil practice github workshop 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice/vickie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">vickie</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#practice-file-to-review" id="toc-practice-file-to-review" class="nav-link active" data-scroll-target="#practice-file-to-review">Practice file to review</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice/index.html">Practice</a></li><li class="breadcrumb-item"><a href="../practice/pr_review_practice_file.html">file_to_review</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">file_to_review</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="practice-file-to-review" class="level1">
+<h1>Practice file to review</h1>
+<p>This is a word list from <a href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases">EFF</a> for making random passphrases.</p>
+<ul>
+<li>acid</li>
+<li>acorn</li>
+<li>acre</li>
+<li>acts</li>
+<li>afar</li>
+<li>affix</li>
+<li>aged</li>
+<li>agent</li>
+<li>agile</li>
+<li>agony</li>
+<li>ahead</li>
+<li>aide</li>
+<li>aids</li>
+<li>aim</li>
+<li>ajar</li>
+<li>alarm</li>
+<li>alias</li>
+<li>alibi</li>
+<li>alien</li>
+<li>alike</li>
+<li>aloe</li>
+<li>aloft</li>
+<li>aloha</li>
+<li>alone</li>
+<li>amend</li>
+<li>amino</li>
+<li>ample</li>
+<li>amuse</li>
+<li>angel</li>
+<li>anger</li>
+<li>angle</li>
+<li>ankle</li>
+<li>apple</li>
+<li>april</li>
+<li>apron</li>
+<li>aqua</li>
+<li>area</li>
+<li>arena</li>
+<li>argue</li>
+<li>arise</li>
+<li>armed</li>
+<li>armor</li>
+<li>army</li>
+<li>aroma</li>
+<li>array</li>
+<li>arson</li>
+<li>art</li>
+<li>ashen</li>
+<li>ashes</li>
+<li>atlas</li>
+<li>atom</li>
+<li>attic</li>
+<li>audio</li>
+<li>avert</li>
+<li>avoid</li>
+<li>awake</li>
+<li>award</li>
+<li>awoke</li>
+<li>axis</li>
+<li>bacon</li>
+<li>badge</li>
+<li>bagel</li>
+<li>baggy</li>
+<li>baked</li>
+<li>baker</li>
+<li>balmy</li>
+<li>banjo</li>
+<li>barge</li>
+<li>barn</li>
+<li>bash</li>
+<li>basil</li>
+<li>bask</li>
+<li>batch</li>
+<li>bath</li>
+<li>baton</li>
+<li>bats</li>
+<li>blade</li>
+<li>blank</li>
+<li>blast</li>
+<li>blaze</li>
+<li>bleak</li>
+<li>blend</li>
+<li>bless</li>
+<li>blimp</li>
+<li>blink</li>
+<li>bloat</li>
+<li>blob</li>
+<li>blog</li>
+<li>blot</li>
+<li>blunt</li>
+<li>blurt</li>
+<li>blush</li>
+<li>boast</li>
+<li>boat</li>
+<li>body</li>
+<li>boil</li>
+<li>bok</li>
+<li>bolt</li>
+<li>boned</li>
+<li>boney</li>
+<li>bonus</li>
+<li>bony</li>
+<li>book</li>
+<li>booth</li>
+<li>boots</li>
+<li>boss</li>
+<li>botch</li>
+<li>both</li>
+<li>boxer</li>
+<li>breed</li>
+<li>bribe</li>
+<li>brick</li>
+<li>bride</li>
+<li>brim</li>
+<li>bring</li>
+<li>brink</li>
+<li>brisk</li>
+<li>broad</li>
+<li>broil</li>
+<li>broke</li>
+<li>brook</li>
+<li>broom</li>
+<li>brush</li>
+<li>buck</li>
+<li>bud</li>
+<li>buggy</li>
+<li>bulge</li>
+<li>bulk</li>
+<li>bully</li>
+<li>bunch</li>
+<li>bunny</li>
+<li>bunt</li>
+<li>bush</li>
+<li>bust</li>
+<li>busy</li>
+<li>buzz</li>
+<li>cable</li>
+<li>cache</li>
+<li>cadet</li>
+<li>cage</li>
+<li>cake</li>
+<li>calm</li>
+<li>cameo</li>
+<li>canal</li>
+<li>candy</li>
+<li>cane</li>
+<li>canon</li>
+<li>cape</li>
+<li>card</li>
+<li>cargo</li>
+<li>carol</li>
+<li>carry</li>
+<li>carve</li>
+<li>case</li>
+<li>cash</li>
+<li>cause</li>
+<li>cedar</li>
+<li>chain</li>
+<li>chair</li>
+<li>chant</li>
+<li>chaos</li>
+<li>charm</li>
+<li>chase</li>
+<li>cheek</li>
+<li>cheer</li>
+<li>chef</li>
+<li>chess</li>
+<li>chest</li>
+<li>chew</li>
+<li>chief</li>
+<li>chill</li>
+<li>chip</li>
+<li>chomp</li>
+<li>chop</li>
+<li>chow</li>
+<li>chuck</li>
+<li>chump</li>
+<li>chunk</li>
+<li>churn</li>
+<li>chute</li>
+<li>cider</li>
+<li>cinch</li>
+<li>city</li>
+<li>civic</li>
+<li>civil</li>
+<li>clad</li>
+<li>claim</li>
+<li>clamp</li>
+<li>clap</li>
+<li>clash</li>
+<li>clasp</li>
+<li>class</li>
+<li>claw</li>
+<li>clay</li>
+<li>clean</li>
+<li>clear</li>
+<li>cleat</li>
+<li>cleft</li>
+<li>clerk</li>
+<li>click</li>
+<li>cling</li>
+<li>clink</li>
+<li>clip</li>
+<li>cloak</li>
+<li>clock</li>
+<li>clone</li>
+<li>cloth</li>
+<li>cloud</li>
+<li>clump</li>
+<li>coach</li>
+<li>coast</li>
+<li>coat</li>
+<li>cod</li>
+<li>coil</li>
+<li>coke</li>
+<li>cola</li>
+<li>cold</li>
+<li>colt</li>
+<li>coma</li>
+<li>come</li>
+<li>comic</li>
+<li>comma</li>
+<li>cone</li>
+<li>cope</li>
+<li>copy</li>
+<li>coral</li>
+<li>cork</li>
+<li>cost</li>
+<li>cot</li>
+<li>couch</li>
+<li>cough</li>
+<li>cover</li>
+<li>cozy</li>
+<li>craft</li>
+<li>cramp</li>
+<li>crane</li>
+<li>crank</li>
+<li>crate</li>
+<li>crave</li>
+<li>crawl</li>
+<li>crazy</li>
+<li>creme</li>
+<li>crepe</li>
+<li>crept</li>
+<li>crib</li>
+<li>cried</li>
+<li>crisp</li>
+<li>crook</li>
+<li>crop</li>
+<li>cross</li>
+<li>crowd</li>
+<li>crown</li>
+<li>crumb</li>
+<li>crush</li>
+<li>crust</li>
+<li>cub</li>
+<li>cult</li>
+<li>cupid</li>
+<li>cure</li>
+<li>curl</li>
+<li>curry</li>
+<li>curse</li>
+<li>curve</li>
+<li>curvy</li>
+<li>cushy</li>
+<li>cut</li>
+<li>cycle</li>
+<li>dab</li>
+<li>dad</li>
+<li>daily</li>
+<li>dairy</li>
+<li>daisy</li>
+<li>dance</li>
+<li>dandy</li>
+<li>darn</li>
+<li>dart</li>
+<li>dash</li>
+<li>data</li>
+<li>date</li>
+<li>dawn</li>
+<li>deaf</li>
+<li>deal</li>
+<li>dean</li>
+<li>debit</li>
+<li>debt</li>
+<li>debug</li>
+<li>decaf</li>
+<li>decal</li>
+<li>decay</li>
+<li>deck</li>
+<li>decor</li>
+<li>decoy</li>
+<li>deed</li>
+<li>delay</li>
+<li>denim</li>
+<li>dense</li>
+<li>dent</li>
+<li>depth</li>
+<li>derby</li>
+<li>desk</li>
+<li>dial</li>
+<li>diary</li>
+<li>dice</li>
+<li>dig</li>
+<li>dill</li>
+<li>dime</li>
+<li>dimly</li>
+<li>diner</li>
+<li>dingy</li>
+<li>disco</li>
+<li>dish</li>
+<li>disk</li>
+<li>ditch</li>
+<li>ditzy</li>
+<li>dizzy</li>
+<li>dock</li>
+<li>dodge</li>
+<li>doing</li>
+<li>doll</li>
+<li>dome</li>
+<li>donor</li>
+<li>donut</li>
+<li>dose</li>
+<li>dot</li>
+<li>dove</li>
+<li>down</li>
+<li>dowry</li>
+<li>doze</li>
+<li>drab</li>
+<li>drama</li>
+<li>drank</li>
+<li>draw</li>
+<li>dress</li>
+<li>dried</li>
+<li>drift</li>
+<li>drill</li>
+<li>drive</li>
+<li>drone</li>
+<li>droop</li>
+<li>drove</li>
+<li>drown</li>
+<li>drum</li>
+<li>dry</li>
+<li>duck</li>
+<li>duct</li>
+<li>dude</li>
+<li>dug</li>
+<li>duke</li>
+<li>duo</li>
+<li>dusk</li>
+<li>dust</li>
+<li>duty</li>
+<li>dwarf</li>
+<li>dwell</li>
+<li>eagle</li>
+<li>early</li>
+<li>earth</li>
+<li>easel</li>
+<li>east</li>
+<li>eaten</li>
+<li>eats</li>
+<li>ebay</li>
+<li>ebony</li>
+<li>ebook</li>
+<li>echo</li>
+<li>edge</li>
+<li>eel</li>
+<li>eject</li>
+<li>elbow</li>
+<li>elder</li>
+<li>elf</li>
+<li>elk</li>
+<li>elm</li>
+<li>elope</li>
+<li>elude</li>
+<li>elves</li>
+<li>email</li>
+<li>emit</li>
+<li>empty</li>
+<li>emu</li>
+<li>enter</li>
+<li>entry</li>
+<li>envoy</li>
+<li>equal</li>
+<li>erase</li>
+<li>error</li>
+<li>erupt</li>
+<li>essay</li>
+<li>etch</li>
+<li>evade</li>
+<li>even</li>
+<li>evict</li>
+<li>evil</li>
+<li>evoke</li>
+<li>exact</li>
+<li>exit</li>
+<li>fable</li>
+<li>faced</li>
+<li>fact</li>
+<li>fade</li>
+<li>fall</li>
+<li>false</li>
+<li>fancy</li>
+<li>fang</li>
+<li>fax</li>
+<li>feast</li>
+<li>feed</li>
+<li>femur</li>
+<li>fend</li>
+<li>ferry</li>
+<li>fetal</li>
+<li>fetch</li>
+<li>fever</li>
+<li>fiber</li>
+<li>fifth</li>
+<li>fifty</li>
+<li>film</li>
+<li>filth</li>
+<li>final</li>
+<li>finch</li>
+<li>fit</li>
+<li>five</li>
+<li>flag</li>
+<li>flaky</li>
+<li>flame- acid</li>
+<li>acorn</li>
+<li>acre</li>
+<li>acts</li>
+<li>afar</li>
+<li>affix</li>
+<li>aged</li>
+<li>agent</li>
+<li>agile</li>
+<li>aging</li>
+<li>agony</li>
+<li>ahead</li>
+<li>aide</li>
+<li>aids</li>
+<li>aim</li>
+<li>ajar</li>
+<li>alarm</li>
+<li>alias</li>
+<li>alibi</li>
+<li>alien</li>
+<li>alike</li>
+<li>alive</li>
+<li>aloe</li>
+<li>aloft</li>
+<li>aloha</li>
+<li>alone</li>
+<li>amend</li>
+<li>amino</li>
+<li>ample</li>
+<li>amuse</li>
+<li>angel</li>
+<li>anger</li>
+<li>angle</li>
+<li>ankle</li>
+<li>apple</li>
+<li>april</li>
+<li>apron</li>
+<li>aqua</li>
+<li>area</li>
+<li>arena</li>
+<li>argue</li>
+<li>arise</li>
+<li>armed</li>
+<li>armor</li>
+<li>army</li>
+<li>aroma</li>
+<li>array</li>
+<li>arson</li>
+<li>art</li>
+<li>ashen</li>
+<li>ashes</li>
+<li>atlas</li>
+<li>atom</li>
+<li>attic</li>
+<li>audio</li>
+<li>avert</li>
+<li>avoid</li>
+<li>awake</li>
+<li>award</li>
+<li>awoke</li>
+<li>axis</li>
+<li>bacon</li>
+<li>badge</li>
+<li>bagel</li>
+<li>baggy</li>
+<li>baked</li>
+<li>baker</li>
+<li>balmy</li>
+<li>banjo</li>
+<li>barge</li>
+<li>barn</li>
+<li>bash</li>
+<li>basil</li>
+<li>bask</li>
+<li>batch</li>
+<li>bath</li>
+<li>baton</li>
+<li>bats</li>
+<li>blade</li>
+<li>blank</li>
+<li>blast</li>
+<li>blaze</li>
+<li>bleak</li>
+<li>blend</li>
+<li>bless</li>
+<li>blimp</li>
+<li>blink</li>
+<li>bloat</li>
+<li>blob</li>
+<li>blog</li>
+<li>blot</li>
+<li>blunt</li>
+<li>blurt</li>
+<li>blush</li>
+<li>boast</li>
+<li>boat</li>
+<li>body</li>
+<li>boil</li>
+<li>bok</li>
+<li>bolt</li>
+<li>boned</li>
+<li>boney</li>
+<li>bonus</li>
+<li>bony</li>
+<li>book</li>
+<li>booth</li>
+<li>boots</li>
+<li>boss</li>
+<li>botch</li>
+<li>both</li>
+<li>boxer</li>
+<li>breed</li>
+<li>bribe</li>
+<li>brick</li>
+<li>bride</li>
+<li>brim</li>
+<li>bring</li>
+<li>brink</li>
+<li>brisk</li>
+<li>broad</li>
+<li>broil</li>
+<li>broke</li>
+<li>brook</li>
+<li>broom</li>
+<li>brush</li>
+<li>buck</li>
+<li>bud</li>
+<li>buggy</li>
+<li>bulge</li>
+<li>bulk</li>
+<li>bully</li>
+<li>bunch</li>
+<li>bunny</li>
+<li>bunt</li>
+<li>bush</li>
+<li>bust</li>
+<li>busy</li>
+<li>buzz</li>
+<li>cable</li>
+<li>cache</li>
+<li>cadet</li>
+<li>cage</li>
+<li>cake</li>
+<li>calm</li>
+<li>cameo</li>
+<li>canal</li>
+<li>candy</li>
+<li>cane</li>
+<li>canon</li>
+<li>cape</li>
+<li>card</li>
+<li>cargo</li>
+<li>carol</li>
+<li>carry</li>
+<li>carve</li>
+<li>case</li>
+<li>cash</li>
+<li>cause</li>
+<li>cedar</li>
+<li>chain</li>
+<li>chair</li>
+<li>chant</li>
+<li>chaos</li>
+<li>charm</li>
+<li>chase</li>
+<li>cheek</li>
+<li>cheer</li>
+<li>chef</li>
+<li>chess</li>
+<li>chest</li>
+<li>chew</li>
+<li>chief</li>
+<li>chili</li>
+<li>chill</li>
+<li>chip</li>
+<li>chomp</li>
+<li>chop</li>
+<li>chow</li>
+<li>chuck</li>
+<li>chump</li>
+<li>chunk</li>
+<li>churn</li>
+<li>chute</li>
+<li>cider</li>
+<li>cinch</li>
+<li>city</li>
+<li>civic</li>
+<li>civil</li>
+<li>clad</li>
+<li>claim</li>
+<li>clamp</li>
+<li>clap</li>
+<li>clash</li>
+<li>clasp</li>
+<li>class</li>
+<li>claw</li>
+<li>clay</li>
+<li>clean</li>
+<li>clear</li>
+<li>cleat</li>
+<li>cleft</li>
+<li>clerk</li>
+<li>click</li>
+<li>cling</li>
+<li>clink</li>
+<li>clip</li>
+<li>cloak</li>
+<li>clock</li>
+<li>clone</li>
+<li>cloth</li>
+<li>cloud</li>
+<li>clump</li>
+<li>coach</li>
+<li>coast</li>
+<li>coat</li>
+<li>cod</li>
+<li>coil</li>
+<li>coke</li>
+<li>cola</li>
+<li>cold</li>
+<li>colt</li>
+<li>coma</li>
+<li>come</li>
+<li>comic</li>
+<li>comma</li>
+<li>cone</li>
+<li>cope</li>
+<li>copy</li>
+<li>coral</li>
+<li>cork</li>
+<li>cost</li>
+<li>cot</li>
+<li>couch</li>
+<li>cover</li>
+<li>cozy</li>
+<li>craft</li>
+<li>cramp</li>
+<li>crane</li>
+<li>crank</li>
+<li>crate</li>
+<li>crave</li>
+<li>crawl</li>
+<li>crazy</li>
+<li>creme</li>
+<li>crepe</li>
+<li>crept</li>
+<li>crib</li>
+<li>cried</li>
+<li>crisp</li>
+<li>crook</li>
+<li>crop</li>
+<li>cross</li>
+<li>crowd</li>
+<li>crown</li>
+<li>crumb</li>
+<li>crush</li>
+<li>crust</li>
+<li>cub</li>
+<li>cult</li>
+<li>cupid</li>
+<li>cure</li>
+<li>curl</li>
+<li>curry</li>
+<li>curse</li>
+<li>curve</li>
+<li>curvy</li>
+<li>cushy</li>
+<li>cut</li>
+<li>cycle</li>
+<li>dab</li>
+<li>dad</li>
+<li>daily</li>
+<li>dairy</li>
+<li>daisy</li>
+<li>dance</li>
+<li>dandy</li>
+<li>darn</li>
+<li>dart</li>
+<li>dash</li>
+<li>data</li>
+<li>date</li>
+<li>dawn</li>
+<li>deaf</li>
+<li>deal</li>
+<li>dean</li>
+<li>debit</li>
+<li>debt</li>
+<li>debug</li>
+<li>decaf</li>
+<li>decal</li>
+<li>decay</li>
+<li>deck</li>
+<li>decor</li>
+<li>decoy</li>
+<li>deed</li>
+<li>delay</li>
+<li>denim</li>
+<li>dense</li>
+<li>dent</li>
+<li>depth</li>
+<li>derby</li>
+<li>desk</li>
+<li>dial</li>
+<li>diary</li>
+<li>dice</li>
+<li>dig</li>
+<li>dill</li>
+<li>dime</li>
+<li>dimly</li>
+<li>diner</li>
+<li>dingy</li>
+<li>disco</li>
+<li>dish</li>
+<li>disk</li>
+<li>ditch</li>
+<li>ditzy</li>
+<li>dizzy</li>
+<li>dock</li>
+<li>dodge</li>
+<li>doing</li>
+<li>doll</li>
+<li>dome</li>
+<li>donor</li>
+<li>donut</li>
+<li>dose</li>
+<li>dot</li>
+<li>dove</li>
+<li>down</li>
+<li>dowry</li>
+<li>doze</li>
+<li>drab</li>
+<li>drama</li>
+<li>drank</li>
+<li>draw</li>
+<li>dress</li>
+<li>dried</li>
+<li>drift</li>
+<li>drill</li>
+<li>drive</li>
+<li>drone</li>
+<li>droop</li>
+<li>drove</li>
+<li>drown</li>
+<li>drum</li>
+<li>dry</li>
+<li>duck</li>
+<li>duct</li>
+<li>dude</li>
+<li>dug</li>
+<li>duke</li>
+<li>duo</li>
+<li>dusk</li>
+<li>dust</li>
+<li>duty</li>
+<li>dwarf</li>
+<li>dwell</li>
+<li>eagle</li>
+<li>early</li>
+<li>earth</li>
+<li>easel</li>
+<li>east</li>
+<li>eaten</li>
+<li>eats</li>
+<li>ebay</li>
+<li>ebony</li>
+<li>ebook</li>
+<li>echo</li>
+<li>edge</li>
+<li>eel</li>
+<li>eject</li>
+<li>elbow</li>
+<li>elder</li>
+<li>elf</li>
+<li>elk</li>
+<li>elm</li>
+<li>elope</li>
+<li>elude</li>
+<li>elves</li>
+<li>email</li>
+<li>emit</li>
+<li>empty</li>
+<li>emu</li>
+<li>enter</li>
+<li>entry</li>
+<li>envoy</li>
+<li>equal</li>
+<li>erase</li>
+<li>error</li>
+<li>erupt</li>
+<li>essay</li>
+<li>etch</li>
+<li>evade</li>
+<li>even</li>
+<li>evict</li>
+<li>evil</li>
+<li>evoke</li>
+<li>exact</li>
+<li>exit</li>
+<li>fable</li>
+<li>faced</li>
+<li>fact</li>
+<li>fade</li>
+<li>fall</li>
+<li>false</li>
+<li>fancy</li>
+<li>fang</li>
+<li>fax</li>
+<li>feast</li>
+<li>feed</li>
+<li>femur</li>
+<li>fence</li>
+<li>fend</li>
+<li>ferry</li>
+<li>fetal</li>
+<li>fetch</li>
+<li>fever</li>
+<li>fiber</li>
+<li>fifth</li>
+<li>fifty</li>
+<li>film</li>
+<li>filth</li>
+<li>final</li>
+<li>finch</li>
+<li>fit</li>
+<li>five</li>
+<li>flag</li>
+<li>flaky</li>
+<li>flame</li>
+<li>flap</li>
+<li>flask</li>
+<li>fled</li>
+<li>flick</li>
+<li>fling</li>
+<li>flint</li>
+<li>flip</li>
+<li>flirt</li>
+<li>float</li>
+<li>flock</li>
+<li>flop</li>
+<li>floss</li>
+<li>flyer</li>
+<li>foam</li>
+<li>foe</li>
+<li>fog</li>
+<li>foil</li>
+<li>folic</li>
+<li>folk</li>
+<li>food</li>
+<li>fool</li>
+<li>found</li>
+<li>fox</li>
+<li>foyer</li>
+<li>frail</li>
+<li>frame</li>
+<li>fray</li>
+<li>fresh</li>
+<li>fried</li>
+<li>frill</li>
+<li>frisk</li>
+<li>from</li>
+<li>front</li>
+<li>frost</li>
+<li>froth</li>
+<li>frown</li>
+<li>froze</li>
+<li>fruit</li>
+<li>gag</li>
+<li>gains</li>
+<li>gala</li>
+<li>game</li>
+<li>gap</li>
+<li>gas</li>
+<li>gave</li>
+<li>gear</li>
+<li>gecko</li>
+<li>geek</li>
+<li>gem</li>
+<li>genre</li>
+<li>gift</li>
+<li>gig</li>
+<li>gills</li>
+<li>given</li>
+<li>giver</li>
+<li>glad</li>
+<li>glass</li>
+<li>gloss</li>
+<li>glove</li>
+<li>glow</li>
+<li>glue</li>
+<li>goal</li>
+<li>going</li>
+<li>golf</li>
+<li>gong</li>
+<li>good</li>
+<li>gooey</li>
+<li>goofy</li>
+<li>gore</li>
+<li>gown</li>
+<li>grab</li>
+<li>grain</li>
+<li>grant</li>
+<li>grape</li>
+<li>graph</li>
+<li>grasp</li>
+<li>grass</li>
+<li>grave</li>
+<li>gravy</li>
+<li>gray</li>
+<li>green</li>
+<li>greet</li>
+<li>grew</li>
+<li>grid</li>
+<li>grief</li>
+<li>grill</li>
+<li>grip</li>
+<li>grit</li>
+<li>groom</li>
+<li>grope</li>
+<li>growl</li>
+<li>grub</li>
+<li>grunt</li>
+<li>guide</li>
+<li>gulf</li>
+<li>gulp</li>
+<li>gummy</li>
+<li>guru</li>
+<li>gush</li>
+<li>gut</li>
+<li>guy</li>
+<li>habit</li>
+<li>half</li>
+<li>halo</li>
+<li>halt</li>
+<li>happy</li>
+<li>harm</li>
+<li>hash</li>
+<li>hasty</li>
+<li>hatch</li>
+<li>hate</li>
+<li>haven</li>
+<li>hazel</li>
+<li>hazy</li>
+<li>heap</li>
+<li>heat</li>
+<li>heave</li>
+<li>hedge</li>
+<li>hefty</li>
+<li>help</li>
+<li>herbs</li>
+<li>hers</li>
+<li>hub</li>
+<li>hug</li>
+<li>hula</li>
+<li>hull</li>
+<li>human</li>
+<li>humid</li>
+<li>hump</li>
+<li>hung</li>
+<li>hunk</li>
+<li>hunt</li>
+<li>hurry</li>
+<li>hurt</li>
+<li>hush</li>
+<li>hut</li>
+<li>ice</li>
+<li>icing</li>
+<li>icon</li>
+<li>icy</li>
+<li>igloo</li>
+<li>image</li>
+<li>ion</li>
+<li>iron</li>
+<li>islam</li>
+<li>issue</li>
+<li>item</li>
+<li>ivory</li>
+<li>ivy</li>
+<li>jab</li>
+<li>jam</li>
+<li>jaws</li>
+<li>jazz</li>
+<li>jeep</li>
+<li>jelly</li>
+<li>jet</li>
+<li>jiffy</li>
+<li>job</li>
+<li>jog</li>
+<li>jolly</li>
+<li>jolt</li>
+<li>jot</li>
+<li>joy</li>
+<li>judge</li>
+<li>juice</li>
+<li>juicy</li>
+<li>july</li>
+<li>jumbo</li>
+<li>jump</li>
+<li>junky</li>
+<li>juror</li>
+<li>jury</li>
+<li>keep</li>
+<li>keg</li>
+<li>kept</li>
+<li>kick</li>
+<li>kilt</li>
+<li>king</li>
+<li>kite</li>
+<li>kitty</li>
+<li>kiwi</li>
+<li>knee</li>
+<li>knelt</li>
+<li>koala</li>
+<li>kung</li>
+<li>ladle</li>
+<li>lady</li>
+<li>lair</li>
+<li>lake</li>
+<li>lance</li>
+<li>land</li>
+<li>lapel</li>
+<li>large</li>
+<li>lash</li>
+<li>lasso</li>
+<li>last</li>
+<li>latch</li>
+<li>late</li>
+<li>lazy</li>
+<li>left</li>
+<li>legal</li>
+<li>lemon</li>
+<li>lend</li>
+<li>lens</li>
+<li>lent</li>
+<li>level</li>
+<li>lever</li>
+<li>lid</li>
+<li>life</li>
+<li>lift</li>
+<li>lilac</li>
+<li>lily</li>
+<li>limb</li>
+<li>limes</li>
+<li>line</li>
+<li>lint</li>
+<li>lion</li>
+<li>lip</li>
+<li>list</li>
+<li>lived</li>
+<li>liver</li>
+<li>lunar</li>
+<li>lunch</li>
+<li>lung</li>
+<li>lurch</li>
+<li>lure</li>
+<li>lurk</li>
+<li>lying</li>
+<li>lyric</li>
+<li>mace</li>
+<li>maker</li>
+<li>malt</li>
+<li>mama</li>
+<li>mango</li>
+<li>manor</li>
+<li>many</li>
+<li>map</li>
+<li>march</li>
+<li>mardi</li>
+<li>marry</li>
+<li>mash</li>
+<li>match</li>
+<li>mate</li>
+<li>math</li>
+<li>moan</li>
+<li>mocha</li>
+<li>moist</li>
+<li>mold</li>
+<li>mom</li>
+<li>moody</li>
+<li>mop</li>
+<li>morse</li>
+<li>most</li>
+<li>motor</li>
+<li>motto</li>
+<li>mount</li>
+<li>mouse</li>
+<li>mousy</li>
+<li>mouth</li>
+<li>move</li>
+<li>movie</li>
+<li>mower</li>
+<li>mud</li>
+<li>mug</li>
+<li>mulch</li>
+<li>mule</li>
+<li>mull</li>
+<li>mumbo</li>
+<li>mummy</li>
+<li>mural</li>
+<li>muse</li>
+<li>music</li>
+<li>musky</li>
+<li>mute</li>
+<li>nacho</li>
+<li>nag</li>
+<li>nail</li>
+<li>name</li>
+<li>nanny</li>
+<li>nap</li>
+<li>near</li>
+<li>neat</li>
+<li>neon</li>
+<li>nerd</li>
+<li>nest</li>
+<li>net</li>
+<li>next</li>
+<li>niece</li>
+<li>ninth</li>
+<li>nutty</li>
+<li>oak</li>
+<li>oasis</li>
+<li>oat</li>
+<li>ocean</li>
+<li>oil</li>
+<li>old</li>
+<li>olive</li>
+<li>omen</li>
+<li>onion</li>
+<li>only</li>
+<li>ooze</li>
+<li>opal</li>
+<li>open</li>
+<li>opera</li>
+<li>opt</li>
+<li>otter</li>
+<li>ouch</li>
+<li>ounce</li>
+<li>outer</li>
+<li>oval</li>
+<li>oven</li>
+<li>owl</li>
+<li>ozone</li>
+<li>pace</li>
+<li>pagan</li>
+<li>pager</li>
+<li>palm</li>
+<li>panda</li>
+<li>panic</li>
+<li>pants</li>
+<li>panty</li>
+<li>paper</li>
+<li>park</li>
+<li>party</li>
+<li>pasta</li>
+<li>patch</li>
+<li>path</li>
+<li>patio</li>
+<li>payer</li>
+<li>pecan</li>
+<li>penny</li>
+<li>pep</li>
+<li>perch</li>
+<li>perky</li>
+<li>perm</li>
+<li>pest</li>
+<li>petal</li>
+<li>petri</li>
+<li>petty</li>
+<li>photo</li>
+<li>plank</li>
+<li>plant</li>
+<li>plaza</li>
+<li>plead</li>
+<li>plot</li>
+<li>plow</li>
+<li>pluck</li>
+<li>plug</li>
+<li>plus</li>
+<li>poach</li>
+<li>pod</li>
+<li>poem</li>
+<li>poet</li>
+<li>pogo</li>
+<li>point</li>
+<li>poise</li>
+<li>poker</li>
+<li>polar</li>
+<li>polio</li>
+<li>polka</li>
+<li>polo</li>
+<li>pond</li>
+<li>pony</li>
+<li>poppy</li>
+<li>pork</li>
+<li>poser</li>
+<li>pouch</li>
+<li>pound</li>
+<li>pout</li>
+<li>power</li>
+<li>prank</li>
+<li>press</li>
+<li>print</li>
+<li>prior</li>
+<li>prism</li>
+<li>prize</li>
+<li>probe</li>
+<li>prong</li>
+<li>proof</li>
+<li>props</li>
+<li>prude</li>
+<li>prune</li>
+<li>pry</li>
+<li>pug</li>
+<li>pull</li>
+<li>pulp</li>
+<li>pulse</li>
+<li>puma</li>
+<li>punch</li>
+<li>punk</li>
+<li>pupil</li>
+<li>puppy</li>
+<li>purr</li>
+<li>purse</li>
+<li>push</li>
+<li>putt</li>
+<li>quack</li>
+<li>quake</li>
+<li>query</li>
+<li>quiet</li>
+<li>quill</li>
+<li>quilt</li>
+<li>quit</li>
+<li>quota</li>
+<li>quote</li>
+<li>rabid</li>
+<li>race</li>
+<li>rack</li>
+<li>radar</li>
+<li>radio</li>
+<li>raft</li>
+<li>rage</li>
+<li>raid</li>
+<li>rail</li>
+<li>rake</li>
+<li>rally</li>
+<li>ramp</li>
+<li>ranch</li>
+<li>range</li>
+<li>rank</li>
+<li>rant</li>
+<li>rash</li>
+<li>raven</li>
+<li>reach</li>
+<li>react</li>
+<li>ream</li>
+<li>rebel</li>
+<li>recap</li>
+<li>relax</li>
+<li>relay</li>
+<li>relic</li>
+<li>remix</li>
+<li>repay</li>
+<li>repel</li>
+<li>reply</li>
+<li>rerun</li>
+<li>reset</li>
+<li>rhyme</li>
+<li>rice</li>
+<li>rich</li>
+<li>ride</li>
+<li>rigid</li>
+<li>rigor</li>
+<li>rinse</li>
+<li>riot</li>
+<li>ripen</li>
+<li>rise</li>
+<li>risk</li>
+<li>ritzy</li>
+<li>rival</li>
+<li>river</li>
+<li>roast</li>
+<li>robe</li>
+<li>robin</li>
+<li>rock</li>
+<li>rogue</li>
+<li>roman</li>
+<li>romp</li>
+<li>rope</li>
+<li>rover</li>
+<li>royal</li>
+<li>ruby</li>
+<li>rug</li>
+<li>ruin</li>
+<li>rule</li>
+<li>runny</li>
+<li>rush</li>
+<li>rust</li>
+<li>rut</li>
+<li>sadly</li>
+<li>sage</li>
+<li>said</li>
+<li>saint</li>
+<li>salad</li>
+<li>salon</li>
+<li>salsa</li>
+<li>salt</li>
+<li>same</li>
+<li>sandy</li>
+<li>santa</li>
+<li>satin</li>
+<li>sauna</li>
+<li>saved</li>
+<li>savor</li>
+<li>sax</li>
+<li>say</li>
+<li>scale</li>
+<li>scam</li>
+<li>scan</li>
+<li>scare</li>
+<li>scarf</li>
+<li>scary</li>
+<li>scoff</li>
+<li>scold</li>
+<li>scoop</li>
+<li>scoot</li>
+<li>scope</li>
+<li>score</li>
+<li>scorn</li>
+<li>scout</li>
+<li>scowl</li>
+<li>scrap</li>
+<li>scrub</li>
+<li>scuba</li>
+<li>scuff</li>
+<li>sect</li>
+<li>sedan</li>
+<li>self</li>
+<li>send</li>
+<li>sepia</li>
+<li>serve</li>
+<li>set</li>
+<li>seven</li>
+<li>shack</li>
+<li>shade</li>
+<li>shady</li>
+<li>shaft</li>
+<li>shaky</li>
+<li>sham</li>
+<li>shape</li>
+<li>share</li>
+<li>sharp</li>
+<li>shed</li>
+<li>sheep</li>
+<li>sheet</li>
+<li>shelf</li>
+<li>shell</li>
+<li>shine</li>
+<li>shiny</li>
+<li>ship</li>
+<li>shirt</li>
+<li>shock</li>
+<li>shop</li>
+<li>shore</li>
+<li>shout</li>
+<li>shove</li>
+<li>shown</li>
+<li>showy</li>
+<li>shred</li>
+<li>shrug</li>
+<li>shun</li>
+<li>shush</li>
+<li>shut</li>
+<li>shy</li>
+<li>sift</li>
+<li>silk</li>
+<li>silly</li>
+<li>silo</li>
+<li>sip</li>
+<li>siren</li>
+<li>sixth</li>
+<li>size</li>
+<li>skate</li>
+<li>skew</li>
+<li>skid</li>
+<li>skier</li>
+<li>skies</li>
+<li>skip</li>
+<li>skirt</li>
+<li>skit</li>
+<li>sky</li>
+<li>slab</li>
+<li>slack</li>
+<li>slain</li>
+<li>slam</li>
+<li>slang</li>
+<li>slash</li>
+<li>slate</li>
+<li>slaw</li>
+<li>sled</li>
+<li>sleek</li>
+<li>sleep</li>
+<li>sleet</li>
+<li>slept</li>
+<li>slice</li>
+<li>slick</li>
+<li>slimy</li>
+<li>sling</li>
+<li>slip</li>
+<li>slit</li>
+<li>slob</li>
+<li>slot</li>
+<li>slug</li>
+<li>slum</li>
+<li>slurp</li>
+<li>slush</li>
+<li>small</li>
+<li>smash</li>
+<li>smell</li>
+<li>smile</li>
+<li>smirk</li>
+<li>smog</li>
+<li>snack</li>
+<li>snap</li>
+<li>snare</li>
+<li>snarl</li>
+<li>sneak</li>
+<li>sneer</li>
+<li>sniff</li>
+<li>snore</li>
+<li>snort</li>
+<li>snout</li>
+<li>snowy</li>
+<li>snub</li>
+<li>snuff</li>
+<li>speak</li>
+<li>speed</li>
+<li>spend</li>
+<li>spent</li>
+<li>spew</li>
+<li>spied</li>
+<li>spill</li>
+<li>spiny</li>
+<li>spoil</li>
+<li>spoke</li>
+<li>spoof</li>
+<li>spool</li>
+<li>spoon</li>
+<li>sport</li>
+<li>spot</li>
+<li>spout</li>
+<li>spray</li>
+<li>spree</li>
+<li>spur</li>
+<li>squad</li>
+<li>squat</li>
+<li>squid</li>
+<li>stack</li>
+<li>staff</li>
+<li>stage</li>
+<li>stain</li>
+<li>stall</li>
+<li>stamp</li>
+<li>stand</li>
+<li>stank</li>
+<li>stark</li>
+<li>start</li>
+<li>stash</li>
+<li>state</li>
+<li>stays</li>
+<li>steam</li>
+<li>steep</li>
+<li>stem</li>
+<li>step</li>
+<li>stew</li>
+<li>stick</li>
+<li>sting</li>
+<li>stir</li>
+<li>stock</li>
+<li>stole</li>
+<li>stomp</li>
+<li>stony</li>
+<li>stood</li>
+<li>stool</li>
+<li>stoop</li>
+<li>stop</li>
+<li>storm</li>
+<li>stout</li>
+<li>stove</li>
+<li>straw</li>
+<li>stray</li>
+<li>strut</li>
+<li>stuck</li>
+<li>stud</li>
+<li>stuff</li>
+<li>stump</li>
+<li>stung</li>
+<li>stunt</li>
+<li>suds</li>
+<li>sugar</li>
+<li>sulk</li>
+<li>surf</li>
+<li>sushi</li>
+<li>swab</li>
+<li>swan</li>
+<li>swarm</li>
+<li>sway</li>
+<li>swear</li>
+<li>sweat</li>
+<li>sweep</li>
+<li>swell</li>
+<li>swept</li>
+<li>swim</li>
+<li>swing</li>
+<li>swipe</li>
+<li>swirl</li>
+<li>swoop</li>
+<li>swore</li>
+<li>syrup</li>
+<li>tacky</li>
+<li>taco</li>
+<li>tag</li>
+<li>take</li>
+<li>tall</li>
+<li>talon</li>
+<li>tamer</li>
+<li>tank</li>
+<li>taper</li>
+<li>taps</li>
+<li>tarot</li>
+<li>tart</li>
+<li>task</li>
+<li>taste</li>
+<li>tasty</li>
+<li>taunt</li>
+<li>thank</li>
+<li>thaw</li>
+<li>theft</li>
+<li>theme</li>
+<li>thigh</li>
+<li>thing</li>
+<li>think</li>
+<li>thong</li>
+<li>thorn</li>
+<li>those</li>
+<li>throb</li>
+<li>thud</li>
+<li>thumb</li>
+<li>thump</li>
+<li>thus</li>
+<li>tiara</li>
+<li>tidal</li>
+<li>tidy</li>
+<li>tiger</li>
+<li>tile</li>
+<li>tilt</li>
+<li>tint</li>
+<li>tiny</li>
+<li>trace</li>
+<li>track</li>
+<li>trade</li>
+<li>train</li>
+<li>trait</li>
+<li>trap</li>
+<li>trash</li>
+<li>tray</li>
+<li>treat</li>
+<li>tree</li>
+<li>trek</li>
+<li>trend</li>
+<li>trial</li>
+<li>tribe</li>
+<li>trick</li>
+<li>trio</li>
+<li>trout</li>
+<li>truce</li>
+<li>truck</li>
+<li>trump</li>
+<li>trunk</li>
+<li>try</li>
+<li>tug</li>
+<li>tulip</li>
+<li>tummy</li>
+<li>turf</li>
+<li>tusk</li>
+<li>tutor</li>
+<li>tutu</li>
+<li>tux</li>
+<li>tweak</li>
+<li>tweet</li>
+<li>twice</li>
+<li>twine</li>
+<li>twins</li>
+<li>twirl</li>
+<li>twist</li>
+<li>uncle</li>
+<li>uncut</li>
+<li>undo</li>
+<li>unify</li>
+<li>union</li>
+<li>unit</li>
+<li>untie</li>
+<li>upon</li>
+<li>upper</li>
+<li>urban</li>
+<li>used</li>
+<li>user</li>
+<li>usher</li>
+<li>utter</li>
+<li>value</li>
+<li>vapor</li>
+<li>vegan</li>
+<li>venue</li>
+<li>verse</li>
+<li>vest</li>
+<li>veto</li>
+<li>vice</li>
+<li>video</li>
+<li>view</li>
+<li>viral</li>
+<li>virus</li>
+<li>visa</li>
+<li>visor</li>
+<li>vixen</li>
+<li>vocal</li>
+<li>voice</li>
+<li>void</li>
+<li>volt</li>
+<li>voter</li>
+<li>vowel</li>
+<li>wad</li>
+<li>wafer</li>
+<li>wager</li>
+<li>wages</li>
+<li>wagon</li>
+<li>wake</li>
+<li>walk</li>
+<li>wand</li>
+<li>wasp</li>
+<li>watch</li>
+<li>water</li>
+<li>wavy</li>
+<li>wheat</li>
+<li>whiff</li>
+<li>whole</li>
+<li>whoop</li>
+<li>wick</li>
+<li>widen</li>
+<li>widow</li>
+<li>width</li>
+<li>wife</li>
+<li>wifi</li>
+<li>wilt</li>
+<li>wimp</li>
+<li>wind</li>
+<li>wing</li>
+<li>wink</li>
+<li>wipe</li>
+<li>wired</li>
+<li>wiry</li>
+<li>wise</li>
+<li>wish</li>
+<li>wispy</li>
+<li>wok</li>
+<li>wolf</li>
+<li>womb</li>
+<li>wool</li>
+<li>woozy</li>
+<li>word</li>
+<li>work</li>
+<li>worry</li>
+<li>wound</li>
+<li>woven</li>
+<li>wrath</li>
+<li>wreck</li>
+<li>wrist</li>
+<li>xerox</li>
+<li>yahoo</li>
+<li>yam</li>
+<li>yard</li>
+<li>year</li>
+<li>yeast</li>
+<li>yelp</li>
+<li>yield</li>
+<li>yo-yo</li>
+<li>yodel</li>
+<li>yoga</li>
+<li>yoyo</li>
+<li>yummy</li>
+<li>zebra</li>
+<li>zero</li>
+<li>zesty</li>
+<li>zippy</li>
+<li>zone</li>
+<li>zoom</li>
+<li>flap</li>
+<li>flask</li>
+<li>fled</li>
+<li>flick</li>
+<li>fling</li>
+<li>flint</li>
+<li>flip</li>
+<li>flirt</li>
+<li>float</li>
+<li>flock</li>
+<li>flop</li>
+<li>floss</li>
+<li>flyer</li>
+<li>foam</li>
+<li>foe</li>
+<li>fog</li>
+<li>foil</li>
+<li>folic</li>
+<li>folk</li>
+<li>food</li>
+<li>fool</li>
+<li>found</li>
+<li>fox</li>
+<li>foyer</li>
+<li>frail</li>
+<li>frame</li>
+<li>fray</li>
+<li>fresh</li>
+<li>fried</li>
+<li>frill</li>
+<li>frisk</li>
+<li>from</li>
+<li>front</li>
+<li>frost</li>
+<li>froth</li>
+<li>frown</li>
+<li>froze</li>
+<li>fruit</li>
+<li>gag</li>
+<li>gains</li>
+<li>gala</li>
+<li>game</li>
+<li>gap</li>
+<li>gas</li>
+<li>gave</li>
+<li>gear</li>
+<li>gecko</li>
+<li>geek</li>
+<li>gem</li>
+<li>genre</li>
+<li>gift</li>
+<li>gig</li>
+<li>gills</li>
+<li>given</li>
+<li>giver</li>
+<li>glad</li>
+<li>glass</li>
+<li>glide</li>
+<li>gloss</li>
+<li>glove</li>
+<li>glow</li>
+<li>glue</li>
+<li>goal</li>
+<li>going</li>
+<li>golf</li>
+<li>gong</li>
+<li>good</li>
+<li>gooey</li>
+<li>goofy</li>
+<li>gore</li>
+<li>gown</li>
+<li>grab</li>
+<li>grain</li>
+<li>grant</li>
+<li>grape</li>
+<li>graph</li>
+<li>grasp</li>
+<li>grass</li>
+<li>grave</li>
+<li>gravy</li>
+<li>gray</li>
+<li>green</li>
+<li>greet</li>
+<li>grew</li>
+<li>grid</li>
+<li>grief</li>
+<li>grill</li>
+<li>grip</li>
+<li>grit</li>
+<li>groom</li>
+<li>grope</li>
+<li>growl</li>
+<li>grub</li>
+<li>grunt</li>
+<li>guide</li>
+<li>gulf</li>
+<li>gulp</li>
+<li>gummy</li>
+<li>guru</li>
+<li>gush</li>
+<li>gut</li>
+<li>guy</li>
+<li>habit</li>
+<li>half</li>
+<li>halo</li>
+<li>halt</li>
+<li>happy</li>
+<li>harm</li>
+<li>hash</li>
+<li>hasty</li>
+<li>hatch</li>
+<li>hate</li>
+<li>haven</li>
+<li>hazel</li>
+<li>hazy</li>
+<li>heap</li>
+<li>heat</li>
+<li>heave</li>
+<li>hedge</li>
+<li>hefty</li>
+<li>help</li>
+<li>herbs</li>
+<li>hers</li>
+<li>hub</li>
+<li>hug</li>
+<li>hula</li>
+<li>hull</li>
+<li>human</li>
+<li>humid</li>
+<li>hump</li>
+<li>hung</li>
+<li>hunk</li>
+<li>hunt</li>
+<li>hurry</li>
+<li>hurt</li>
+<li>hush</li>
+<li>hut</li>
+<li>ice</li>
+<li>icing</li>
+<li>icon</li>
+<li>icy</li>
+<li>igloo</li>
+<li>image</li>
+<li>ion</li>
+<li>iron</li>
+<li>islam</li>
+<li>issue</li>
+<li>item</li>
+<li>ivory</li>
+<li>ivy</li>
+<li>jab</li>
+<li>jam</li>
+<li>jaws</li>
+<li>jazz</li>
+<li>jeep</li>
+<li>jelly</li>
+<li>jet</li>
+<li>jiffy</li>
+<li>job</li>
+<li>jog</li>
+<li>jolly</li>
+<li>jolt</li>
+<li>jot</li>
+<li>joy</li>
+<li>judge</li>
+<li>juice</li>
+<li>juicy</li>
+<li>july</li>
+<li>jumbo</li>
+<li>jump</li>
+<li>junky</li>
+<li>juror</li>
+<li>jury</li>
+<li>keep</li>
+<li>keg</li>
+<li>kept</li>
+<li>kick</li>
+<li>kilt</li>
+<li>king</li>
+<li>kite</li>
+<li>kitty</li>
+<li>kiwi</li>
+<li>knee</li>
+<li>knelt</li>
+<li>koala</li>
+<li>kung</li>
+<li>ladle</li>
+<li>lady</li>
+<li>lair</li>
+<li>lake</li>
+<li>lance</li>
+<li>land</li>
+<li>lapel</li>
+<li>large</li>
+<li>lash</li>
+<li>lasso</li>
+<li>last</li>
+<li>latch</li>
+<li>late</li>
+<li>lazy</li>
+<li>left</li>
+<li>legal</li>
+<li>lemon</li>
+<li>lend</li>
+<li>lens</li>
+<li>lent</li>
+<li>level</li>
+<li>lever</li>
+<li>lid</li>
+<li>life</li>
+<li>lift</li>
+<li>lilac</li>
+<li>lily</li>
+<li>limb</li>
+<li>limes</li>
+<li>line</li>
+<li>lint</li>
+<li>lion</li>
+<li>lip</li>
+<li>lived</li>
+<li>liver</li>
+<li>lunar</li>
+<li>lunch</li>
+<li>lung</li>
+<li>lurch</li>
+<li>lure</li>
+<li>lurk</li>
+<li>lying</li>
+<li>lyric</li>
+<li>mace</li>
+<li>maker</li>
+<li>malt</li>
+<li>mama</li>
+<li>mango</li>
+<li>manor</li>
+<li>many</li>
+<li>map</li>
+<li>march</li>
+<li>mardi</li>
+<li>marry</li>
+<li>mash</li>
+<li>match</li>
+<li>mate</li>
+<li>math</li>
+<li>moan</li>
+<li>mocha</li>
+<li>moist</li>
+<li>mold</li>
+<li>mom</li>
+<li>moody</li>
+<li>mop</li>
+<li>morse</li>
+<li>most</li>
+<li>motor</li>
+<li>motto</li>
+<li>mount</li>
+<li>mouse</li>
+<li>mousy</li>
+<li>mouth</li>
+<li>move</li>
+<li>movie</li>
+<li>mower</li>
+<li>mud</li>
+<li>mug</li>
+<li>mulch</li>
+<li>mule</li>
+<li>mull</li>
+<li>mumbo</li>
+<li>mummy</li>
+<li>mural</li>
+<li>muse</li>
+<li>music</li>
+<li>musky</li>
+<li>mute</li>
+<li>nacho</li>
+<li>nag</li>
+<li>nail</li>
+<li>name</li>
+<li>nanny</li>
+<li>nap</li>
+<li>navy</li>
+<li>near</li>
+<li>neat</li>
+<li>neon</li>
+<li>nerd</li>
+<li>nest</li>
+<li>net</li>
+<li>next</li>
+<li>niece</li>
+<li>ninth</li>
+<li>nutty</li>
+<li>oak</li>
+<li>oasis</li>
+<li>oat</li>
+<li>ocean</li>
+<li>oil</li>
+<li>old</li>
+<li>olive</li>
+<li>omen</li>
+<li>onion</li>
+<li>only</li>
+<li>ooze</li>
+<li>opal</li>
+<li>open</li>
+<li>opera</li>
+<li>opt</li>
+<li>otter</li>
+<li>ouch</li>
+<li>ounce</li>
+<li>outer</li>
+<li>oval</li>
+<li>oven</li>
+<li>owl</li>
+<li>ozone</li>
+<li>pace</li>
+<li>pagan</li>
+<li>pager</li>
+<li>palm</li>
+<li>panda</li>
+<li>panic</li>
+<li>pants</li>
+<li>panty</li>
+<li>paper</li>
+<li>park</li>
+<li>party</li>
+<li>patch</li>
+<li>path</li>
+<li>patio</li>
+<li>payer</li>
+<li>pecan</li>
+<li>penny</li>
+<li>pep</li>
+<li>perch</li>
+<li>perky</li>
+<li>perm</li>
+<li>pest</li>
+<li>petal</li>
+<li>petri</li>
+<li>petty</li>
+<li>photo</li>
+<li>plank</li>
+<li>plant</li>
+<li>plaza</li>
+<li>plead</li>
+<li>plot</li>
+<li>plow</li>
+<li>pluck</li>
+<li>plug</li>
+<li>plus</li>
+<li>poach</li>
+<li>pod</li>
+<li>poem</li>
+<li>poet</li>
+<li>pogo</li>
+<li>point</li>
+<li>poise</li>
+<li>poker</li>
+<li>polar</li>
+<li>polio</li>
+<li>polka</li>
+<li>polo</li>
+<li>pond</li>
+<li>pony</li>
+<li>poppy</li>
+<li>pork</li>
+<li>poser</li>
+<li>pouch</li>
+<li>pound</li>
+<li>pout</li>
+<li>power</li>
+<li>prank</li>
+<li>press</li>
+<li>print</li>
+<li>prior</li>
+<li>prism</li>
+<li>prize</li>
+<li>probe</li>
+<li>prong</li>
+<li>proof</li>
+<li>props</li>
+<li>prude</li>
+<li>prune</li>
+<li>pry</li>
+<li>pug</li>
+<li>pull</li>
+<li>pulp</li>
+<li>pulse</li>
+<li>puma</li>
+<li>punch</li>
+<li>punk</li>
+<li>pupil</li>
+<li>puppy</li>
+<li>purr</li>
+<li>purse</li>
+<li>push</li>
+<li>putt</li>
+<li>quack</li>
+<li>quake</li>
+<li>query</li>
+<li>quiet</li>
+<li>quill</li>
+<li>quilt</li>
+<li>quit</li>
+<li>quota</li>
+<li>quote</li>
+<li>rabid</li>
+<li>race</li>
+<li>rack</li>
+<li>radar</li>
+<li>radio</li>
+<li>raft</li>
+<li>rage</li>
+<li>raid</li>
+<li>rail</li>
+<li>rake</li>
+<li>rally</li>
+<li>ramp</li>
+<li>ranch</li>
+<li>range</li>
+<li>rank</li>
+<li>rant</li>
+<li>rash</li>
+<li>raven</li>
+<li>reach</li>
+<li>react</li>
+<li>ream</li>
+<li>rebel</li>
+<li>recap</li>
+<li>relax</li>
+<li>relay</li>
+<li>relic</li>
+<li>remix</li>
+<li>repay</li>
+<li>repel</li>
+<li>reply</li>
+<li>rerun</li>
+<li>reset</li>
+<li>rhyme</li>
+<li>rice</li>
+<li>rich</li>
+<li>ride</li>
+<li>rigid</li>
+<li>rigor</li>
+<li>rinse</li>
+<li>riot</li>
+<li>ripen</li>
+<li>rise</li>
+<li>risk</li>
+<li>ritzy</li>
+<li>rival</li>
+<li>river</li>
+<li>roast</li>
+<li>robe</li>
+<li>robin</li>
+<li>rock</li>
+<li>rogue</li>
+<li>roman</li>
+<li>romp</li>
+<li>rope</li>
+<li>rover</li>
+<li>royal</li>
+<li>ruby</li>
+<li>rug</li>
+<li>ruin</li>
+<li>rule</li>
+<li>runny</li>
+<li>rush</li>
+<li>rust</li>
+<li>rut</li>
+<li>sadly</li>
+<li>sage</li>
+<li>said</li>
+<li>saint</li>
+<li>salad</li>
+<li>salon</li>
+<li>salt</li>
+<li>same</li>
+<li>sandy</li>
+<li>santa</li>
+<li>satin</li>
+<li>sauna</li>
+<li>saved</li>
+<li>savor</li>
+<li>sax</li>
+<li>say</li>
+<li>scale</li>
+<li>scam</li>
+<li>scan</li>
+<li>scare</li>
+<li>scarf</li>
+<li>scary</li>
+<li>scoff</li>
+<li>scold</li>
+<li>scoop</li>
+<li>scoot</li>
+<li>scope</li>
+<li>score</li>
+<li>scorn</li>
+<li>scout</li>
+<li>scowl</li>
+<li>scrap</li>
+<li>scrub</li>
+<li>scuba</li>
+<li>scuff</li>
+<li>sect</li>
+<li>sedan</li>
+<li>self</li>
+<li>send</li>
+<li>sepia</li>
+<li>serve</li>
+<li>set</li>
+<li>seven</li>
+<li>shack</li>
+<li>shade</li>
+<li>shady</li>
+<li>shaft</li>
+<li>shaky</li>
+<li>sham</li>
+<li>shape</li>
+<li>share</li>
+<li>sharp</li>
+<li>shed</li>
+<li>sheep</li>
+<li>sheet</li>
+<li>shelf</li>
+<li>shell</li>
+<li>shine</li>
+<li>shiny</li>
+<li>ship</li>
+<li>shirt</li>
+<li>shock</li>
+<li>shop</li>
+<li>shore</li>
+<li>shout</li>
+<li>shove</li>
+<li>shown</li>
+<li>showy</li>
+<li>shred</li>
+<li>shrug</li>
+<li>shun</li>
+<li>shush</li>
+<li>shut</li>
+<li>shy</li>
+<li>sift</li>
+<li>silk</li>
+<li>silly</li>
+<li>silo</li>
+<li>sip</li>
+<li>siren</li>
+<li>sixth</li>
+<li>size</li>
+<li>skate</li>
+<li>skew</li>
+<li>skid</li>
+<li>skier</li>
+<li>skies</li>
+<li>skip</li>
+<li>skirt</li>
+<li>skit</li>
+<li>sky</li>
+<li>slab</li>
+<li>slack</li>
+<li>slain</li>
+<li>slam</li>
+<li>slang</li>
+<li>slash</li>
+<li>slate</li>
+<li>slaw</li>
+<li>sled</li>
+<li>sleek</li>
+<li>sleep</li>
+<li>sleet</li>
+<li>slept</li>
+<li>slice</li>
+<li>slick</li>
+<li>slimy</li>
+<li>sling</li>
+<li>slip</li>
+<li>slit</li>
+<li>slob</li>
+<li>slot</li>
+<li>slug</li>
+<li>slum</li>
+<li>slurp</li>
+<li>slush</li>
+<li>small</li>
+<li>smash</li>
+<li>smell</li>
+<li>smile</li>
+<li>smirk</li>
+<li>smog</li>
+<li>snack</li>
+<li>snare</li>
+<li>snarl</li>
+<li>sneak</li>
+<li>sneer</li>
+<li>sniff</li>
+<li>snore</li>
+<li>snort</li>
+<li>snout</li>
+<li>snowy</li>
+<li>snub</li>
+<li>snuff</li>
+<li>speak</li>
+<li>speed</li>
+<li>spend</li>
+<li>spent</li>
+<li>spew</li>
+<li>spied</li>
+<li>spill</li>
+<li>spiny</li>
+<li>spoil</li>
+<li>spoke</li>
+<li>spoof</li>
+<li>spool</li>
+<li>spoon</li>
+<li>sport</li>
+<li>spot</li>
+<li>spout</li>
+<li>spray</li>
+<li>spree</li>
+<li>spur</li>
+<li>squad</li>
+<li>squat</li>
+<li>squid</li>
+<li>stack</li>
+<li>staff</li>
+<li>stage</li>
+<li>stain</li>
+<li>stall</li>
+<li>stamp</li>
+<li>stand</li>
+<li>stank</li>
+<li>stark</li>
+<li>start</li>
+<li>stash</li>
+<li>state</li>
+<li>stays</li>
+<li>steam</li>
+<li>steep</li>
+<li>stem</li>
+<li>step</li>
+<li>stew</li>
+<li>stick</li>
+<li>sting</li>
+<li>stir</li>
+<li>stock</li>
+<li>stole</li>
+<li>stomp</li>
+<li>stony</li>
+<li>stood</li>
+<li>stool</li>
+<li>stoop</li>
+<li>stop</li>
+<li>storm</li>
+<li>stout</li>
+<li>stove</li>
+<li>straw</li>
+<li>stray</li>
+<li>strut</li>
+<li>stuck</li>
+<li>stud</li>
+<li>stuff</li>
+<li>stump</li>
+<li>stung</li>
+<li>stunt</li>
+<li>suds</li>
+<li>sugar</li>
+<li>sulk</li>
+<li>surf</li>
+<li>sushi</li>
+<li>swab</li>
+<li>swan</li>
+<li>swarm</li>
+<li>sway</li>
+<li>swear</li>
+<li>sweat</li>
+<li>sweep</li>
+<li>swell</li>
+<li>swept</li>
+<li>swim</li>
+<li>swing</li>
+<li>swipe</li>
+<li>swirl</li>
+<li>swoop</li>
+<li>swore</li>
+<li>syrup</li>
+<li>tacky</li>
+<li>taco</li>
+<li>tag</li>
+<li>take</li>
+<li>tall</li>
+<li>talon</li>
+<li>tamer</li>
+<li>tank</li>
+<li>taper</li>
+<li>taps</li>
+<li>tarot</li>
+<li>tart</li>
+<li>task</li>
+<li>taste</li>
+<li>tasty</li>
+<li>taunt</li>
+<li>thank</li>
+<li>thaw</li>
+<li>theft</li>
+<li>theme</li>
+<li>thigh</li>
+<li>thing</li>
+<li>think</li>
+<li>thong</li>
+<li>thorn</li>
+<li>those</li>
+<li>throb</li>
+<li>thud</li>
+<li>thumb</li>
+<li>thump</li>
+<li>thus</li>
+<li>tiara</li>
+<li>tidal</li>
+<li>tidy</li>
+<li>tiger</li>
+<li>tile</li>
+<li>tilt</li>
+<li>tint</li>
+<li>trace</li>
+<li>track</li>
+<li>trade</li>
+<li>train</li>
+<li>trait</li>
+<li>trap</li>
+<li>trash</li>
+<li>tray</li>
+<li>treat</li>
+<li>tree</li>
+<li>trek</li>
+<li>trend</li>
+<li>trial</li>
+<li>tribe</li>
+<li>trick</li>
+<li>trio</li>
+<li>trout</li>
+<li>truce</li>
+<li>truck</li>
+<li>trump</li>
+<li>trunk</li>
+<li>try</li>
+<li>tug</li>
+<li>tulip</li>
+<li>tummy</li>
+<li>turf</li>
+<li>tusk</li>
+<li>tutor</li>
+<li>tutu</li>
+<li>tux</li>
+<li>tweak</li>
+<li>tweet</li>
+<li>twice</li>
+<li>twine</li>
+<li>twins</li>
+<li>twirl</li>
+<li>twist</li>
+<li>uncle</li>
+<li>uncut</li>
+<li>undo</li>
+<li>unify</li>
+<li>union</li>
+<li>unit</li>
+<li>untie</li>
+<li>upon</li>
+<li>upper</li>
+<li>urban</li>
+<li>used</li>
+<li>user</li>
+<li>usher</li>
+<li>utter</li>
+<li>value</li>
+<li>vapor</li>
+<li>vegan</li>
+<li>venue</li>
+<li>verse</li>
+<li>vest</li>
+<li>veto</li>
+<li>vice</li>
+<li>video</li>
+<li>view</li>
+<li>viral</li>
+<li>virus</li>
+<li>visa</li>
+<li>visor</li>
+<li>vixen</li>
+<li>vocal</li>
+<li>voice</li>
+<li>void</li>
+<li>volt</li>
+<li>voter</li>
+<li>vowel</li>
+<li>wad</li>
+<li>wafer</li>
+<li>wager</li>
+<li>wages</li>
+<li>wagon</li>
+<li>wake</li>
+<li>walk</li>
+<li>wand</li>
+<li>wasp</li>
+<li>watch</li>
+<li>water</li>
+<li>wavy</li>
+<li>wheat</li>
+<li>whiff</li>
+<li>whole</li>
+<li>whoop</li>
+<li>wick</li>
+<li>widen</li>
+<li>widow</li>
+<li>width</li>
+<li>wife</li>
+<li>wifi</li>
+<li>wilt</li>
+<li>wimp</li>
+<li>wind</li>
+<li>wing</li>
+<li>wink</li>
+<li>wipe</li>
+<li>wired</li>
+<li>wiry</li>
+<li>wise</li>
+<li>wish</li>
+<li>wispy</li>
+<li>wok</li>
+<li>wolf</li>
+<li>womb</li>
+<li>wool</li>
+<li>woozy</li>
+<li>word</li>
+<li>work</li>
+<li>worry</li>
+<li>wound</li>
+<li>woven</li>
+<li>wrath</li>
+<li>wreck</li>
+<li>wrist</li>
+<li>xerox</li>
+<li>yahoo</li>
+<li>yam</li>
+<li>yard</li>
+<li>year</li>
+<li>yeast</li>
+<li>yelp</li>
+<li>yo-yo</li>
+<li>yodel</li>
+<li>yoga</li>
+<li>yoyo</li>
+<li>yummy</li>
+<li>zebra</li>
+<li>zero</li>
+<li>zesty</li>
+<li>zippy</li>
+<li>zone</li>
+<li>zoom</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/dawnbcgov\.github\.io\/aq-intro-to-github-shinyapps\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
