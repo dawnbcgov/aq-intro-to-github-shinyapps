@@ -199,7 +199,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#welcome-setup-check-10-mins" id="toc-welcome-setup-check-10-mins" class="nav-link active" data-scroll-target="#welcome-setup-check-10-mins">Welcome &amp; Setup Check (10 mins)</a></li>
   <li><a href="#refresher-on-key-concepts-with-version-control-10-mins" id="toc-refresher-on-key-concepts-with-version-control-10-mins" class="nav-link" data-scroll-target="#refresher-on-key-concepts-with-version-control-10-mins">Refresher on key concepts with version control (10 mins)</a></li>
   <li><a href="#tracking-changes-20-mins" id="toc-tracking-changes-20-mins" class="nav-link" data-scroll-target="#tracking-changes-20-mins">Tracking changes (20 mins)</a></li>
-  <li><a href="#collaboration-on-github-20-mins" id="toc-collaboration-on-github-20-mins" class="nav-link" data-scroll-target="#collaboration-on-github-20-mins">Collaboration on GitHub (20 mins)</a></li>
+  <li><a href="#collaboration-on-github-20-mins" id="toc-collaboration-on-github-20-mins" class="nav-link" data-scroll-target="#collaboration-on-github-20-mins">Collaboration on GitHub (20 mins)</a>
+  <ul class="collapse">
+  <li><a href="#creating-pull-requests-pr" id="toc-creating-pull-requests-pr" class="nav-link" data-scroll-target="#creating-pull-requests-pr">Creating pull requests (PR)</a></li>
+  <li><a href="#reviewing-pull-requests" id="toc-reviewing-pull-requests" class="nav-link" data-scroll-target="#reviewing-pull-requests">Reviewing pull requests</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -354,13 +358,15 @@ Resources used
 <p>We’ve all been working from the <code>main</code> branch, but that can be risky for a many reasons.</p>
 <p>Just a couple: we might make a mistake while we’re working and if we just keep updating the authoritative copy we could miss it. second, two people might change the same file and then we need a process to resolve that conflict.</p>
 <p>Git and GitHub give us powerful collaboration tools we can use to manage all these processes!</p>
+<section id="creating-pull-requests-pr" class="level3">
+<h3 class="anchored">Creating pull requests (PR)</h3>
 <section id="activity-make-a-change-to-another-page-on-a-branch-and-change-it-back-to-the-main-site-pull-request" class="level4 mark">
 <h4 class="anchored" data-anchor-id="activity-make-a-change-to-another-page-on-a-branch-and-change-it-back-to-the-main-site-pull-request"><strong>Activity</strong>: Make a change to another page on a branch and change it back to the main site (pull request)</h4>
 </section>
-<p>Finally, lets make an edit to someone elses page on a new <code>branch</code> and use the collaboration tools to review and merge those changes (and resolve conflicts!).</p>
+<p>Let’s make an edit to someone else’s page on a new <code>branch</code> and use the collaboration tools to review and merge those changes (and resolve conflicts!).</p>
 <div class="accordion">
   <div class="accordion-item">
-    <h2 class="accordion-header anchored" id="headingThree">
+    <h2 class="accordion-header anchored" id="headingThree" data-anchor-id="creating-pull-requests-pr">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         <strong>Hint</strong>
       </button>
@@ -372,12 +378,53 @@ Resources used
           <li>Open and edit an existing file in the <code>practice</code> folder</li>
           <li>Make your edits and save</li>
           <li>When you are ready, select the file you changed, commit it (you will need to add a message), and push it. There will be an extra step to set up the branch in the repository we are all using depending on your software</li>          
-          <li>Then go to GitHub.com and go to the [pull request tab](https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls)</li> Select your branch to "compare" with the main branch and then the button create pull request        
+          <li>Then go to GitHub.com and go to the <a href="https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls">pull request tab</a></li> 
+          <li>Select your branch to "compare" with the main branch and then the button create pull request</li>
       </ol>
       </div>
     </div>
   </div>
 </div>
+</section>
+<section id="reviewing-pull-requests" class="level3">
+<h3 class="anchored">Reviewing pull requests</h3>
+<p>To mitigate the risk of pushing directly to the <code>main</code> branch, some repositories have <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches">branch protection rules</a>. These rules restrict merges and commits to specific branches unless specific criteria are made. One common criteria is that the pull request can only be merged to the <code>main</code> branch if it has been reviewed by another collaborator. Even without these rules, working on a development branch and asking a collaborator to review your pull request is good practice. When you create a pull request, you can use the GitHub pull request page to request/assign reviewers (right hand menu).</p>
+<section id="activity-review-a-proposed-change-to-the-main-site-pull-request" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-review-a-proposed-change-to-the-main-site-pull-request"><strong>Activity</strong>: Review a proposed change to the main site (pull request)</h4>
+</section>
+<p>Although this repo will not have branch protection rules applied, we can practice navigating the pull request review process on GitHub. Let’s review the practice branch we’ve created, <code>pr_practice</code>, together. Follow the instructions on the pull request itself. You can also walk through every step in the accordion box below.</p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header anchored" id="headingThree" data-anchor-id="reviewing-pull-requests">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <strong>Hint</strong>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>First, navigate to the <a href="https://github.com/dawnbcgov/aq-intro-to-github-shinyapps/pulls">pull request tab</a> of the GitHub repository.</li>
+          <li>Click on the PR you want to review. For this activity, it is the one named "PR Review Practice". Note that Issues and PRs are numbered in the same sequence.</li>
+          <li>On the PR's page, you can first start with the "Conversation" tab and read through the PR author's description of the changes. You can follow any conversation that might have already happened and also see a history of commits, all in chronological order. Read through the existing comments and add a hello of your own.</li>
+          <li>On the "Commits" tab, you can see just the commit history for the branch that is the subject of the pull request. Note that as the review and conversation progresses, further pushes to this branch will also update the pull request. That is, the pull request is for a *branch* to be pulled into another, not a specific commit. </li>          
+          <li>We can skip the "Checks" tab for this practice. For repos with Continuous Integration/Continuous Deployment (aka <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd">CI/CD</a>), the history of the output of all automated checking and unit testing scripts will appear here. For workflows that use it, it can help the collaborators answer the question "Does this code work?"</li>
+          <li>The "Files changed" tab is where you will do most of the reviewing. For each file changed, you can see the "diff" of the original and proposed changes. For long files, only the changed lines are displayed, but you can expand the collapsed lines if you need to see the context. Here are some review activities to try:</li>
+          <ol>
+            <li> Notice that there is a review interface in the upper right (that will stay on top as you scroll) showing how many files you have reviewed and a green button to finalise your review. But first, let's just read through the first file.</li>
+            <li>Find duplicate lines and add a line-specific comment to flag as a duplicate. Just do one duplicate so others can flag too. You can do this by mousing over the space between the line number and the line of code. A blue + sign will appear. Click on it. You can type a comment (e.g. a correction of the spelling) and then add your comment with either "add single comment" or "Start a review" (choose this for this activity).</li>
+            <li>You can also add a comment to the entire file rather than a specific line. In the upper right area of the box that contains this file, there is a speech bubble icon to click on and add a comment. Write a comment and then "Add review comment".
+            </li><li>When you are finished with the file, you can click the "Viewed" box to indicate that you have reviewed the file. It will close/collapse the container and you can move on to the next file. It's not necessary to check this box but it can help you keep track and indicate to others that you reviewed it without having to leave a comment that just says "looks good".</li>
+            <li>Repeat with any other files and then click "Finish your review". You can write one additional "final review" comment if you want. You also have three options with your review: just comment, approve, or indicate that more changes are needed before you can approve. Submit an approve review.</li>
+            
+          </ol>
+      </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<p>The GitHub review interface is very handy. All review comments go into the “Conversation” tab. When specific lines of codes are mentioned, a preview appears. Each comment can have its own thread to help discuss the details of the code. Conversations can be “resolved” when you have iterated enough to meet the requirements.</p>
+<p>If you come back to the PR after having reviewed it and changes have been made, the interface remembers what you have seen and you can just review the new changes. Files that you have clicked as “Viewed” will be unclicked if there were changes. If you need to see the full context and history, those are available as well, in the tabs mentioned above. You can also use <code>diff</code> tools on GitHub or on your own software to make more comparisons.</p>
+<p>Finally, testing the code is not part of this activity, but if you wanted to run the code on the pull request locally, you would check out the branch of the PR and then you have a copy of the code being reviewed as well.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -395,6 +442,7 @@ Resources used
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
