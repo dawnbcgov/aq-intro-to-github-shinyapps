@@ -77,6 +77,17 @@
     ]
   },
   {
+    "objectID": "practice/James.html",
+    "href": "practice/James.html",
+    "title": "james h",
+    "section": "",
+    "text": "James H page\n\ncreating\na\nlist",
+    "crumbs": [
+      "Practice",
+      "james h"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
