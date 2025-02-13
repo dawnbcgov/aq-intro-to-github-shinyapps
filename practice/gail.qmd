@@ -1,0 +1,9 @@
+---
+title: "gail r"
+format: html
+---
+
+# Gail R's page
+
+-   updating gail's page
+-   making changes on a new branch instead of main
