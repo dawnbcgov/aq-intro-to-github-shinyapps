@@ -5,6 +5,5 @@ format: html
 
 # Gail R's page
 
--   creating
--   a
--   list
+-   updating gail's page
+-   making changes on a new branch instead of main
