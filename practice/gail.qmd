@@ -1,0 +1,10 @@
+---
+title: "gail r"
+format: html
+---
+
+# Gail R's page
+
+-   creating
+-   a
+-   list
