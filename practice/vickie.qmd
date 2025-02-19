@@ -3,3 +3,9 @@ title: "vickie"
 format: html
 ---
 
+# Changes to show collaboration
+
+-Here 
+-are
+-my
+-thoughts
