@@ -11,6 +11,8 @@ website:
         href: index.qmd
       - text: "Workshop 1. GitHub Collaboration Workflows"  
         href: 01-github-collaboration-workflows.qmd        
+      - text: "Workshop 2. GitHub Pages and Actions"  
+        href: 02-github-pages-actions.qmd     
       - section: "Resources"
         contents:
         - text: "Preparation and installation instructions"
