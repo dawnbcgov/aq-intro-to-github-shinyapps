@@ -2,3 +2,188 @@
 title: "GitHub Pages and Actions"
 ---
 
+## Welcome & Key Concepts
+
+**Learning Objective:** Understand GitHub Pages and Actions and how they can work together to publish webite site. Practice by publishing a Quarto site using your own GitHub account.
+
+*Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.* 
+
+#### Publishing a web site
+
+We likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like Youtube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.
+
+You may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are needed:
+
+- a domain name (the human-readable address) 
+- a server or host (the place)
+- application or files (the content of the web site itself)
+
+<image>
+  
+::: callout-tip
+## Places to learn more
+
+-  [Glitch](https://glitch.com/?ref=NODESK), allows you to remix (basically fork) projects to build websites from the browser
+-  [Neocities](https://neocities.org/), also has all the tools to build a website in the browser
+-  [Mozilla MDN Web Docs: Your first website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website) 
+:::
+
+
+#### Quarto Websites
+
+We already know Quarto is a *system* for scientific and technical publishing. It allows you to do a lot.
+
+One thing it does is make it easy to create websites for content that is _document_-focused (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.
+
+#### Github Pages
+
+Like Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, *but only for the contents of a GitHub repository*.
+
+It helps with all the three parts you need:
+
+- a domain name 
+- a server or host
+- application or files => is the contents of the respository!
+
+Imagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.
+
+Now, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!
+
+So, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It's a way to share your creations with the world!
+
+
+#### Github Actions
+
+One more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.
+
+Actions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows,  cron jobs
+
+
+They are sort of like recipes, you describe the ingredients you need and then actions to take with those ingredients.
+
+
+
+## Create a Quarto Website (20 mins) 
+
+::: mark
+#### **Activity**: Create a new Quarto website project and add the code to GitHub
+:::
+
+To start, you will need to create your own website project, all the files for that webite in a git repo, then host that repository via GitHub.
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Using RStudio: Select New Project and follow the wizard to select "Quarto Website"</li>
+          <li>Enter a directory name <em>and create a git repository</em></li>
+          <li>Make the website your own, you can change the text or title of a page</li>
+          <li>Click the render button to preview the website locally and ensure you are happy with it</li>
+          <li>Switch to GitHub Desktop (or from RStudio) commit all those files and push them to GitHub.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+Alternatively, if you want to skip this step, you can go to this template: <url> and make a copy or **fork** the repo
+
+::: callout-note
+## Resources used
+
+-  Quarto: [Creating a Website](https://quarto.org/docs/websites/)
+:::
+
+
+
+## Publish it to GitHub Pages (20 mins)
+
+There is more than one way to publish a website using Quarto to GitHub Pages. Today we're going to use a mix of the built-in `publish` command and GitHub Actions to automate ongoing updates.
+
+::: mark
+#### **Activity**: Use `publish` to publish a new site for the first time
+:::
+
+The `quarto publish` command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: <https://github.com/<yourname>/<repo>/settings/pages> (this URL will be specific to your repository)
+
+After that, we are going to set up GitHub Pages to render all the site contents from our `main` branch into a website that is served from the `gh-pages` branch! (The name `gh-pages` is a convention used because "gh" is short for GitHub I guess).
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Follow <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">the instructions from Quarto</a> to set the <em>source branch</em> to <code>gh-pages</code> and the site directory to <em>root (/)</em></li>
+          <li>Add the output directory of your project to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can have a sidebar on this)</li>
+          <li>From RStudio press "Publish" above the source window.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+
+::: callout-note
+## Resources used
+
+-  Quarto: [Publishing > GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+:::
+
+
+
+## Automate publishing with GitHub Actions (Advanced)
+
+
+::: mark
+#### **Activity**: Add a GitHub Action so it automagically updates on every change (Advanced)
+:::
+
+Once we have run that `publish` action locally once, we can set up an Action to re-publish (or re-build) the site as soon as a simple change was made.
+
+Remember how in the first workshop you only had to commit your change to the `main` branch and refresh the website to see the change show up in the sidebar? That was because an action in the background was re-building the site!
+
+_Note: this is an advanced activity so it is okay to just follow along_
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+::: callout-note
+## Resources used
+
+-  Quarto: [Publishing > GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+:::
