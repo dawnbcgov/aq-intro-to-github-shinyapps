@@ -7,3 +7,4 @@ format: html
 
 -   updating gail's page
 -   making changes on a new branch instead of main
+-   reviewing day 2 workshop in more detail
