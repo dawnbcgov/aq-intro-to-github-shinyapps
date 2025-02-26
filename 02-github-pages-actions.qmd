@@ -4,28 +4,31 @@ title: "GitHub Pages and Actions"
 
 ## Welcome & Key Concepts
 
-**Learning Objective:** Understand GitHub Pages and Actions and how they can work together to publish webite site. Practice by publishing a Quarto site using your own GitHub account.
+**Learning Objective:** Understand GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.
 
 *Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.* 
 
 #### Publishing a web site
 
-We likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like Youtube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.
+We likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.
 
-You may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are needed:
+You may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:
 
 - a domain name (the human-readable address) 
 - a server or host (the place)
 - application or files (the content of the web site itself)
 
-<image>
+
+![How a web server works. Credit: Hostinger.](https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/11/how-web-server-works-1536x584.webp){width=80%}
+  
   
 ::: callout-tip
 ## Places to learn more
 
 -  [Glitch](https://glitch.com/?ref=NODESK), allows you to remix (basically fork) projects to build websites from the browser
 -  [Neocities](https://neocities.org/), also has all the tools to build a website in the browser
--  [Mozilla MDN Web Docs: Your first website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website) 
+-  [Mozilla MDN Web Docs: Your first website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
+  
 :::
 
 
@@ -33,17 +36,25 @@ You may not have published a full web site before. It can get complex, but we wa
 
 We already know Quarto is a *system* for scientific and technical publishing. It allows you to do a lot.
 
-One thing it does is make it easy to create websites for content that is _document_-focused (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.
+One thing it does is make it easy to [create websites](https://quarto.org/docs/websites/) for _document_-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.
 
-#### Github Pages
+![Quarto website rendered in RStudio. Credit: Posit.](https://quarto.org/docs/websites/images/rstudio-project-website-preview.png){width=80%}
 
-Like Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, *but only for the contents of a GitHub repository*.
+#### GitHub Pages
+
+Like Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) is a free way to publish a web sites, *but only for the contents of a GitHub repository*.
 
 It helps with all the three parts you need:
 
-- a domain name 
-- a server or host
-- application or files => is the contents of the respository!
+- a domain name ✔️ by default, it looks like: `<https://[USER/ORG NAME].github.io/[REPO NAME]/>`
+- a server or host ✔️ for free!
+- application or files ✔️ the contents of the repository!
+
+Plus it also gives us the advantages of working with git and GitHub we talked about last workshop!
+You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues
+
+![Screenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.](https://digitalhumanities.hkust.edu.hk/wp-content/uploads/2023/10/github-page-setting-1-1536x944.png){width=80%}
+
 
 Imagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.
 
@@ -52,24 +63,23 @@ Now, imagine you want to share your drawings and stories with your friends. GitH
 So, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It's a way to share your creations with the world!
 
 
-#### Github Actions
+#### GitHub Actions
 
 One more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.
 
-Actions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows,  cron jobs
+Actions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs
+
+They are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.
 
 
-They are sort of like recipes, you describe the ingredients you need and then actions to take with those ingredients.
 
-
-
-## Create a Quarto Website (20 mins) 
+## Create a Quarto Website 
 
 ::: mark
 #### **Activity**: Create a new Quarto website project and add the code to GitHub
 :::
 
-To start, you will need to create your own website project, all the files for that webite in a git repo, then host that repository via GitHub.
+To start, you will need to create your own website project, all the files for that website in a git repo, then host that repository via GitHub.
 
 ```{=html}
 <div class="accordion">
@@ -94,7 +104,7 @@ To start, you will need to create your own website project, all the files for th
 </div>
 ```
 
-Alternatively, if you want to skip this step, you can go to this template: <url> and make a copy or **fork** the repo
+Alternatively, if you want to skip this step, you can go to this template: https://github.com/dawnbcgov/example-website and make a copy or **fork** the repo
 
 ::: callout-note
 ## Resources used
@@ -104,7 +114,7 @@ Alternatively, if you want to skip this step, you can go to this template: <url>
 
 
 
-## Publish it to GitHub Pages (20 mins)
+## Publish it to GitHub Pages
 
 There is more than one way to publish a website using Quarto to GitHub Pages. Today we're going to use a mix of the built-in `publish` command and GitHub Actions to automate ongoing updates.
 
@@ -112,7 +122,7 @@ There is more than one way to publish a website using Quarto to GitHub Pages. To
 #### **Activity**: Use `publish` to publish a new site for the first time
 :::
 
-The `quarto publish` command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: <https://github.com/<yourname>/<repo>/settings/pages> (this URL will be specific to your repository)
+The `quarto publish` command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: `<https://github.com/[USER NAME]/[REPO NAME]/settings/pages>` (this URL will be specific to your repository)
 
 After that, we are going to set up GitHub Pages to render all the site contents from our `main` branch into a website that is served from the `gh-pages` branch! (The name `gh-pages` is a convention used because "gh" is short for GitHub I guess).
 
@@ -128,7 +138,7 @@ After that, we are going to set up GitHub Pages to render all the site contents 
       <div class="accordion-body">
         <ol>
           <li>Follow <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">the instructions from Quarto</a> to set the <em>source branch</em> to <code>gh-pages</code> and the site directory to <em>root (/)</em></li>
-          <li>Add the output directory of your project to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can have a sidebar on this)</li>
+          <li>Add the output directory of your project to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)</li>
           <li>From RStudio press "Publish" above the source window.</li>
         </ol>
       </div>
@@ -143,6 +153,7 @@ After that, we are going to set up GitHub Pages to render all the site contents 
 ## Resources used
 
 -  Quarto: [Publishing > GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+-  HKUST Digital Humanities: [How to host your website on GitHub Page](https://digitalhumanities.hkust.edu.hk/tutorials/how-to-host-your-website-on-github-page/)
 :::
 
 
@@ -171,9 +182,10 @@ _Note: this is an advanced activity so it is okay to just follow along_
     <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Make sure you have run <code>quarto publish gh-pages</code> locally, once (you should have done this in the previous step.</li>
+          <li>Add a GitHub Action to your GitHub repo and project by creating a file at: <code>.github/workflows/publish.yml</code> (note the dot in the first folder, you will probably need to create those folders too!)</li>
+          <li>Copy the contents from the Quarto docs for the <a href="https://quarto.org/docs/publishing/github-pages.html#publish-action">Publish Action file</a></li>
+          <li>Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.</li>
         </ol>
       </div>
     </div>
