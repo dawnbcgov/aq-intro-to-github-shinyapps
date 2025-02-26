@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">GitHub Pages and Actions</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-github-pages-actions.html">Workshop 2. GitHub Pages and Actions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -114,6 +114,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./01-github-collaboration-workflows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workshop 1. GitHub Collaboration Workflows</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-github-pages-actions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Workshop 2. GitHub Pages and Actions</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -233,8 +239,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome-key-concepts" id="toc-welcome-key-concepts" class="nav-link active" data-scroll-target="#welcome-key-concepts">Welcome &amp; Key Concepts</a></li>
+  <li><a href="#create-a-quarto-website" id="toc-create-a-quarto-website" class="nav-link" data-scroll-target="#create-a-quarto-website">Create a Quarto Website</a></li>
+  <li><a href="#publish-it-to-github-pages" id="toc-publish-it-to-github-pages" class="nav-link" data-scroll-target="#publish-it-to-github-pages">Publish it to GitHub Pages</a></li>
+  <li><a href="#automate-publishing-with-github-actions-advanced" id="toc-automate-publishing-with-github-actions-advanced" class="nav-link" data-scroll-target="#automate-publishing-with-github-actions-advanced">Automate publishing with GitHub Actions (Advanced)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -258,8 +273,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="welcome-key-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-key-concepts">Welcome &amp; Key Concepts</h2>
+<p><strong>Learning Objective:</strong> Understand GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.</p>
+<p><em>Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.</em></p>
+<section id="publishing-a-web-site" class="level4">
+<h4 class="anchored" data-anchor-id="publishing-a-web-site">Publishing a web site</h4>
+<p>We likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.</p>
+<p>You may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:</p>
+<ul>
+<li>a domain name (the human-readable address)</li>
+<li>a server or host (the place)</li>
+<li>application or files (the content of the web site itself)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/11/how-web-server-works-1536x584.webp" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>How a web server works. Credit: Hostinger.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Places to learn more
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://glitch.com/?ref=NODESK">Glitch</a>, allows you to remix (basically fork) projects to build websites from the browser</li>
+<li><a href="https://neocities.org/">Neocities</a>, also has all the tools to build a website in the browser</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website">Mozilla MDN Web Docs: Your first website</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="quarto-websites" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-websites">Quarto Websites</h4>
+<p>We already know Quarto is a <em>system</em> for scientific and technical publishing. It allows you to do a lot.</p>
+<p>One thing it does is make it easy to <a href="https://quarto.org/docs/websites/">create websites</a> for <em>document</em>-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://quarto.org/docs/websites/images/rstudio-project-website-preview.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Quarto website rendered in RStudio. Credit: Posit.</figcaption>
+</figure>
+</div>
+</section>
+<section id="github-pages" class="level4">
+<h4 class="anchored" data-anchor-id="github-pages">GitHub Pages</h4>
+<p>Like Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub Pages</a> is a free way to publish a web sites, <em>but only for the contents of a GitHub repository</em>.</p>
+<p>It helps with all the three parts you need:</p>
+<ul>
+<li>a domain name ✔️ by default, it looks like: <code>&lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;</code></li>
+<li>a server or host ✔️ for free!</li>
+<li>application or files ✔️ the contents of the repository!</li>
+</ul>
+<p>Plus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://digitalhumanities.hkust.edu.hk/wp-content/uploads/2023/10/github-page-setting-1-1536x944.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Screenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.</figcaption>
+</figure>
+</div>
+<p>Imagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.</p>
+<p>Now, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!</p>
+<p>So, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!</p>
+</section>
+<section id="github-actions" class="level4">
+<h4 class="anchored" data-anchor-id="github-actions">GitHub Actions</h4>
+<p>One more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.</p>
+<p>Actions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs</p>
+<p>They are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.</p>
+</section>
+</section>
+<section id="create-a-quarto-website" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-quarto-website">Create a Quarto Website</h2>
+<section id="activity-create-a-new-quarto-website-project-and-add-the-code-to-github" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-create-a-new-quarto-website-project-and-add-the-code-to-github"><strong>Activity</strong>: Create a new Quarto website project and add the code to GitHub</h4>
+</section>
+<p>To start, you will need to create your own website project, all the files for that website in a git repo, then host that repository via GitHub.</p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header anchored" id="heading1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Using RStudio: Select New Project and follow the wizard to select "Quarto Website"</li>
+          <li>Enter a directory name <em>and create a git repository</em></li>
+          <li>Make the website your own, you can change the text or title of a page</li>
+          <li>Click the render button to preview the website locally and ensure you are happy with it</li>
+          <li>Switch to GitHub Desktop (or from RStudio) commit all those files and push them to GitHub.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<p>Alternatively, if you want to skip this step, you can go to this template: https://github.com/dawnbcgov/example-website and make a copy or <strong>fork</strong> the repo</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resources used
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Quarto: <a href="https://quarto.org/docs/websites/">Creating a Website</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="publish-it-to-github-pages" class="level2">
+<h2 class="anchored" data-anchor-id="publish-it-to-github-pages">Publish it to GitHub Pages</h2>
+<p>There is more than one way to publish a website using Quarto to GitHub Pages. Today we’re going to use a mix of the built-in <code>publish</code> command and GitHub Actions to automate ongoing updates.</p>
+<section id="activity-use-publish-to-publish-a-new-site-for-the-first-time" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-use-publish-to-publish-a-new-site-for-the-first-time"><strong>Activity</strong>: Use <code>publish</code> to publish a new site for the first time</h4>
+</section>
+<p>The <code>quarto publish</code> command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: <code>&lt;https://github.com/[USER NAME]/[REPO NAME]/settings/pages&gt;</code> (this URL will be specific to your repository)</p>
+<p>After that, we are going to set up GitHub Pages to render all the site contents from our <code>main</code> branch into a website that is served from the <code>gh-pages</code> branch! (The name <code>gh-pages</code> is a convention used because “gh” is short for GitHub I guess).</p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header anchored" id="heading2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Follow <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">the instructions from Quarto</a> to set the <em>source branch</em> to <code>gh-pages</code> and the site directory to <em>root (/)</em></li>
+          <li>Add the output directory of your project to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)</li>
+          <li>From RStudio press "Publish" above the source window.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resources used
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Quarto: <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing &gt; GitHub Pages</a></li>
+<li>HKUST Digital Humanities: <a href="https://digitalhumanities.hkust.edu.hk/tutorials/how-to-host-your-website-on-github-page/">How to host your website on GitHub Page</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="automate-publishing-with-github-actions-advanced" class="level2">
+<h2 class="anchored" data-anchor-id="automate-publishing-with-github-actions-advanced">Automate publishing with GitHub Actions (Advanced)</h2>
+<section id="activity-add-a-github-action-so-it-automagically-updates-on-every-change-advanced" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-add-a-github-action-so-it-automagically-updates-on-every-change-advanced"><strong>Activity</strong>: Add a GitHub Action so it automagically updates on every change (Advanced)</h4>
+</section>
+<p>Once we have run that <code>publish</code> action locally once, we can set up an Action to re-publish (or re-build) the site as soon as a simple change was made.</p>
+<p>Remember how in the first workshop you only had to commit your change to the <code>main</code> branch and refresh the website to see the change show up in the sidebar? That was because an action in the background was re-building the site!</p>
+<p><em>Note: this is an advanced activity so it is okay to just follow along</em></p>
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header anchored" id="heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Make sure you have run <code>quarto publish gh-pages</code> locally, once (you should have done this in the previous step.</li>
+          <li>Add a GitHub Action to your GitHub repo and project by creating a file at: <code>.github/workflows/publish.yml</code> (note the dot in the first folder, you will probably need to create those folders too!)</li>
+          <li>Copy the contents from the Quarto docs for the <a href="https://quarto.org/docs/publishing/github-pages.html#publish-action">Publish Action file</a></li>
+          <li>Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resources used
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Quarto: <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing &gt; GitHub Pages</a></li>
+</ul>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
