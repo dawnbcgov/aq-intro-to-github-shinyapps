@@ -432,13 +432,15 @@ Resources used
       <div class="accordion-body">
         <ol>
           <li>Follow <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">the instructions from Quarto</a> to set the <em>source branch</em> to <code>gh-pages</code> and the site directory to <em>root (/)</em></li>
-          <li>Add the output directory of your project to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)</li>
-          <li>From RStudio press "Publish" above the source window.</li>
+          <li>Add the output directory of your project (/_site/) to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)</li>
+          <li>From RStudio open a terminal (Tools &gt; Terminal &gt; New Terminal) and type <code>quarto publish gh-pages</code>.</li>
+          <li>Follow the command line prompts, you may be prompted to log-in to GitHub before it publishes.</li>
         </ol>
       </div>
     </div>
   </div>
 </div>
+<p>Great! Now after every change we can manually publish an updated version of the site! What about if we want to not worry about this step? We can use an action to automate it.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -474,7 +476,7 @@ Resources used
     <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li>Make sure you have run <code>quarto publish gh-pages</code> locally, once (you should have done this in the previous step.</li>
+          <li>Make sure you have run <code>quarto publish gh-pages</code> locally, once (you should have done this in the previous step).</li>
           <li>Add a GitHub Action to your GitHub repo and project by creating a file at: <code>.github/workflows/publish.yml</code> (note the dot in the first folder, you will probably need to create those folders too!)</li>
           <li>Copy the contents from the Quarto docs for the <a href="https://quarto.org/docs/publishing/github-pages.html#publish-action">Publish Action file</a></li>
           <li>Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.</li>
