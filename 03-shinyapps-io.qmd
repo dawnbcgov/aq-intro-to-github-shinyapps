@@ -1,0 +1,158 @@
+---
+title: "GitHub Pages and Actions"
+---
+
+## Welcome & Key Concepts
+
+**Learning Objective:** 
+
+
+
+#### Shiny and Shiny applications (apps)
+
+Shiny is an R package that allows you to quickly build interactive web apps with R. 
+
+[more here]
+
+::: callout-tip
+## Places to learn more
+
+-  Shiny: [Shiny Basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/)
+
+:::
+
+
+
+#### Shinyapps.io
+
+shinyapps.io is a platform that allows you to quickly publish and share Shiny applications on the web. From their user guide:
+
+> The service runs in the cloud on shared servers that are operated by Posit. Each application is self-contained and operates on either data that is uploaded with the application, or data that the code pulls from third-party data stores, such as databases or web services.
+
+[more here]
+
+::: callout-tip
+## Places to learn more
+
+-  [shinyapps.io User Guide](https://docs.posit.co/shinyapps.io/guide/)
+
+:::
+
+
+## Run a Shiny app locally
+
+::: mark
+#### **Activity**: Prepare your files, test, and run a Shiny app with RStudio
+:::
+
+To start, you will need to have the files for the ShinyApp ready on your local machine. We have an example app ready, so you just need to clone the workshop repository and make sure it is up to date.
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+::: callout-note
+## Resources used
+
+-  []()
+:::
+
+
+
+## Publish using shinyapps.io
+
+::: mark
+#### **Activity**: Publish your Shiny app using shinyapps.io
+:::
+
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+::: callout-note
+## Resources used
+
+-  []()
+:::
+
+#### Advanced configuration options (Demo)
+
+_Note: this activity requires a shinyapps.io pro account so we will just demo._
+
+
+## Update and publish cycle with Shinyapps.io
+
+::: mark
+#### **Activity**: Make a change and re-publish your Shiny app
+:::
+
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+::: callout-note
+## Resources used
+
+-  []()
+:::
+
