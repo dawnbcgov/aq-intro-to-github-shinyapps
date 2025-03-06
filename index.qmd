@@ -48,12 +48,16 @@ title: "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io"
 
 ## Acknowledgements
 
-This instruction material is sourced and adapted from two places:
+This instruction material is sourced and adapted from the following places:
 
 1. The BCGov "Workshop: Introduction To Version Control With Git and GitHub" Copyright © Province of British Columbia and made available under the Creative Commons Attribution 4.0 International licence.
 
-    <https://github.com/bcgov/ds-intro-to-git>
+<https://github.com/bcgov/ds-intro-to-git>
 
 2. The Software Carpentry Foundation (now The Carpenties). All Software Carpentry, Data Carpentry, and Library Carpentry instructional material is Copyright © Software Carpentry and made available under the Creative Commons Attribution licence.
 
-    > Daisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, <https://github.com/swcarpentry/git-novice>, 10.5281/zenodo.57467.
+Daisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, <https://github.com/swcarpentry/git-novice>, 10.5281/zenodo.57467.
+
+3. Joe Cheng "Kmeans example" Copyright © Joe Cheng and RStudio. <https://github.com/rstudio/shiny-examples/tree/main/050-kmeans-example>
+
+In addition, tutorials and documentation are linked and credited throughout.
