@@ -27,7 +27,7 @@ title: "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io"
 
 ### Workshop 2. GitHub Pages and Actions
 
-**Learning Objective:**  Understand github pages and actions and how they work together to publish the site. Practice by publishing a quarto site to our own github account. *Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.*
+**Learning Objective:**  Explore GitHub Pages and Actions and how they work together to publish the site. Practice by publishing a Quarto site to our own GitHub account. *Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.*
 **Instructions:** [GitHub Pages and Actions](02-github-pages-actions.qmd)    
 **External Resources:**  
 
@@ -36,20 +36,28 @@ title: "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io"
 
 ---
 
-### Workshop 3. ShinyApps.io
+### Workshop 3. Deploying to Shinyapps.io
 
-_More soon_
+**Learning Objective:** Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.
+**Instructions:** [Deploying to Shinyapps.io](04-shinyapps-io.qmd)    
+**External Resources:**  
+
+- Shinyapps.io: [User Guide > Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
 
 ---
 
 ## Acknowledgements
 
-This instruction material is sourced and adapted from two places:
+This instruction material is sourced and adapted from the following places:
 
 1. The BCGov "Workshop: Introduction To Version Control With Git and GitHub" Copyright © Province of British Columbia and made available under the Creative Commons Attribution 4.0 International licence.
 
-    <https://github.com/bcgov/ds-intro-to-git>
+<https://github.com/bcgov/ds-intro-to-git>
 
 2. The Software Carpentry Foundation (now The Carpenties). All Software Carpentry, Data Carpentry, and Library Carpentry instructional material is Copyright © Software Carpentry and made available under the Creative Commons Attribution licence.
 
-    > Daisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, <https://github.com/swcarpentry/git-novice>, 10.5281/zenodo.57467.
+Daisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, <https://github.com/swcarpentry/git-novice>, 10.5281/zenodo.57467.
+
+3. Joe Cheng "Kmeans example" Copyright © Joe Cheng and RStudio. <https://github.com/rstudio/shiny-examples/tree/main/050-kmeans-example>
+
+In addition, tutorials and documentation are linked and credited throughout.

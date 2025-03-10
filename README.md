@@ -8,7 +8,7 @@ The goal of this workshop is to highlight key ways to collaborate by giving atte
 
 ### Acknowledgements
 
-This instruction material is sourced and adapted from two places:
+This instruction material is sourced and adapted from the following places:
 
 1. The BCGov "Workshop: Introduction To Version Control With Git and GitHub" Copyright © Province of British Columbia and made available under the Creative Commons Attribution 4.0 International licence.
 
@@ -18,16 +18,11 @@ This instruction material is sourced and adapted from two places:
 
 Daisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, <https://github.com/swcarpentry/git-novice>, 10.5281/zenodo.57467.
 
-<!--### Getting Help or Reporting an Issue
+3. Joe Cheng "Kmeans example" Copyright © Joe Cheng and RStudio. <https://github.com/rstudio/shiny-examples/tree/main/050-kmeans-example>
 
-To report bugs/issues/feature requests, please file an [issue]( ).
+In addition, tutorials and documentation are linked and credited throughout.
 
-### How to Contribute
-
-If you would like to contribute, please see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
-
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
-
+<!--
 ### License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,282 @@
+---
+title: "Deploying to Shinyapps.io"
+---
+
+## Welcome & Key Concepts
+
+**Learning Objective:** Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.
+
+#### Shiny and Shiny applications (apps)
+
+Shiny is an R package that allows you to quickly build interactive web apps with R.
+
+![Shiny app with number of bins slider on the left and histogram of frequency of waiting times on the right". Credit: Shiny.](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/images/01_hello.png){width="80%"}
+
+From the [Shiny docs](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/):
+
+<<<<<<< HEAD
+> Shiny apps are contained in a single script called `app.R`. The script `app.R` lives in a directory (for example, `newdir/`) and the app can be run with `runApp("newdir")`. `app.R` has three components: - a user interface (`ui`) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair
+=======
+> Shiny apps are contained in a single script called `app.R`. The script `app.R` lives in a directory (for example, `newdir/`) and the app can be run with `runApp("newdir")`.  
+>
+> `app.R` has three components:  
+>   -  a user interface (`ui`) object, that controls the layout and appearance of your app  
+>   -  a server function, that contains the   instructions that your computer needs to build your app  
+>   -  a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair  
+>>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+
+Note: Some apps may separate the app scripts into `ui.R` and `server.R` (such as the example app in this workshop)
+
+```         
+library(shiny)
+
+# See above for the definitions of ui and server
+ui <- ...
+
+server <- ...
+
+shinyApp(ui = ui, server = server)
+```
+
+::: callout-tip
+## Places to learn more
+
+-   Shiny: [Shiny Basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/)
+:::
+
+#### Shinyapps.io
+
+shinyapps.io is a platform that allows you to quickly publish and share Shiny applications on the web. From their user guide:
+
+> The service runs in the cloud on shared servers that are operated by Posit. Each application is self-contained and operates on either data that is uploaded with the application, or data that the code pulls from third-party data stores, such as databases or web services.
+
+In the Province of BC we use Shinyapps.io to run many data-heavy applications in the public cloud, and we store the source code on GitHub. Here is one example:
+
+> **shinywqg** is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.
+
+<<<<<<< HEAD
+Shiny App: <https://bcgov-env.shinyapps.io/bc_wqg/> GitHub Repo: <https://github.com/bcgov/shinywqg>
+=======
+Shiny App: [https://bcgov-env.shinyapps.io/bc_wqg/](https://bcgov-env.shinyapps.io/bc_wqg/)  
+GitHub Repo: [https://github.com/bcgov/shinywqg](https://github.com/bcgov/shinywqg)
+
+>>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+
+::: callout-tip
+## Places to learn more
+
+-   Shinyapps.io [User Guide](https://docs.posit.co/shinyapps.io/guide/)
+:::
+
+## Install rsconnect and set up your Shinyapps.io account
+
+::: mark
+#### **Activity**: Set up rsconnect and shinyapps.io account
+:::
+
+It is a good idea to do this before the workshop if possible.
+
+<<<<<<< HEAD
+##### Installing rsconnect
+
+=======
+##### 1. Installing rsconnect
+>>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+Before you start, you need to ensure you have the `rsconnect` R package from CRAN installed. You can run the following command in your console to check:
+
+```         
+library(rsconnect)
+```
+
+If you get no messages or just a warning about `rsconnect` being built under a different R version, you should be able to proceed. Skip ahead to creating shinyapps.io account
+
+However, if you get an Error that says "there is no package called 'rsconnect'" then you will need to do a side quest to install `rsconnect`.
+
+First, try to install it the usual way:
+
+```         
+install.packages(rsconnect)
+```
+
+If you get a note about needing to install Rtools, then you would need to do that before you can install `rsconnect`. Go to [this page](https://cran.r-project.org/bin/windows/Rtools/) and select the version that corresponds with your R version. (Hint: RStudio displays your version of R in your "Console" tab, right below the tabs.) The next paragraph assumes you are using R 4.4.0 or later and will be using `rtools44`.
+
+The easiest way to install is to use the `.exe` file on the page; it's linked as "Rtools44 installer". After you download it, run the `.exe` file and use all defaults, especially the install location set to `C:\rtools44`.
+
+Once that is done, restart RStudio and try to load the rsconnect library again.
+
+<<<<<<< HEAD
+##### Creating shinyapps.io account
+=======
+##### 2. Creating shinyapps.io account
+To access shinyapps.io, go to [https://www.shinyapps.io/](https://www.shinyapps.io/). If you already have an account, you can just click Log in on the top right. Otherwise, click on "Sign Up".
+>>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+
+To access shinyapps.io, go to <https://www.shinyapps.io/>. If you already have an account, you can just click Log in on the top right. Otherwise, click on "Sign Up".
+
+You will have the option to create a sign-up based on your email & password, or you can create an account based using one of the three options listed below for authentication (Google, GitHub, Clever). Using your GitHub account might be the most convenient, especially if you already set it up for government use because then there will be login based on IDIR and two-factor authentication.
+
+If you choose to create your own login based on email & password, we recommend using your gov.bc.ca email and then creating a distinct password (do not use the same password as any other government app, especially your IDIR password).
+
+Note that one single shinyapps.io account can be used to access different "domains" that can host shiny apps online. You will be asked to set up your account when you first log in and your default free domain has the same name as your account name. For example, if you choose the account name `blork` then your shiny apps will have the url of `https://blork.shinyapps.io/app_name/`.
+
+You will use this same shinyapps.io account for other domains as well, such as the professional domain called `bcgov-env`, which is run by ENV and FOR teams. This is the domain where some of our final apps will be deployed. This is why it is good to use a government-based credential to access all of your government shiny work. You might want to create a separate account for personal shiny projects. You can run this workshop in either a work or personal use account.
+
+Now you have everything set up for the workshop! You will configure your `rsconnect` to publish to your shinyapps.io domain in one of the activities below.
+
+::: callout-note
+## Resources used
+
+-   shinyapps.io User Guide: [Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
+:::
+
+## Run a Shiny app locally
+
+::: mark
+#### **Activity**: Prepare your files, test, and run a Shiny app with RStudio
+:::
+
+You will always want to ensure you can run your shiny app locally before you publish to the shinyapps.io platform.
+
+To start, you will need to have the files for the ShinyApp ready on your local machine. We have an example ready on a branch called `shiny-app`, so you just need to clone the workshop repository and make sure it is up to date.
+
+Once you have checked-out the `shiny-app` branch, open the project in RStudio and open the app folder and browse the files. See if you can run the Shiny app locally.
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading1">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Open either the <code>ui.R</code> or <code>server.R</code> file in the <code>app</code> folder in RStudio</li>
+          <li>In the top right of your file pane, click on the "Run App" button.</li>
+          <li>App opens in a RStudio dialog box. You can also open in browser (still run locally)</li>
+          <li>Adjust the widgets to interact with the app</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+::: callout-note
+## Resources used
+
+-   Shiny: [Shiny Basics](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/)
+:::
+
+## Publish using shinyapps.io
+
+::: mark
+#### **Activity**: Publish your Shiny app using shinyapps.io
+:::
+
+Next, we are going to publish the app to our **personal** Shinyapps.io accounts (i.e. the free, basic domain created earlier in this workshop). You then have to configure the `rsconnect` package on your local machine to publish to it by getting a token and secret from shinyaps.io which allows `rsconnect` to access your account. Then we will publish or "deploy" the app from RStudio.
+
+Posit has already provided [detailed instructions](https://docs.posit.co/shinyapps.io/guide/getting_started/#configure-rsconnect), with screenshots, on how to get your shinyapps.io token and configure `rsconnect` to use that token to access shinyapps.io in RStudio. You can use either Method 1 or Method 2 on that page.
+
+You only have to do this once per R/RStudio install on your machine.
+
+After following those steps, see if you can "Publish" your shiny app to the shinyapps.io platform.
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Open either the <code>ui.R</code> or <code>server.R</code> file in the <code>app</code> folde</li>
+          <li>In the upper right corner of your file pane, click on "Publish". It is to the right of the "Run App" button and has a blue icon</li>
+          <li>A dialog box appears. Fill in all the required details. Take note of the following for future reference:</li>
+            <ul>
+              <li>The left side allows you to choose which files to publish (or not publish)</li>
+              <li>Ensure you have the correct Account selected on the right side</li>
+              <li>You need a name that is at least 4 alphanumeric characters (no spaces). The name chosen will be part of the URL to access your app from the internet</li>
+            </ul>
+          <li>Click on "Publish"</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+That's it! You've published a Shiny app to Shinyapps.io!
+
+When you click "Publish", it may take some time for the deployment to complete. A new tab in your Console pane called "Deploy" will appear in the lower left. It's a good idea to read it as it gives you an idea of all the steps it takes. You will see that behind the scenes, it is creating a unique environment on shinyapps.io server for you, installing all the required packages to run your application and then installing all the files and then runs the app!
+
+This order is important: the packages are installed only on deployment (once only) before any files are run. When the app is running, it should not be able to modify its own install environment. Therefore, you cannot have `install.packages()` commands within your shiny app because everything must be installed before the first run. Instead, load them with `library()`. The deployment process looks for `library()` calls and installs these packages on deployment. Most apps will be able to run on shinyapps.io without much modification. 
+
+For more details, see [this section](https://docs.posit.co/shinyapps.io/guide/getting_started/#using-your-r-packages-in-the-cloud) in the Getting Started guide.
+
+::: callout-note
+## Resources used
+
+-   Shinyapps.io [Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
+:::
+
+#### Advanced configuration options (Demo)
+
+*Note: this activity requires a shinyapps.io pro account so we will just demo.*
+
+For our purposes we will want to restrict the Shiny app to only Meteorologists, so we will make use of a feature from the Shinyapps.io pro version: Authentication, that we will demonstrate now.
+
+You can navigate and see the same features with your Free account, but you will see that most options are locked. However, some features such as Metrics and Logs are available to Free users as well.
+
+## Update and publish cycle with Shinyapps.io
+
+::: mark
+#### **Activity**: Make a change and re-publish your Shiny app
+:::
+
+What happens if you need to make a change? We have seen this with the Quarto website for this workshop series and our workshop last week with a Quarto site. By default, once we make a change it isn't automatically published. Let's cover manually re-publishing.
+
+If you are still running the app locally, stop running it. Make a change (it can be something small such as changing the title of the app on line 7 in `ui.R`) and then check to see that it runs locally. Look at the Shinyapps.io version: it hasn't updated there. We need to re-publish the app to see those changes.
+
+```{=html}
+<div class="accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="heading3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+        <strong>Detailed Steps</strong>
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
+      <div class="accordion-body">
+        <ol>
+          <li>Make sure you are not running the app locally</li>
+          <li>Open the app on shinyapps.io (e.g. `https://[your-account].shinyapps.io/[app-name]/`)
+          <li>In RStudio, for a simple edit, go to Line 7 of the `server.R` file</li>
+          <li>Edit the "Iris k-means clustering" string to something else</li>
+          <li>Save the file.</li>
+          <li>Run the app locally from RStudio. Confirm the change. Close app.</li>
+          <li>Refresh the shinyapps.io page in your web browser. Confirm that no change made</li>
+          <li>Re-publish your app to shinyapps.io. Click on the "Republish" button. Now you should see the change</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+_Note: After the first Publish, the "Publish" button in RStudio becomes "Republish" and will automatically use the same settings if you click it, without opening a dialog box. If you want to change deployment/publication settings (such as account or app name), then you have to use the down arrow next to the button to expand a menu for more options._
+
+**Clean up:** The above edits are changes to a version-controlled file in the `shiny_app` branch. However, if you commit and push to the branch, it will change the same app file for everyone. So, we do not want to keep these changes. You can do nothing and your local version will just be out of sync with the GitHub, not the end of the world. If you want to reset your local to the same state as the GitHub repo, you need to *discard* your changes to the `ui.R` file:
+
+- In GitHub desktop, you will see the file listed under "Changes". Right click `ui.R` and choose "Discard changes"
+- In RStudio, you can see the file listed in the Git pane (upper right). Right click `ui.R` and choose "Revert". (Note: Do not choose "ignore", this will add it to Gitignore, but keep the changes).
+
+::: callout-note
+## Resources used
+
+-   Shinyapps.io [Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
+:::
