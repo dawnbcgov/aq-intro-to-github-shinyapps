@@ -14,16 +14,12 @@ Shiny is an R package that allows you to quickly build interactive web apps with
 
 From the [Shiny docs](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/):
 
-<<<<<<< HEAD
-> Shiny apps are contained in a single script called `app.R`. The script `app.R` lives in a directory (for example, `newdir/`) and the app can be run with `runApp("newdir")`. `app.R` has three components: - a user interface (`ui`) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair
-=======
 > Shiny apps are contained in a single script called `app.R`. The script `app.R` lives in a directory (for example, `newdir/`) and the app can be run with `runApp("newdir")`.  
 >
 > `app.R` has three components:  
 >   -  a user interface (`ui`) object, that controls the layout and appearance of your app  
 >   -  a server function, that contains the   instructions that your computer needs to build your app  
->   -  a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair  
->>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+>   -  a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair
 
 Note: Some apps may separate the app scripts into `ui.R` and `server.R` (such as the example app in this workshop)
 
@@ -54,13 +50,8 @@ In the Province of BC we use Shinyapps.io to run many data-heavy applications in
 
 > **shinywqg** is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.
 
-<<<<<<< HEAD
-Shiny App: <https://bcgov-env.shinyapps.io/bc_wqg/> GitHub Repo: <https://github.com/bcgov/shinywqg>
-=======
 Shiny App: [https://bcgov-env.shinyapps.io/bc_wqg/](https://bcgov-env.shinyapps.io/bc_wqg/)  
 GitHub Repo: [https://github.com/bcgov/shinywqg](https://github.com/bcgov/shinywqg)
-
->>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
 
 ::: callout-tip
 ## Places to learn more
@@ -76,12 +67,8 @@ GitHub Repo: [https://github.com/bcgov/shinywqg](https://github.com/bcgov/shinyw
 
 It is a good idea to do this before the workshop if possible.
 
-<<<<<<< HEAD
-##### Installing rsconnect
-
-=======
 ##### 1. Installing rsconnect
->>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
+
 Before you start, you need to ensure you have the `rsconnect` R package from CRAN installed. You can run the following command in your console to check:
 
 ```         
@@ -104,12 +91,8 @@ The easiest way to install is to use the `.exe` file on the page; it's linked as
 
 Once that is done, restart RStudio and try to load the rsconnect library again.
 
-<<<<<<< HEAD
-##### Creating shinyapps.io account
-=======
 ##### 2. Creating shinyapps.io account
 To access shinyapps.io, go to [https://www.shinyapps.io/](https://www.shinyapps.io/). If you already have an account, you can just click Log in on the top right. Otherwise, click on "Sign Up".
->>>>>>> 157dd9794cb7decfa7193a1e961f9be8bf5bbb11
 
 To access shinyapps.io, go to <https://www.shinyapps.io/>. If you already have an account, you can just click Log in on the top right. Otherwise, click on "Sign Up".
 
