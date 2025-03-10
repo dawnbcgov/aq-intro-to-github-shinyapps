@@ -293,12 +293,13 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>From the <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny docs</a>:</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &gt; Shiny apps are contained in a single script called <code>app.R</code>. The script <code>app.R</code> lives in a directory (for example, <code>newdir/</code>) and the app can be run with <code>runApp("newdir")</code>. <code>app.R</code> has three components: - a user interface (<code>ui</code>) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair ======= &gt; Shiny apps are contained in a single script called <code>app.R</code>. The script <code>app.R</code> lives in a directory (for example, <code>newdir/</code>) and the app can be run with <code>runApp("newdir")</code>.<br>
-&gt; &gt; <code>app.R</code> has three components:<br>
-&gt; - a user interface (<code>ui</code>) object, that controls the layout and appearance of your app<br>
-&gt; - a server function, that contains the instructions that your computer needs to build your app<br>
-&gt; - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair<br>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
+<blockquote class="blockquote">
+<p>Shiny apps are contained in a single script called <code>app.R</code>. The script <code>app.R</code> lives in a directory (for example, <code>newdir/</code>) and the app can be run with <code>runApp("newdir")</code>.</p>
+<p><code>app.R</code> has three components:<br>
+- a user interface (<code>ui</code>) object, that controls the layout and appearance of your app<br>
+- a server function, that contains the instructions that your computer needs to build your app<br>
+- a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair</p>
+</blockquote>
 <p>Note: Some apps may separate the app scripts into <code>ui.R</code> and <code>server.R</code> (such as the example app in this workshop)</p>
 <pre><code>library(shiny)
 
@@ -334,23 +335,8 @@ Places to learn more
 <blockquote class="blockquote">
 <p><strong>shinywqg</strong> is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.</p>
 </blockquote>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Shiny App: <a href="https://bcgov-env.shinyapps.io/bc_wqg/" class="uri">https://bcgov-env.shinyapps.io/bc_wqg/</a> GitHub Repo: <a href="https://github.com/bcgov/shinywqg" class="uri">https://github.com/bcgov/shinywqg</a> ======= Shiny App: <a href="https://bcgov-env.shinyapps.io/bc_wqg/">https://bcgov-env.shinyapps.io/bc_wqg/</a><br>
+<p>Shiny App: <a href="https://bcgov-env.shinyapps.io/bc_wqg/">https://bcgov-env.shinyapps.io/bc_wqg/</a><br>
 GitHub Repo: <a href="https://github.com/bcgov/shinywqg">https://github.com/bcgov/shinywqg</a></p>
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<p>157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -374,8 +360,9 @@ Places to learn more
 <h4 class="anchored" data-anchor-id="activity-set-up-rsconnect-and-shinyapps.io-account"><strong>Activity</strong>: Set up rsconnect and shinyapps.io account</h4>
 </section>
 <p>It is a good idea to do this before the workshop if possible.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Installing rsconnect</p>
-<p>======= ##### 1. Installing rsconnect &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11 Before you start, you need to ensure you have the <code>rsconnect</code> R package from CRAN installed. You can run the following command in your console to check:</p>
+<section id="installing-rsconnect" class="level5">
+<h5 class="anchored" data-anchor-id="installing-rsconnect">1. Installing rsconnect</h5>
+<p>Before you start, you need to ensure you have the <code>rsconnect</code> R package from CRAN installed. You can run the following command in your console to check:</p>
 <pre><code>library(rsconnect)</code></pre>
 <p>If you get no messages or just a warning about <code>rsconnect</code> being built under a different R version, you should be able to proceed. Skip ahead to creating shinyapps.io account</p>
 <p>However, if you get an Error that says “there is no package called ‘rsconnect’” then you will need to do a side quest to install <code>rsconnect</code>.</p>
@@ -384,7 +371,10 @@ Places to learn more
 <p>If you get a note about needing to install Rtools, then you would need to do that before you can install <code>rsconnect</code>. Go to <a href="https://cran.r-project.org/bin/windows/Rtools/">this page</a> and select the version that corresponds with your R version. (Hint: RStudio displays your version of R in your “Console” tab, right below the tabs.) The next paragraph assumes you are using R 4.4.0 or later and will be using <code>rtools44</code>.</p>
 <p>The easiest way to install is to use the <code>.exe</code> file on the page; it’s linked as “Rtools44 installer”. After you download it, run the <code>.exe</code> file and use all defaults, especially the install location set to <code>C:\rtools44</code>.</p>
 <p>Once that is done, restart RStudio and try to load the rsconnect library again.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Creating shinyapps.io account ======= ##### 2. Creating shinyapps.io account To access shinyapps.io, go to <a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”. &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
+</section>
+<section id="creating-shinyapps.io-account" class="level5">
+<h5 class="anchored" data-anchor-id="creating-shinyapps.io-account">2. Creating shinyapps.io account</h5>
+<p>To access shinyapps.io, go to <a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”.</p>
 <p>To access shinyapps.io, go to <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a>. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”.</p>
 <p>You will have the option to create a sign-up based on your email &amp; password, or you can create an account based using one of the three options listed below for authentication (Google, GitHub, Clever). Using your GitHub account might be the most convenient, especially if you already set it up for government use because then there will be login based on IDIR and two-factor authentication.</p>
 <p>If you choose to create your own login based on email &amp; password, we recommend using your gov.bc.ca email and then creating a distinct password (do not use the same password as any other government app, especially your IDIR password).</p>
@@ -406,6 +396,7 @@ Resources used
 </ul>
 </div>
 </div>
+</section>
 </section>
 <section id="run-a-shiny-app-locally" class="level2">
 <h2 class="anchored" data-anchor-id="run-a-shiny-app-locally">Run a Shiny app locally</h2>
