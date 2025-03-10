@@ -4,7 +4,7 @@ title: "GitHub Pages and Actions"
 
 ## Welcome & Key Concepts
 
-**Learning Objective:** Understand GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.
+**Learning Objective:** Explore GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.
 
 *Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.* 
 
