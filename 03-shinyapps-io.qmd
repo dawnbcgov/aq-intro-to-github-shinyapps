@@ -106,6 +106,14 @@ You will use this same shinyapps.io account for other domains as well, such as t
 
 Now you have everything set up for the workshop! You will configure your `rsconnect` to publish to your shinyapps.io domain in one of the activities below.
 
+
+::: callout-note
+## Resources used
+
+-  shinyapps.io User Guide: [Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
+
+:::
+
 ## Run a Shiny app locally
 
 ::: mark
