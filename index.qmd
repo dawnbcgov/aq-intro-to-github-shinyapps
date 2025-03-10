@@ -39,7 +39,7 @@ title: "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io"
 ### Workshop 3. Deploying to Shinyapps.io
 
 **Learning Objective:** Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.
-**Instructions:** [Deploying to Shinyapps.io](04-shinyapps-io.qmd)    
+**Instructions:** [Deploying to Shinyapps.io](03-shinyapps-io.qmd)    
 **External Resources:**  
 
 - Shinyapps.io: [User Guide > Getting Started](https://docs.posit.co/shinyapps.io/guide/getting_started/)
