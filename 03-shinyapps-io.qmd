@@ -20,6 +20,7 @@ From the [Shiny docs](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/)
 > - a user interface (`ui`) object, that controls the layout and appearance of your app
 > - a server function, that contains the instructions that your computer needs to build your app
 > - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair
+> Note: Some older or more complicated shiny apps may separate the app scripts into `ui.R` and `server.R` but for this workshop, we will use the single script approach (`app.R`)
 
 ```
 library(shiny)
@@ -61,12 +62,57 @@ GitHub Repo: [https://github.com/bcgov/shinywqg](https://github.com/bcgov/shinyw
 
 :::
 
+## Install rsconnect and set up your Shinyapps.io account 
+
+::: mark
+#### **Activity**: Set up rsconnect and shinyapps.io account
+:::
+
+It is a good idea to do this before the workshop if possible. 
+
+##### Installing rsconnect
+Before you start, you need to ensure you have the `rsconnect` R package from CRAN installed. You can run the following command in your console to check:
+
+```
+library(rsconnect)
+```
+
+If you get no messages or just a warning about `rsconnect` being built under a different R version, you should be able to proceed. Skip ahead to creating shinyapps.io account
+
+However, if you get an Error that says "there is no package called 'rsconnect'" then you will need to do a side quest to install `rsconnect`.
+
+First, try to install it the usual way:
+
+```
+install.packages(rsconnect)
+```
+
+If you get a note about needing to install Rtools, then you would need to do that before you can install `rsconnect`. Go to [this page](https://cran.r-project.org/bin/windows/Rtools/) and select the version that corresponds with your R version. (Hint: RStudio displays your version of R in your "Console" tab, right below the tabs.) The next paragraph assumes you are using R 4.4.0 or later and will be using `rtools44`. 
+
+The easiest way to install is to use the `.exe` file on the page; it's linked as "Rtools44 installer". After you download it, run the `.exe` file and use all defaults, especially the install location set to `C:\rtools44`.
+
+Once that is done, restart RStudio and try to load the rsconnect library again.
+
+##### Creating shinyapps.io account
+To access shinyapps.io, go to [https://www.shinyapps.io/](https://www.shinyapps.io/). If you already have an account, you can just click Log in on the top right. Otherwise, click on "Sign Up".
+
+You will have the option to create a sign-up based on your email & password, or you can create an account based using one of the three options listed below for authentication (Google, GitHub, Clever). Using your GitHub account might be the most convenient, especially if you already set it up for government use because then there will be login based on IDIR and two-factor authentication. 
+
+If you choose to create your own login based on email & password, we recommend using your gov.bc.ca email and then creating a distinct password (do not use the same password as any other government app, especially your IDIR password). 
+
+Note that one single shinyapps.io account can be used to access different "domains" that can host shiny apps online. You will be asked to set up your account when you first log in and your default free domain has the same name as your account name. For example, if you choose the account name `blork` then your shiny apps will have the url of `https://blork.shinyapps.io/app_name/`. 
+
+You will use this same shinyapps.io account for other domains as well, such as the professional domain called `bcgov-env`, which is run by ENV and FOR teams. This is the domain where some of our final apps will be deployed. This is why it is good to use a government-based credential to access all of your government shiny work. You might want to create a separate account for personal shiny projects. You can run this workshop in either a work or personal use account.
+
+Now you have everything set up for the workshop! You will configure your `rsconnect` to publish to your shinyapps.io domain in one of the activities below.
 
 ## Run a Shiny app locally
 
 ::: mark
 #### **Activity**: Prepare your files, test, and run a Shiny app with RStudio
 :::
+
+You will always want to ensure you can run your shiny app locally before you publish to the shinyapps.io platform.
 
 To start, you will need to have the files for the ShinyApp ready on your local machine. We have an example ready on a branch called `shiny-app`, so you just need to clone the workshop repository and make sure it is up to date.
 
