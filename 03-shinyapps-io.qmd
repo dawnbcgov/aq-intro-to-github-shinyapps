@@ -232,7 +232,6 @@ What happens if you need to make a change though? We have seen this with the Qua
 
 If you are still running the app locally, stop running it. Make a change (it can be something small such as changing the title of the app on line 7 in `ui.R`) and then check to see that it runs locally. Look at the Shinyapps.io version: it hasn't updated there. We need to re-publish the app to see those changes.
 
-Note: After the first Publish, the "Publish" button in RStudio becomes "Republish" and will automatically use the same settings if you click it, without opening a dialog box. If you want to change deployment/publication settings (such as account or app name), then you have to use the down arrow next to the button to expand a menu for more options.
 
 ```{=html}
 <div class="accordion">
@@ -245,10 +244,14 @@ Note: After the first Publish, the "Publish" button in RStudio becomes "Republis
     <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Make sure you are not running the app locally</li>
+          <li>Open the app on shinyapps.io (e.g. `https://[your-account].shinyapps.io/[app-name]/`)
+          <li>In RStudio, for a simple edit, go to Line 7 of the `server.R` file</li>
+          <li>Edit the "Iris k-means clustering" string to something else</li>
+          <li>Save the file.</li>
+          <li>Run the app locally from RStudio. Confirm the change. Close app.</li>
+          <li>Refresh the shinyapps.io page in your web browser. Confirm that no change made</li>
+          <li>Re-publish your app to shinyapps.io. Click on the "Republish" button. Now you should see the change</li>
         </ol>
       </div>
     </div>
@@ -256,6 +259,7 @@ Note: After the first Publish, the "Publish" button in RStudio becomes "Republis
 </div>
 ```
 
+Note: After the first Publish, the "Publish" button in RStudio becomes "Republish" and will automatically use the same settings if you click it, without opening a dialog box. If you want to change deployment/publication settings (such as account or app name), then you have to use the down arrow next to the button to expand a menu for more options.
 
 ::: callout-note
 ## Resources used
