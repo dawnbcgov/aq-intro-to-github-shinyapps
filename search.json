@@ -78,219 +78,53 @@
     "text": "Configure Git\n\nGit Set Up\nWhen we use Git on a new computer for the first time, we need to configure a few things. Below are a few examples of configurations we will set as we get started with Git:\n\nour name and email address\nand that we want to use these settings globally (i.e. for every project).\n\nOn a command line, Git commands are written as git verb options, where verb is what we actually want to do and options is additional optional information which may be needed for the verb.\n\n\nSet user.name & user.email\nIn this workshop, we’ll be working with GitHub, and it’s important to ensure that the name and email address you configure on your local computer matches the one associated with your GitHub account. For most participants, this will be your government email address.\nBelow is an example configuration that we will use to connect your local git instance with GitHub.\nFor Windows users, these will be typed into a Git Bash terminal (search for Git Bash from the search bar to open a new window). For Mac users, these will be typed into the Terminal.\n$ git config --global user.name \"your GitHub account name\" \n$ git config --global user.email \"your_email@gmail.com\"\nIf you are concerned about privacy, please review GitHub’s instructions for keeping your email address private.\n\n\nCheck Global Settings\nThe two commands we just ran only need to be run once. The flag --global tells Git to use the settings for every project on this computer.\nYou can check your settings at any time with:\n$ git config --list\nYou can change your configuration as many times as you want: use the same commands to update your name or email address.\n\n\nAccess Git Help and Manual\nIf you forget a git command, you can access a list of available commands by appending a -h. You can access the Git manual for a command by appending --help :\n$ git config -h\n$ git config --help\nWhile viewing the manual, you may see : near the cursor at the bottom of the screen. This is a prompt waiting for further commands such as Q, which you can use to exit the manual."
   },
   {
-    "objectID": "practice/sakshi.html",
-    "href": "practice/sakshi.html",
-    "title": "Sakshi",
+    "objectID": "02-github-pages-actions.html",
+    "href": "02-github-pages-actions.html",
+    "title": "GitHub Pages and Actions",
     "section": "",
-    "text": "#Its an adventure!",
+    "text": "Learning Objective: Explore GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.\nNote: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.\n\n\nWe likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.\nYou may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:\n\na domain name (the human-readable address)\na server or host (the place)\napplication or files (the content of the web site itself)\n\n\n\n\nHow a web server works. Credit: Hostinger.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nMozilla MDN Web Docs: Your first website\nGlitch, allows you to remix (basically fork) projects to build websites from the browser\nNeocities, also has all the tools to build a website in the browser\n\n\n\n\n\n\nWe already know Quarto is a system for scientific and technical publishing. It allows you to do a lot.\nOne thing it does is make it easy to create websites for document-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.\n\n\n\nQuarto website rendered in RStudio. Credit: Posit.\n\n\n\n\n\nLike Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, but only for the contents of a GitHub repository.\nIt helps with all the three parts you need:\n\na domain name ✔️ by default, it looks like: &lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;\na server or host ✔️ for free!\napplication or files ✔️ the contents of the repository!\n\nPlus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues\n\n\n\nScreenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.\n\n\nImagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.\nNow, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!\nSo, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!\n\n\n\nOne more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.\nActions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs\nThey are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.\n\n\n\nDrawing of a GitHub Action workflow. Credit: Deborah Digges.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nGitHub: Examples of deploying with GitHub Actions\nDeborah Digges: Building a GitHub Action",
     "crumbs": [
-      "Practice",
-      "Sakshi"
+      "Workshop 2. GitHub Pages and Actions"
     ]
   },
   {
-    "objectID": "practice/pr_review_practice_file.html",
-    "href": "practice/pr_review_practice_file.html",
-    "title": "file_to_review",
+    "objectID": "02-github-pages-actions.html#welcome-key-concepts",
+    "href": "02-github-pages-actions.html#welcome-key-concepts",
+    "title": "GitHub Pages and Actions",
     "section": "",
-    "text": "Practice file to review\nThis is a word list from EFF for making random passphrases.\n\nacid\nacorn\nacre\nafar\naffix\naged\nagent\nagile\nagony\naide\naids\naim\najar\nalarm\nalias\nalibi\nalien\nalike\naloe\naloft\naloha\nalone\namend\namino\nample\namuse\nangel\nanger\nangle\nankle\napple\napril\napron\naqua\narea\narena\nargue\narise\narmed\narmor\narmy\naroma\narray\narson\nart\nashen\nashes\natlas\natom\nattic\naudio\navert\navoid\nawake\naward\nawoke\naxis\nbacon\nbadge\nbagel\nbaggy\nbaked\nbaker\nbalmy\nbanjo\nbarge\nbarn\nbash\nbasil\nbask\nbatch\nbath\nbaton\nbats\nblade\nblank\nblast\nblaze\nbleak\nblend\nbless\nblimp\nblink\nbloat\nblob\nblog\nblot\nblunt\nblurt\nblush\nboast\nboat\nbody\nboil\nbok\nbolt\nboned\nboney\nbonus\nbony\nbook\nbooth\nboots\nboss\nbotch\nboth\nboxer\nbreed\nbribe\nbrick\nbride\nbrim\nbring\nbrink\nbrisk\nbroad\nbroil\nbroke\nbrook\nbroom\nbrush\nbuck\nbud\nbuggy\nbulge\nbulk\nbully\nbunch\nbunny\nbunt\nbush\nbust\nbusy\nbuzz\ncable\ncache\ncadet\ncage\ncake\ncalm\ncameo\ncanal\ncandy\ncane\ncanon\ncape\ncard\ncargo\ncarol\ncarry\ncarve\ncase\ncash\ncause\ncedar\nchain\nchair\nchant\nchaos\ncharm\nchase\ncheek\ncheer\nchef\nchest\nchew\nchief\nchill\nchip\nchomp\nchop\nchow\nchuck\nchump\nchunk\nchurn\nchute\ncider\ncinch\ncity\ncivic\ncivil\nclad\nclaim\nclamp\nclap\nclash\nclasp\nclass\nclaw\nclay\nclean\nclear\ncleat\ncleft\nclerk\nclick\ncling\nclink\nclip\ncloak\nclock\nclone\ncloth\ncloud\nclump\ncoach\ncoast\ncoat\ncod\ncoil\ncoke\ncola\ncold\ncolt\ncoma\ncome\ncomic\ncomma\ncone\ncope\ncopy\ncoral\ncork\ncost\ncot\ncouch\ncough\ncover\ncozy\ncraft\ncramp\ncrane\ncrank\ncrate\ncrawl\ncrazy\ncreme\ncrepe\ncrept\ncried\ncrisp\ncrook\ncrop\ncross\ncrowd\ncrown\ncrumb\ncrush\ncrust\ncub\ncult\ncupid\ncure\ncurl\ncurry\ncurse\ncurve\ncurvy\ncushy\ncut\ncycle\ndab\ndad\ndaily\ndairy\ndaisy\ndance\ndandy\ndarn\ndart\ndash\ndata\ndate\ndawn\ndeaf\ndeal\ndean\ndebit\ndebt\ndebug\ndecaf\ndecal\ndecay\ndeck\ndecor\ndecoy\ndeed\ndelay\ndenim\ndense\ndent\ndepth\nderby\ndesk\ndial\ndiary\ndice\ndig\ndill\ndime\ndimly\ndiner\ndingy\ndisco\ndish\ndisk\nditch\nditzy\ndizzy\ndock\ndodge\ndoing\ndoll\ndome\ndonor\ndonut\ndose\ndot\ndove\ndown\ndowry\ndoze\ndrab\ndrama\ndrank\ndraw\ndress\ndried\ndrift\ndrill\ndrive\ndrone\ndroop\ndrown\ndrum\ndry\nduck\nduct\ndude\ndug\nduke\nduo\ndusk\ndust\nduty\ndwarf\ndwell\neagle\nearly\nearth\neasel\neast\neaten\neats\nebay\nebony\nebook\necho\nedge\neel\neject\nelbow\nelder\nelf\nelk\nelm\nelope\nelude\nelves\nemail\nemit\nempty\nemu\nenter\nentry\nenvoy\nequal\nerase\nerror\nerupt\nessay\netch\nevade\neven\nevict\nevil\nevoke\nexact\nexit\nfable\nfaced\nfact\nfade\nfall\nfalse\nfancy\nfang\nfax\nfeast\nfeed\nfemur\nfend\nferry\nfetal\nfetch\nfever\nfiber\nfifth\nfifty\nfilm\nfilth\nfinal\nfinch\nfit\nfive\nflag\nflaky\nflame\nflap\nflask\nfled\nflick\nfling\nflint\nflip\nflirt\nfloat\nflock\nflop\nfloss\nflyer\nfoam\nfoe\nfog\nfoil\nfolic\nfolk\nfood\nfool\nfound\nfox\nfoyer\nfrail\nframe\nfray\nfresh\nfried\nfrill\nfrisk\nfrom\nfront\nfrost\nfroth\nfrown\nfroze\nfruit\ngag\ngains\ngala\ngame\ngap\ngas\ngave\ngear\ngeek\ngem\ngenre\ngift\ngig\ngills\ngiven\ngiver\nglad\nglass\nglide\ngloss\nglove\nglow\nglue\ngoal\ngoing\ngolf\ngong\ngood\ngooey\ngoofy\ngore\ngown\ngrab\ngrain\ngrant\ngrape\ngraph\ngrasp\ngrass\ngrave\ngravy\ngray\ngreen\ngreet\ngrew\ngrid\ngrief\ngrill\ngrip\ngrit\ngroom\ngrowl\ngrub\ngrunt\nguide\ngulf\ngulp\ngummy\nguru\ngush\ngut\nguy\nhabit\nhalf\nhalo\nhalt\nhappy\nharm\nhash\nhasty\nhatch\nhate\nhaven\nhazel\nhazy\nheap\nheat\nheave\nhedge\nhefty\nhelp\nherbs\nhers\nhub\nhug\nhula\nhull\nhuman\nhumid\nhump\nhung\nhunk\nhunt\nhurry\nhurt\nhush\nhut\nice\nicing\nicon\nicy\nigloo\nimage\nion\niron\nislam\nissue\nitem\nivory\nivy\njab\njam\njaws\njazz\njeep\njelly\njet\njiffy\njob\njog\njolly\njolt\njot\njoy\njudge\njuice\njuicy\njuly\njumbo\njump\njunky\njuror\nkeep\nkeg\nkept\nkick\nkilt\nking\nkite\nkitty\nkiwi\nknee\nknelt\nkoala\nkung\nladle\nlady\nlair\nlake\nlance\nlapel\nlarge\nlash\nlasso\nlast\nlatch\nlate\nlazy\nleft\nlegal\nlemon\nlend\nlens\nlent\nlevel\nlever\nlid\nlife\nlift\nlilac\nlily\nlimb\nlimes\nline\nlint\nlion\nlip\nlived\nliver\nlunar\nlunch\nlung\nlurch\nlurk\nlying\nlyric\nmace\nmaker\nmalt\nmama\nmango\nmanor\nmany\nmap\nmarch\nmardi\nmash\nmatch\nmate\nmath\nmocha\nmold\nmom\nmoody\nmop\nmorse\nmost\nmotor\nmotto\nmount\nmouse\nmousy\nmouth\nmove\nmovie\nmower\nmud\nmug\nmulch\nmule\nmull\nmumbo\nmummy\nmural\nmuse\nmusic\nmusky\nmute\nnacho\nnag\nnail\nname\nnanny\nnap\nnavy\nnear\nneat\nneon\nnerd\nnest\nnet\nnext\nniece\nninth\nnutty\noak\noasis\noat\nocean\noil\nold\nolive\nomen\nonion\nonly\nooze\nopal\nopen\nopera\nopt\notter\nouch\nounce\nouter\noval\noven\nowl\nozone\npace\npagan\npager\npalm\npanda\npanic\npants\npanty\npaper\npark\nparty\npatch\npath\npatio\npayer\npecan\npenny\npep\nperch\nperky\nperm\npest\npetal\npetri\npetty\nphoto\nplank\nplant\nplaza\nplead\nplow\npluck\nplug\nplus\npoach\npod\npoem\npoet\npogo\npoint\npoise\npoker\npolar\npolio\npolka\npolo\npond\npony\npoppy\npork\nposer\npouch\npound\npout\npower\nprank\npress\nprint\nprior\nprism\nprize\nprobe\nprong\nproof\nprops\nprude\nprune\npry\npug\npull\npulp\npulse\npuma\npunch\npunk\npupil\npuppy\npurr\npurse\npush\nputt\nquack\nquake\nquery\nquiet\nquill\nquilt\nquit\nquota\nquote\nrabid\nrace\nrack\nradar\nradio\nraft\nrage\nraid\nrail\nrake\nrally\nramp\nranch\nrange\nrank\nrant\nrash\nreach\nreact\nream\nrebel\nrecap\nrelax\nrelay\nrelic\nremix\nrepay\nrepel\nreply\nrerun\nreset\nrhyme\nrice\nrich\nride\nrigid\nrigor\nrinse\nriot\nripen\nrise\nrisk\nritzy\nrival\nriver\nroast\nrobe\nrobin\nrock\nrogue\nroman\nromp\nrope\nrover\nroyal\nruby\nrug\nruin\nrule\nrunny\nrush\nrust\nrut\nsadly\nsage\nsaid\nsaint\nsalad\nsalon\nsalt\nsame\nsandy\nsanta\nsatin\nsauna\nsaved\nsavor\nsax\nsay\nscale\nscam\nscan\nscare\nscarf\nscary\nscoff\nscold\nscoop\nscoot\nscope\nscore\nscorn\nscout\nscowl\nscrap\nscrub\nscuba\nscuff\nsect\nsedan\nself\nsend\nsepia\nserve\nset\nseven\nshack\nshade\nshady\nshaft\nshaky\nsham\nshape\nshare\nsharp\nshed\nsheep\nsheet\nshelf\nshell\nshine\nshiny\nship\nshirt\nshock\nshop\nshore\nshout\nshove\nshown\nshowy\nshred\nshrug\nshun\nshush\nshut\nshy\nsift\nsilk\nsilly\nsilo\nsip\nsiren\nsixth\nsize\nskate\nskew\nskid\nskier\nskies\nskip\nskirt\nskit\nsky\nslab\nslack\nslain\nslam\nslang\nslash\nslate\nslaw\nsled\nsleek\nsleep\nsleet\nslept\nslice\nslick\nslimy\nsling\nslip\nslit\nslob\nslot\nslug\nslum\nslurp\nslush\nsmall\nsmash\nsmell\nsmile\nsmirk\nsmog\nsnack\nsnare\nsnarl\nsneak\nsneer\nsniff\nsnore\nsnout\nsnowy\nsnub\nsnuff\nspeak\nspeed\nspend\nspent\nspew\nspied\nspill\nspiny\nspoil\nspoke\nspoof\nspool\nspoon\nsport\nspot\nspout\nspray\nspree\nspur\nsquad\nsquat\nsquid\nstack\nstaff\nstage\nstain\nstall\nstamp\nstand\nstank\nstark\nstart\nstash\nstate\nstays\nsteam\nsteep\nstem\nstep\nstew\nstick\nsting\nstir\nstock\nstole\nstomp\nstony\nstood\nstool\nstoop\nstop\nstorm\nstout\nstove\nstraw\nstray\nstrut\nstuck\nstud\nstuff\nstump\nstung\nstunt\nsuds\nsugar\nsulk\nsurf\nsushi\nswab\nswan\nswarm\nswear\nsweat\nsweep\nswell\nswept\nswim\nswing\nswipe\nswirl\nswoop\nswore\nsyrup\ntacky\ntaco\ntag\ntake\ntall\ntalon\ntamer\ntank\ntaper\ntaps\ntarot\ntart\ntask\ntaste\ntasty\ntaunt\nthank\nthaw\ntheft\ntheme\nthigh\nthing\nthink\nthong\nthorn\nthose\nthrob\nthud\nthumb\nthump\nthus\ntiara\ntidal\ntidy\ntiger\ntile\ntilt\ntint\ntrace\ntrack\ntrade\ntrain\ntrait\ntrap\ntrash\ntray\ntreat\ntree\ntrek\ntrend\ntrial\ntribe\ntrick\ntrio\ntrout\ntruce\ntruck\ntrump\ntrunk\ntry\ntug\ntulip\ntummy\nturf\ntusk\ntutor\ntutu\ntux\ntweak\ntweet\ntwice\ntwine\ntwins\ntwirl\ntwist\nuncle\nuncut\nundo\nunify\nunion\nunit\nuntie\nupon\nupper\nurban\nused\nuser\nusher\nutter\nvalue\nvapor\nvegan\nvenue\nverse\nvest\nveto\nvice\nvideo\nview\nviral\nvirus\nvisa\nvisor\nvixen\nvocal\nvoice\nvoid\nvolt\nvoter\nvowel\nwad\nwafer\nwager\nwagon\nwake\nwalk\nwand\nwasp\nwatch\nwater\nwavy\nwheat\nwhiff\nwhole\nwhoop\nwick\nwiden\nwidow\nwidth\nwife\nwifi\nwilt\nwimp\nwind\nwing\nwink\nwipe\nwired\nwiry\nwise\nwish\nwispy\nwok\nwolf\nwomb\nwool\nwoozy\nword\nwork\nworry\nwound\nwoven\nwrath\nwreck\nwrist\nxerox\nyahoo\nyam\nyard\nyear\nyeast\nyelp\nyodel\nyoga\nyoyo\nyummy\nzebra\nzero\nzesty\nzippy\nzone\nzoom",
+    "text": "Learning Objective: Explore GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.\nNote: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.\n\n\nWe likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.\nYou may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:\n\na domain name (the human-readable address)\na server or host (the place)\napplication or files (the content of the web site itself)\n\n\n\n\nHow a web server works. Credit: Hostinger.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nMozilla MDN Web Docs: Your first website\nGlitch, allows you to remix (basically fork) projects to build websites from the browser\nNeocities, also has all the tools to build a website in the browser\n\n\n\n\n\n\nWe already know Quarto is a system for scientific and technical publishing. It allows you to do a lot.\nOne thing it does is make it easy to create websites for document-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.\n\n\n\nQuarto website rendered in RStudio. Credit: Posit.\n\n\n\n\n\nLike Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, but only for the contents of a GitHub repository.\nIt helps with all the three parts you need:\n\na domain name ✔️ by default, it looks like: &lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;\na server or host ✔️ for free!\napplication or files ✔️ the contents of the repository!\n\nPlus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues\n\n\n\nScreenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.\n\n\nImagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.\nNow, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!\nSo, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!\n\n\n\nOne more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.\nActions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs\nThey are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.\n\n\n\nDrawing of a GitHub Action workflow. Credit: Deborah Digges.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nGitHub: Examples of deploying with GitHub Actions\nDeborah Digges: Building a GitHub Action",
     "crumbs": [
-      "Practice",
-      "file_to_review"
+      "Workshop 2. GitHub Pages and Actions"
     ]
   },
   {
-    "objectID": "practice/James.html",
-    "href": "practice/James.html",
-    "title": "james h",
-    "section": "",
-    "text": "James H page\n\ncreating\na\nlist",
+    "objectID": "02-github-pages-actions.html#create-a-quarto-website",
+    "href": "02-github-pages-actions.html#create-a-quarto-website",
+    "title": "GitHub Pages and Actions",
+    "section": "Create a Quarto Website",
+    "text": "Create a Quarto Website\n\nActivity: Create a new Quarto website project and add the code to GitHub\n\nTo start, you will need to create your own website project, all the files for that website in a git repo, then host that repository via GitHub.\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Using RStudio: Select New Project and follow the wizard to select \"Quarto Website\"\n          Enter a directory name and create a git repository\n          Make the website your own, you can change the text or title of a page\n          Click the render button to preview the website locally and ensure you are happy with it\n          Switch to GitHub Desktop (or from RStudio) commit all those files and push them to GitHub.\n        \n      \n    \n  \n\nAlternatively, if you want to skip this step, you can go to this template: https://github.com/dawnbcgov/example-website and make a copy or fork the repo\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Creating a Website",
     "crumbs": [
-      "Practice",
-      "james h"
+      "Workshop 2. GitHub Pages and Actions"
     ]
   },
   {
-    "objectID": "practice/henry.html",
-    "href": "practice/henry.html",
-    "title": "Henry’s practice page",
-    "section": "",
-    "text": "Henry’s practice page",
+    "objectID": "02-github-pages-actions.html#publish-it-to-github-pages",
+    "href": "02-github-pages-actions.html#publish-it-to-github-pages",
+    "title": "GitHub Pages and Actions",
+    "section": "Publish it to GitHub Pages",
+    "text": "Publish it to GitHub Pages\nThere is more than one way to publish a website using Quarto to GitHub Pages. Today we’re going to use a mix of the built-in publish command and GitHub Actions to automate ongoing updates.\n\nActivity: Use publish to publish a new site for the first time\n\nThe quarto publish command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: &lt;https://github.com/[USER NAME]/[REPO NAME]/settings/pages&gt; (this URL will be specific to your repository)\nAfter that, we are going to set up GitHub Pages to render all the site contents from our main branch into a website that is served from the gh-pages branch! (The name gh-pages is a convention used because “gh” is short for GitHub I guess).\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Follow the instructions from Quarto to set the source branch to gh-pages and the site directory to root (/)\n          Add the output directory of your project (/_site/) to .gitignore so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)\n          From RStudio open a terminal (Tools &gt; Terminal &gt; New Terminal) and type quarto publish gh-pages.\n          Follow the command line prompts, you may be prompted to log-in to GitHub before it publishes.\n        \n      \n    \n  \n\nGreat! Now after every change we can manually publish an updated version of the site! What about if we want to not worry about this step? We can use an action to automate it.\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Publishing &gt; GitHub Pages\nHKUST Digital Humanities: How to host your website on GitHub Page",
     "crumbs": [
-      "Practice",
-      "Henry's practice page"
+      "Workshop 2. GitHub Pages and Actions"
     ]
   },
   {
-    "objectID": "practice/henry.html#a-sub-section",
-    "href": "practice/henry.html#a-sub-section",
-    "title": "Henry’s practice page",
-    "section": "A sub section",
-    "text": "A sub section\nHello world",
+    "objectID": "02-github-pages-actions.html#automate-publishing-with-github-actions-advanced",
+    "href": "02-github-pages-actions.html#automate-publishing-with-github-actions-advanced",
+    "title": "GitHub Pages and Actions",
+    "section": "Automate publishing with GitHub Actions (Advanced)",
+    "text": "Automate publishing with GitHub Actions (Advanced)\n\nActivity: Add a GitHub Action so it automagically updates on every change (Advanced)\n\nOnce we have run that publish action locally once, we can set up an Action to re-publish (or re-build) the site as soon as a simple change was made.\nRemember how in the first workshop you only had to commit your change to the main branch and refresh the website to see the change show up in the sidebar? That was because an action in the background was re-building the site!\nNote: this is an advanced activity so it is okay to just follow along\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Make sure you have run quarto publish gh-pages locally, once (you should have done this in the previous step).\n          Add a GitHub Action to your GitHub repo and project by creating a file at: .github/workflows/publish.yml (note the dot in the first folder, you will probably need to create those folders too!)\n          Copy the contents from the Quarto docs for the Publish Action file\n          Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.\n        \n      \n    \n  \n\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Publishing &gt; GitHub Pages",
     "crumbs": [
-      "Practice",
-      "Henry's practice page"
-    ]
-  },
-  {
-    "objectID": "practice/henry.html#a-new-section-for-a-pull-request",
-    "href": "practice/henry.html#a-new-section-for-a-pull-request",
-    "title": "Henry’s practice page",
-    "section": "A new section for a pull request",
-    "text": "A new section for a pull request",
-    "crumbs": [
-      "Practice",
-      "Henry's practice page"
-    ]
-  },
-  {
-    "objectID": "practice/muntaseer.html",
-    "href": "practice/muntaseer.html",
-    "title": "muntaseer",
-    "section": "",
-    "text": "My name is muntaseer\n\nhere\nis\na\nlist\nI don’t know where I am",
-    "crumbs": [
-      "Practice",
-      "muntaseer"
-    ]
-  },
-  {
-    "objectID": "practice/sahil.html",
-    "href": "practice/sahil.html",
-    "title": "sahil practice github workshop 1",
-    "section": "",
-    "text": "test file adding a line for Henry-led workshop! :)\nWorkshop in the morning today, We can do this, is what I’ll say, Oh I was a little late to the meeting, missed saying “hey|”, I seem to be getting things, no way!\nAdding more data so I can read the workshop notes completely\nAdding one more line as I want to review the code using GitHub",
-    "crumbs": [
-      "Practice",
-      "sahil practice github workshop 1"
-    ]
-  },
-  {
-    "objectID": "practice/dawn.html",
-    "href": "practice/dawn.html",
-    "title": "dawn",
-    "section": "",
-    "text": "My name is dawn\n\nhere\nis\na\nlist",
-    "crumbs": [
-      "Practice",
-      "dawn"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
-    "section": "",
-    "text": "Learning Objective: Set up GitHub account and ensure the tools we need are working on your machine\nInstructions: Preparation and installation instructions\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; BCGov GitHub Organization\nBC Developer Guide: BC Government organizations in GitHub\n\n\n\n\nLearning Objective: Practice key steps for remote code hosting and collaborating in GitHub by using branches, opening pull requests (PRs), reviewing PRs, and merging changes\nInstructions: GitHub Collaboration Workflows\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; Remote Code Hosting and GitHub\nSoftware Carpentry: Version Control with Git (specific sections)\n\n\n\n\n\nLearning Objective: Understand github pages and actions and how they work together to publish the site. Practice by publishing a quarto site to our own github account. Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system. Instructions: GitHub Pages and Actions\nExternal Resources:\n\nGitHub: Creating a GitHub Pages site\nQuarto: Publishing &gt; GitHub Pages\n\n\n\n\n\nMore soon",
-    "crumbs": [
-      "Workshop Outline"
-    ]
-  },
-  {
-    "objectID": "index.html#course-outline",
-    "href": "index.html#course-outline",
-    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
-    "section": "",
-    "text": "Learning Objective: Set up GitHub account and ensure the tools we need are working on your machine\nInstructions: Preparation and installation instructions\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; BCGov GitHub Organization\nBC Developer Guide: BC Government organizations in GitHub\n\n\n\n\nLearning Objective: Practice key steps for remote code hosting and collaborating in GitHub by using branches, opening pull requests (PRs), reviewing PRs, and merging changes\nInstructions: GitHub Collaboration Workflows\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; Remote Code Hosting and GitHub\nSoftware Carpentry: Version Control with Git (specific sections)\n\n\n\n\n\nLearning Objective: Understand github pages and actions and how they work together to publish the site. Practice by publishing a quarto site to our own github account. Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system. Instructions: GitHub Pages and Actions\nExternal Resources:\n\nGitHub: Creating a GitHub Pages site\nQuarto: Publishing &gt; GitHub Pages\n\n\n\n\n\nMore soon",
-    "crumbs": [
-      "Workshop Outline"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThis instruction material is sourced and adapted from two places:\n\nThe BCGov “Workshop: Introduction To Version Control With Git and GitHub” Copyright © Province of British Columbia and made available under the Creative Commons Attribution 4.0 International licence.\nhttps://github.com/bcgov/ds-intro-to-git\nThe Software Carpentry Foundation (now The Carpenties). All Software Carpentry, Data Carpentry, and Library Carpentry instructional material is Copyright © Software Carpentry and made available under the Creative Commons Attribution licence.\n\nDaisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, https://github.com/swcarpentry/git-novice, 10.5281/zenodo.57467.",
-    "crumbs": [
-      "Workshop Outline"
-    ]
-  },
-  {
-    "objectID": "practice/ben.html",
-    "href": "practice/ben.html",
-    "title": "ben w",
-    "section": "",
-    "text": "Ben W’s page\n\ncreating\na\nlist",
-    "crumbs": [
-      "Practice",
-      "ben w"
-    ]
-  },
-  {
-    "objectID": "practice/index.html",
-    "href": "practice/index.html",
-    "title": "Practice Area",
-    "section": "",
-    "text": "This is the practice area we will use for making PRs, commits, and changes collaboratively.",
-    "crumbs": [
-      "Practice"
-    ]
-  },
-  {
-    "objectID": "practice/Gaelle.html",
-    "href": "practice/Gaelle.html",
-    "title": "Gaelle",
-    "section": "",
-    "text": "I am a bit lost",
-    "crumbs": [
-      "Practice",
-      "Gaelle"
-    ]
-  },
-  {
-    "objectID": "practice/Gaelle.html#section",
-    "href": "practice/Gaelle.html#section",
-    "title": "Gaelle",
-    "section": "",
-    "text": "I am a bit lost",
-    "crumbs": [
-      "Practice",
-      "Gaelle"
-    ]
-  },
-  {
-    "objectID": "practice/vickie.html",
-    "href": "practice/vickie.html",
-    "title": "vickie",
-    "section": "",
-    "text": "Changes to show collaboration\n-Here -are -my -thoughts",
-    "crumbs": [
-      "Practice",
-      "vickie"
-    ]
-  },
-  {
-    "objectID": "practice/gail.html",
-    "href": "practice/gail.html",
-    "title": "gail r",
-    "section": "",
-    "text": "Gail R’s page\n\nupdating gail’s page\nmaking changes on a new branch instead of main\nreviewing day 2 workshop in more detail",
-    "crumbs": [
-      "Practice",
-      "gail r"
-    ]
-  },
-  {
-    "objectID": "practice/another.html",
-    "href": "practice/another.html",
-    "title": "Another Page",
-    "section": "",
-    "text": "Here is another page!",
-    "crumbs": [
-      "Practice",
-      "Another Page"
-    ]
-  },
-  {
-    "objectID": "practice/another.html#with-a-sub-section",
-    "href": "practice/another.html#with-a-sub-section",
-    "title": "Another Page",
-    "section": "With a sub section",
-    "text": "With a sub section\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nFirst ordered list item\nAnother item\nActual numbers don’t matter, just that it’s a number\n\nOrdered sub-list\n\nAnd another item.",
-    "crumbs": [
-      "Practice",
-      "Another Page"
+      "Workshop 2. GitHub Pages and Actions"
     ]
   },
   {
@@ -327,54 +161,262 @@
     ]
   },
   {
-    "objectID": "02-github-pages-actions.html",
-    "href": "02-github-pages-actions.html",
-    "title": "GitHub Pages and Actions",
+    "objectID": "practice/another.html",
+    "href": "practice/another.html",
+    "title": "Another Page",
     "section": "",
-    "text": "Learning Objective: Understand GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.\nNote: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.\n\n\nWe likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.\nYou may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:\n\na domain name (the human-readable address)\na server or host (the place)\napplication or files (the content of the web site itself)\n\n\n\n\nHow a web server works. Credit: Hostinger.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nMozilla MDN Web Docs: Your first website\nGlitch, allows you to remix (basically fork) projects to build websites from the browser\nNeocities, also has all the tools to build a website in the browser\n\n\n\n\n\n\nWe already know Quarto is a system for scientific and technical publishing. It allows you to do a lot.\nOne thing it does is make it easy to create websites for document-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.\n\n\n\nQuarto website rendered in RStudio. Credit: Posit.\n\n\n\n\n\nLike Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, but only for the contents of a GitHub repository.\nIt helps with all the three parts you need:\n\na domain name ✔️ by default, it looks like: &lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;\na server or host ✔️ for free!\napplication or files ✔️ the contents of the repository!\n\nPlus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues\n\n\n\nScreenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.\n\n\nImagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.\nNow, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!\nSo, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!\n\n\n\nOne more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.\nActions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs\nThey are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.\n\n\n\nDrawing of a GitHub Action workflow. Credit: Deborah Digges.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nGitHub: Examples of deploying with GitHub Actions\nDeborah Digges: Building a GitHub Action",
+    "text": "Here is another page!",
     "crumbs": [
-      "Workshop 2. GitHub Pages and Actions"
+      "Practice",
+      "Another Page"
     ]
   },
   {
-    "objectID": "02-github-pages-actions.html#welcome-key-concepts",
-    "href": "02-github-pages-actions.html#welcome-key-concepts",
-    "title": "GitHub Pages and Actions",
+    "objectID": "practice/another.html#with-a-sub-section",
+    "href": "practice/another.html#with-a-sub-section",
+    "title": "Another Page",
+    "section": "With a sub section",
+    "text": "With a sub section\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nFirst ordered list item\nAnother item\nActual numbers don’t matter, just that it’s a number\n\nOrdered sub-list\n\nAnd another item.",
+    "crumbs": [
+      "Practice",
+      "Another Page"
+    ]
+  },
+  {
+    "objectID": "practice/gail.html",
+    "href": "practice/gail.html",
+    "title": "gail r",
     "section": "",
-    "text": "Learning Objective: Understand GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.\nNote: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.\n\n\nWe likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.\nYou may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:\n\na domain name (the human-readable address)\na server or host (the place)\napplication or files (the content of the web site itself)\n\n\n\n\nHow a web server works. Credit: Hostinger.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nMozilla MDN Web Docs: Your first website\nGlitch, allows you to remix (basically fork) projects to build websites from the browser\nNeocities, also has all the tools to build a website in the browser\n\n\n\n\n\n\nWe already know Quarto is a system for scientific and technical publishing. It allows you to do a lot.\nOne thing it does is make it easy to create websites for document-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.\n\n\n\nQuarto website rendered in RStudio. Credit: Posit.\n\n\n\n\n\nLike Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. GitHub Pages is a free way to publish a web sites, but only for the contents of a GitHub repository.\nIt helps with all the three parts you need:\n\na domain name ✔️ by default, it looks like: &lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;\na server or host ✔️ for free!\napplication or files ✔️ the contents of the repository!\n\nPlus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues\n\n\n\nScreenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.\n\n\nImagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.\nNow, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!\nSo, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!\n\n\n\nOne more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.\nActions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs\nThey are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.\n\n\n\nDrawing of a GitHub Action workflow. Credit: Deborah Digges.\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nGitHub: Examples of deploying with GitHub Actions\nDeborah Digges: Building a GitHub Action",
+    "text": "Gail R’s page\n\nupdating gail’s page\nmaking changes on a new branch instead of main\nreviewing day 2 workshop in more detail",
     "crumbs": [
-      "Workshop 2. GitHub Pages and Actions"
+      "Practice",
+      "gail r"
     ]
   },
   {
-    "objectID": "02-github-pages-actions.html#create-a-quarto-website",
-    "href": "02-github-pages-actions.html#create-a-quarto-website",
-    "title": "GitHub Pages and Actions",
-    "section": "Create a Quarto Website",
-    "text": "Create a Quarto Website\n\nActivity: Create a new Quarto website project and add the code to GitHub\n\nTo start, you will need to create your own website project, all the files for that website in a git repo, then host that repository via GitHub.\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Using RStudio: Select New Project and follow the wizard to select \"Quarto Website\"\n          Enter a directory name and create a git repository\n          Make the website your own, you can change the text or title of a page\n          Click the render button to preview the website locally and ensure you are happy with it\n          Switch to GitHub Desktop (or from RStudio) commit all those files and push them to GitHub.\n        \n      \n    \n  \n\nAlternatively, if you want to skip this step, you can go to this template: https://github.com/dawnbcgov/example-website and make a copy or fork the repo\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Creating a Website",
+    "objectID": "practice/vickie.html",
+    "href": "practice/vickie.html",
+    "title": "vickie",
+    "section": "",
+    "text": "Changes to show collaboration\n-Here -are -my -thoughts",
     "crumbs": [
-      "Workshop 2. GitHub Pages and Actions"
+      "Practice",
+      "vickie"
     ]
   },
   {
-    "objectID": "02-github-pages-actions.html#publish-it-to-github-pages",
-    "href": "02-github-pages-actions.html#publish-it-to-github-pages",
-    "title": "GitHub Pages and Actions",
-    "section": "Publish it to GitHub Pages",
-    "text": "Publish it to GitHub Pages\nThere is more than one way to publish a website using Quarto to GitHub Pages. Today we’re going to use a mix of the built-in publish command and GitHub Actions to automate ongoing updates.\n\nActivity: Use publish to publish a new site for the first time\n\nThe quarto publish command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: &lt;https://github.com/[USER NAME]/[REPO NAME]/settings/pages&gt; (this URL will be specific to your repository)\nAfter that, we are going to set up GitHub Pages to render all the site contents from our main branch into a website that is served from the gh-pages branch! (The name gh-pages is a convention used because “gh” is short for GitHub I guess).\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Follow the instructions from Quarto to set the source branch to gh-pages and the site directory to root (/)\n          Add the output directory of your project (/_site/) to .gitignore so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)\n          From RStudio open a terminal (Tools &gt; Terminal &gt; New Terminal) and type quarto publish gh-pages.\n          Follow the command line prompts, you may be prompted to log-in to GitHub before it publishes.\n        \n      \n    \n  \n\nGreat! Now after every change we can manually publish an updated version of the site! What about if we want to not worry about this step? We can use an action to automate it.\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Publishing &gt; GitHub Pages\nHKUST Digital Humanities: How to host your website on GitHub Page",
+    "objectID": "practice/Gaelle.html",
+    "href": "practice/Gaelle.html",
+    "title": "Gaelle",
+    "section": "",
+    "text": "I am a bit lost",
     "crumbs": [
-      "Workshop 2. GitHub Pages and Actions"
+      "Practice",
+      "Gaelle"
     ]
   },
   {
-    "objectID": "02-github-pages-actions.html#automate-publishing-with-github-actions-advanced",
-    "href": "02-github-pages-actions.html#automate-publishing-with-github-actions-advanced",
-    "title": "GitHub Pages and Actions",
-    "section": "Automate publishing with GitHub Actions (Advanced)",
-    "text": "Automate publishing with GitHub Actions (Advanced)\n\nActivity: Add a GitHub Action so it automagically updates on every change (Advanced)\n\nOnce we have run that publish action locally once, we can set up an Action to re-publish (or re-build) the site as soon as a simple change was made.\nRemember how in the first workshop you only had to commit your change to the main branch and refresh the website to see the change show up in the sidebar? That was because an action in the background was re-building the site!\nNote: this is an advanced activity so it is okay to just follow along\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Make sure you have run quarto publish gh-pages locally, once (you should have done this in the previous step).\n          Add a GitHub Action to your GitHub repo and project by creating a file at: .github/workflows/publish.yml (note the dot in the first folder, you will probably need to create those folders too!)\n          Copy the contents from the Quarto docs for the Publish Action file\n          Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.\n        \n      \n    \n  \n\n\n\n\n\n\n\nResources used\n\n\n\n\nQuarto: Publishing &gt; GitHub Pages",
+    "objectID": "practice/Gaelle.html#section",
+    "href": "practice/Gaelle.html#section",
+    "title": "Gaelle",
+    "section": "",
+    "text": "I am a bit lost",
     "crumbs": [
-      "Workshop 2. GitHub Pages and Actions"
+      "Practice",
+      "Gaelle"
     ]
+  },
+  {
+    "objectID": "practice/index.html",
+    "href": "practice/index.html",
+    "title": "Practice Area",
+    "section": "",
+    "text": "This is the practice area we will use for making PRs, commits, and changes collaboratively.",
+    "crumbs": [
+      "Practice"
+    ]
+  },
+  {
+    "objectID": "practice/ben.html",
+    "href": "practice/ben.html",
+    "title": "ben w",
+    "section": "",
+    "text": "Ben W’s page\n\ncreating\na\nlist",
+    "crumbs": [
+      "Practice",
+      "ben w"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
+    "section": "",
+    "text": "Learning Objective: Set up GitHub account and ensure the tools we need are working on your machine\nInstructions: Preparation and installation instructions\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; BCGov GitHub Organization\nBC Developer Guide: BC Government organizations in GitHub\n\n\n\n\nLearning Objective: Practice key steps for remote code hosting and collaborating in GitHub by using branches, opening pull requests (PRs), reviewing PRs, and merging changes\nInstructions: GitHub Collaboration Workflows\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; Remote Code Hosting and GitHub\nSoftware Carpentry: Version Control with Git (specific sections)\n\n\n\n\n\nLearning Objective: Explore GitHub Pages and Actions and how they work together to publish the site. Practice by publishing a Quarto site to our own GitHub account. Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system. Instructions: GitHub Pages and Actions\nExternal Resources:\n\nGitHub: Creating a GitHub Pages site\nQuarto: Publishing &gt; GitHub Pages\n\n\n\n\n\nLearning Objective: Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard. Instructions: Deploying to Shinyapps.io\nExternal Resources:\n\nShinyapps.io: User Guide &gt; Getting Started",
+    "crumbs": [
+      "Workshop Outline"
+    ]
+  },
+  {
+    "objectID": "index.html#course-outline",
+    "href": "index.html#course-outline",
+    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
+    "section": "",
+    "text": "Learning Objective: Set up GitHub account and ensure the tools we need are working on your machine\nInstructions: Preparation and installation instructions\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; BCGov GitHub Organization\nBC Developer Guide: BC Government organizations in GitHub\n\n\n\n\nLearning Objective: Practice key steps for remote code hosting and collaborating in GitHub by using branches, opening pull requests (PRs), reviewing PRs, and merging changes\nInstructions: GitHub Collaboration Workflows\nExternal Resources:\n\nBC Stats: Introduction to Version Control with Git & GitHub &gt; Remote Code Hosting and GitHub\nSoftware Carpentry: Version Control with Git (specific sections)\n\n\n\n\n\nLearning Objective: Explore GitHub Pages and Actions and how they work together to publish the site. Practice by publishing a Quarto site to our own GitHub account. Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system. Instructions: GitHub Pages and Actions\nExternal Resources:\n\nGitHub: Creating a GitHub Pages site\nQuarto: Publishing &gt; GitHub Pages\n\n\n\n\n\nLearning Objective: Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard. Instructions: Deploying to Shinyapps.io\nExternal Resources:\n\nShinyapps.io: User Guide &gt; Getting Started",
+    "crumbs": [
+      "Workshop Outline"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThis instruction material is sourced and adapted from the following places:\n\nThe BCGov “Workshop: Introduction To Version Control With Git and GitHub” Copyright © Province of British Columbia and made available under the Creative Commons Attribution 4.0 International licence.\n\nhttps://github.com/bcgov/ds-intro-to-git\n\nThe Software Carpentry Foundation (now The Carpenties). All Software Carpentry, Data Carpentry, and Library Carpentry instructional material is Copyright © Software Carpentry and made available under the Creative Commons Attribution licence.\n\nDaisie Huang and Ivan Gonzalez (eds): Software Carpentry: Version Control with Git. Version 2016.06, June 2016, https://github.com/swcarpentry/git-novice, 10.5281/zenodo.57467.\n\nJoe Cheng “Kmeans example” Copyright © Joe Cheng and RStudio. https://github.com/rstudio/shiny-examples/tree/main/050-kmeans-example\n\nIn addition, tutorials and documentation are linked and credited throughout.",
+    "crumbs": [
+      "Workshop Outline"
+    ]
+  },
+  {
+    "objectID": "practice/dawn.html",
+    "href": "practice/dawn.html",
+    "title": "dawn",
+    "section": "",
+    "text": "My name is dawn\n\nhere\nis\na\nlist",
+    "crumbs": [
+      "Practice",
+      "dawn"
+    ]
+  },
+  {
+    "objectID": "practice/sahil.html",
+    "href": "practice/sahil.html",
+    "title": "sahil practice github workshop 1",
+    "section": "",
+    "text": "test file adding a line for Henry-led workshop! :)\nWorkshop in the morning today, We can do this, is what I’ll say, Oh I was a little late to the meeting, missed saying “hey|”, I seem to be getting things, no way!\nAdding more data so I can read the workshop notes completely\nAdding one more line as I want to review the code using GitHub",
+    "crumbs": [
+      "Practice",
+      "sahil practice github workshop 1"
+    ]
+  },
+  {
+    "objectID": "practice/muntaseer.html",
+    "href": "practice/muntaseer.html",
+    "title": "muntaseer",
+    "section": "",
+    "text": "My name is muntaseer\n\nhere\nis\na\nlist\nI don’t know where I am",
+    "crumbs": [
+      "Practice",
+      "muntaseer"
+    ]
+  },
+  {
+    "objectID": "practice/henry.html",
+    "href": "practice/henry.html",
+    "title": "Henry’s practice page",
+    "section": "",
+    "text": "Henry’s practice page",
+    "crumbs": [
+      "Practice",
+      "Henry's practice page"
+    ]
+  },
+  {
+    "objectID": "practice/henry.html#a-sub-section",
+    "href": "practice/henry.html#a-sub-section",
+    "title": "Henry’s practice page",
+    "section": "A sub section",
+    "text": "A sub section\nHello world",
+    "crumbs": [
+      "Practice",
+      "Henry's practice page"
+    ]
+  },
+  {
+    "objectID": "practice/henry.html#a-new-section-for-a-pull-request",
+    "href": "practice/henry.html#a-new-section-for-a-pull-request",
+    "title": "Henry’s practice page",
+    "section": "A new section for a pull request",
+    "text": "A new section for a pull request",
+    "crumbs": [
+      "Practice",
+      "Henry's practice page"
+    ]
+  },
+  {
+    "objectID": "practice/James.html",
+    "href": "practice/James.html",
+    "title": "james h",
+    "section": "",
+    "text": "James H page\n\ncreating\na\nlist",
+    "crumbs": [
+      "Practice",
+      "james h"
+    ]
+  },
+  {
+    "objectID": "practice/pr_review_practice_file.html",
+    "href": "practice/pr_review_practice_file.html",
+    "title": "file_to_review",
+    "section": "",
+    "text": "Practice file to review\nThis is a word list from EFF for making random passphrases.\n\nacid\nacorn\nacre\nafar\naffix\naged\nagent\nagile\nagony\naide\naids\naim\najar\nalarm\nalias\nalibi\nalien\nalike\naloe\naloft\naloha\nalone\namend\namino\nample\namuse\nangel\nanger\nangle\nankle\napple\napril\napron\naqua\narea\narena\nargue\narise\narmed\narmor\narmy\naroma\narray\narson\nart\nashen\nashes\natlas\natom\nattic\naudio\navert\navoid\nawake\naward\nawoke\naxis\nbacon\nbadge\nbagel\nbaggy\nbaked\nbaker\nbalmy\nbanjo\nbarge\nbarn\nbash\nbasil\nbask\nbatch\nbath\nbaton\nbats\nblade\nblank\nblast\nblaze\nbleak\nblend\nbless\nblimp\nblink\nbloat\nblob\nblog\nblot\nblunt\nblurt\nblush\nboast\nboat\nbody\nboil\nbok\nbolt\nboned\nboney\nbonus\nbony\nbook\nbooth\nboots\nboss\nbotch\nboth\nboxer\nbreed\nbribe\nbrick\nbride\nbrim\nbring\nbrink\nbrisk\nbroad\nbroil\nbroke\nbrook\nbroom\nbrush\nbuck\nbud\nbuggy\nbulge\nbulk\nbully\nbunch\nbunny\nbunt\nbush\nbust\nbusy\nbuzz\ncable\ncache\ncadet\ncage\ncake\ncalm\ncameo\ncanal\ncandy\ncane\ncanon\ncape\ncard\ncargo\ncarol\ncarry\ncarve\ncase\ncash\ncause\ncedar\nchain\nchair\nchant\nchaos\ncharm\nchase\ncheek\ncheer\nchef\nchest\nchew\nchief\nchill\nchip\nchomp\nchop\nchow\nchuck\nchump\nchunk\nchurn\nchute\ncider\ncinch\ncity\ncivic\ncivil\nclad\nclaim\nclamp\nclap\nclash\nclasp\nclass\nclaw\nclay\nclean\nclear\ncleat\ncleft\nclerk\nclick\ncling\nclink\nclip\ncloak\nclock\nclone\ncloth\ncloud\nclump\ncoach\ncoast\ncoat\ncod\ncoil\ncoke\ncola\ncold\ncolt\ncoma\ncome\ncomic\ncomma\ncone\ncope\ncopy\ncoral\ncork\ncost\ncot\ncouch\ncough\ncover\ncozy\ncraft\ncramp\ncrane\ncrank\ncrate\ncrawl\ncrazy\ncreme\ncrepe\ncrept\ncried\ncrisp\ncrook\ncrop\ncross\ncrowd\ncrown\ncrumb\ncrush\ncrust\ncub\ncult\ncupid\ncure\ncurl\ncurry\ncurse\ncurve\ncurvy\ncushy\ncut\ncycle\ndab\ndad\ndaily\ndairy\ndaisy\ndance\ndandy\ndarn\ndart\ndash\ndata\ndate\ndawn\ndeaf\ndeal\ndean\ndebit\ndebt\ndebug\ndecaf\ndecal\ndecay\ndeck\ndecor\ndecoy\ndeed\ndelay\ndenim\ndense\ndent\ndepth\nderby\ndesk\ndial\ndiary\ndice\ndig\ndill\ndime\ndimly\ndiner\ndingy\ndisco\ndish\ndisk\nditch\nditzy\ndizzy\ndock\ndodge\ndoing\ndoll\ndome\ndonor\ndonut\ndose\ndot\ndove\ndown\ndowry\ndoze\ndrab\ndrama\ndrank\ndraw\ndress\ndried\ndrift\ndrill\ndrive\ndrone\ndroop\ndrown\ndrum\ndry\nduck\nduct\ndude\ndug\nduke\nduo\ndusk\ndust\nduty\ndwarf\ndwell\neagle\nearly\nearth\neasel\neast\neaten\neats\nebay\nebony\nebook\necho\nedge\neel\neject\nelbow\nelder\nelf\nelk\nelm\nelope\nelude\nelves\nemail\nemit\nempty\nemu\nenter\nentry\nenvoy\nequal\nerase\nerror\nerupt\nessay\netch\nevade\neven\nevict\nevil\nevoke\nexact\nexit\nfable\nfaced\nfact\nfade\nfall\nfalse\nfancy\nfang\nfax\nfeast\nfeed\nfemur\nfend\nferry\nfetal\nfetch\nfever\nfiber\nfifth\nfifty\nfilm\nfilth\nfinal\nfinch\nfit\nfive\nflag\nflaky\nflame\nflap\nflask\nfled\nflick\nfling\nflint\nflip\nflirt\nfloat\nflock\nflop\nfloss\nflyer\nfoam\nfoe\nfog\nfoil\nfolic\nfolk\nfood\nfool\nfound\nfox\nfoyer\nfrail\nframe\nfray\nfresh\nfried\nfrill\nfrisk\nfrom\nfront\nfrost\nfroth\nfrown\nfroze\nfruit\ngag\ngains\ngala\ngame\ngap\ngas\ngave\ngear\ngeek\ngem\ngenre\ngift\ngig\ngills\ngiven\ngiver\nglad\nglass\nglide\ngloss\nglove\nglow\nglue\ngoal\ngoing\ngolf\ngong\ngood\ngooey\ngoofy\ngore\ngown\ngrab\ngrain\ngrant\ngrape\ngraph\ngrasp\ngrass\ngrave\ngravy\ngray\ngreen\ngreet\ngrew\ngrid\ngrief\ngrill\ngrip\ngrit\ngroom\ngrowl\ngrub\ngrunt\nguide\ngulf\ngulp\ngummy\nguru\ngush\ngut\nguy\nhabit\nhalf\nhalo\nhalt\nhappy\nharm\nhash\nhasty\nhatch\nhate\nhaven\nhazel\nhazy\nheap\nheat\nheave\nhedge\nhefty\nhelp\nherbs\nhers\nhub\nhug\nhula\nhull\nhuman\nhumid\nhump\nhung\nhunk\nhunt\nhurry\nhurt\nhush\nhut\nice\nicing\nicon\nicy\nigloo\nimage\nion\niron\nislam\nissue\nitem\nivory\nivy\njab\njam\njaws\njazz\njeep\njelly\njet\njiffy\njob\njog\njolly\njolt\njot\njoy\njudge\njuice\njuicy\njuly\njumbo\njump\njunky\njuror\nkeep\nkeg\nkept\nkick\nkilt\nking\nkite\nkitty\nkiwi\nknee\nknelt\nkoala\nkung\nladle\nlady\nlair\nlake\nlance\nlapel\nlarge\nlash\nlasso\nlast\nlatch\nlate\nlazy\nleft\nlegal\nlemon\nlend\nlens\nlent\nlevel\nlever\nlid\nlife\nlift\nlilac\nlily\nlimb\nlimes\nline\nlint\nlion\nlip\nlived\nliver\nlunar\nlunch\nlung\nlurch\nlurk\nlying\nlyric\nmace\nmaker\nmalt\nmama\nmango\nmanor\nmany\nmap\nmarch\nmardi\nmash\nmatch\nmate\nmath\nmocha\nmold\nmom\nmoody\nmop\nmorse\nmost\nmotor\nmotto\nmount\nmouse\nmousy\nmouth\nmove\nmovie\nmower\nmud\nmug\nmulch\nmule\nmull\nmumbo\nmummy\nmural\nmuse\nmusic\nmusky\nmute\nnacho\nnag\nnail\nname\nnanny\nnap\nnavy\nnear\nneat\nneon\nnerd\nnest\nnet\nnext\nniece\nninth\nnutty\noak\noasis\noat\nocean\noil\nold\nolive\nomen\nonion\nonly\nooze\nopal\nopen\nopera\nopt\notter\nouch\nounce\nouter\noval\noven\nowl\nozone\npace\npagan\npager\npalm\npanda\npanic\npants\npanty\npaper\npark\nparty\npatch\npath\npatio\npayer\npecan\npenny\npep\nperch\nperky\nperm\npest\npetal\npetri\npetty\nphoto\nplank\nplant\nplaza\nplead\nplow\npluck\nplug\nplus\npoach\npod\npoem\npoet\npogo\npoint\npoise\npoker\npolar\npolio\npolka\npolo\npond\npony\npoppy\npork\nposer\npouch\npound\npout\npower\nprank\npress\nprint\nprior\nprism\nprize\nprobe\nprong\nproof\nprops\nprude\nprune\npry\npug\npull\npulp\npulse\npuma\npunch\npunk\npupil\npuppy\npurr\npurse\npush\nputt\nquack\nquake\nquery\nquiet\nquill\nquilt\nquit\nquota\nquote\nrabid\nrace\nrack\nradar\nradio\nraft\nrage\nraid\nrail\nrake\nrally\nramp\nranch\nrange\nrank\nrant\nrash\nreach\nreact\nream\nrebel\nrecap\nrelax\nrelay\nrelic\nremix\nrepay\nrepel\nreply\nrerun\nreset\nrhyme\nrice\nrich\nride\nrigid\nrigor\nrinse\nriot\nripen\nrise\nrisk\nritzy\nrival\nriver\nroast\nrobe\nrobin\nrock\nrogue\nroman\nromp\nrope\nrover\nroyal\nruby\nrug\nruin\nrule\nrunny\nrush\nrust\nrut\nsadly\nsage\nsaid\nsaint\nsalad\nsalon\nsalt\nsame\nsandy\nsanta\nsatin\nsauna\nsaved\nsavor\nsax\nsay\nscale\nscam\nscan\nscare\nscarf\nscary\nscoff\nscold\nscoop\nscoot\nscope\nscore\nscorn\nscout\nscowl\nscrap\nscrub\nscuba\nscuff\nsect\nsedan\nself\nsend\nsepia\nserve\nset\nseven\nshack\nshade\nshady\nshaft\nshaky\nsham\nshape\nshare\nsharp\nshed\nsheep\nsheet\nshelf\nshell\nshine\nshiny\nship\nshirt\nshock\nshop\nshore\nshout\nshove\nshown\nshowy\nshred\nshrug\nshun\nshush\nshut\nshy\nsift\nsilk\nsilly\nsilo\nsip\nsiren\nsixth\nsize\nskate\nskew\nskid\nskier\nskies\nskip\nskirt\nskit\nsky\nslab\nslack\nslain\nslam\nslang\nslash\nslate\nslaw\nsled\nsleek\nsleep\nsleet\nslept\nslice\nslick\nslimy\nsling\nslip\nslit\nslob\nslot\nslug\nslum\nslurp\nslush\nsmall\nsmash\nsmell\nsmile\nsmirk\nsmog\nsnack\nsnare\nsnarl\nsneak\nsneer\nsniff\nsnore\nsnout\nsnowy\nsnub\nsnuff\nspeak\nspeed\nspend\nspent\nspew\nspied\nspill\nspiny\nspoil\nspoke\nspoof\nspool\nspoon\nsport\nspot\nspout\nspray\nspree\nspur\nsquad\nsquat\nsquid\nstack\nstaff\nstage\nstain\nstall\nstamp\nstand\nstank\nstark\nstart\nstash\nstate\nstays\nsteam\nsteep\nstem\nstep\nstew\nstick\nsting\nstir\nstock\nstole\nstomp\nstony\nstood\nstool\nstoop\nstop\nstorm\nstout\nstove\nstraw\nstray\nstrut\nstuck\nstud\nstuff\nstump\nstung\nstunt\nsuds\nsugar\nsulk\nsurf\nsushi\nswab\nswan\nswarm\nswear\nsweat\nsweep\nswell\nswept\nswim\nswing\nswipe\nswirl\nswoop\nswore\nsyrup\ntacky\ntaco\ntag\ntake\ntall\ntalon\ntamer\ntank\ntaper\ntaps\ntarot\ntart\ntask\ntaste\ntasty\ntaunt\nthank\nthaw\ntheft\ntheme\nthigh\nthing\nthink\nthong\nthorn\nthose\nthrob\nthud\nthumb\nthump\nthus\ntiara\ntidal\ntidy\ntiger\ntile\ntilt\ntint\ntrace\ntrack\ntrade\ntrain\ntrait\ntrap\ntrash\ntray\ntreat\ntree\ntrek\ntrend\ntrial\ntribe\ntrick\ntrio\ntrout\ntruce\ntruck\ntrump\ntrunk\ntry\ntug\ntulip\ntummy\nturf\ntusk\ntutor\ntutu\ntux\ntweak\ntweet\ntwice\ntwine\ntwins\ntwirl\ntwist\nuncle\nuncut\nundo\nunify\nunion\nunit\nuntie\nupon\nupper\nurban\nused\nuser\nusher\nutter\nvalue\nvapor\nvegan\nvenue\nverse\nvest\nveto\nvice\nvideo\nview\nviral\nvirus\nvisa\nvisor\nvixen\nvocal\nvoice\nvoid\nvolt\nvoter\nvowel\nwad\nwafer\nwager\nwagon\nwake\nwalk\nwand\nwasp\nwatch\nwater\nwavy\nwheat\nwhiff\nwhole\nwhoop\nwick\nwiden\nwidow\nwidth\nwife\nwifi\nwilt\nwimp\nwind\nwing\nwink\nwipe\nwired\nwiry\nwise\nwish\nwispy\nwok\nwolf\nwomb\nwool\nwoozy\nword\nwork\nworry\nwound\nwoven\nwrath\nwreck\nwrist\nxerox\nyahoo\nyam\nyard\nyear\nyeast\nyelp\nyodel\nyoga\nyoyo\nyummy\nzebra\nzero\nzesty\nzippy\nzone\nzoom",
+    "crumbs": [
+      "Practice",
+      "file_to_review"
+    ]
+  },
+  {
+    "objectID": "practice/sakshi.html",
+    "href": "practice/sakshi.html",
+    "title": "Sakshi",
+    "section": "",
+    "text": "#Its an adventure!",
+    "crumbs": [
+      "Practice",
+      "Sakshi"
+    ]
+  },
+  {
+    "objectID": "03-shinyapps-io.html",
+    "href": "03-shinyapps-io.html",
+    "title": "Deploying to Shinyapps.io",
+    "section": "",
+    "text": "Learning Objective: Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.\n\n\nShiny is an R package that allows you to quickly build interactive web apps with R.\n\n\n\nShiny app with number of bins slider on the left and histogram of frequency of waiting times on the right”. Credit: Shiny.\n\n\nFrom the Shiny docs:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &gt; Shiny apps are contained in a single script called app.R. The script app.R lives in a directory (for example, newdir/) and the app can be run with runApp(\"newdir\"). app.R has three components: - a user interface (ui) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair ======= &gt; Shiny apps are contained in a single script called app.R. The script app.R lives in a directory (for example, newdir/) and the app can be run with runApp(\"newdir\").\n&gt; &gt; app.R has three components:\n&gt; - a user interface (ui) object, that controls the layout and appearance of your app\n&gt; - a server function, that contains the instructions that your computer needs to build your app\n&gt; - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11\nNote: Some apps may separate the app scripts into ui.R and server.R (such as the example app in this workshop)\nlibrary(shiny)\n\n# See above for the definitions of ui and server\nui &lt;- ...\n\nserver &lt;- ...\n\nshinyApp(ui = ui, server = server)\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nShiny: Shiny Basics\n\n\n\n\n\n\nshinyapps.io is a platform that allows you to quickly publish and share Shiny applications on the web. From their user guide:\n\nThe service runs in the cloud on shared servers that are operated by Posit. Each application is self-contained and operates on either data that is uploaded with the application, or data that the code pulls from third-party data stores, such as databases or web services.\n\nIn the Province of BC we use Shinyapps.io to run many data-heavy applications in the public cloud, and we store the source code on GitHub. Here is one example:\n\nshinywqg is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Shiny App: https://bcgov-env.shinyapps.io/bc_wqg/ GitHub Repo: https://github.com/bcgov/shinywqg ======= Shiny App: https://bcgov-env.shinyapps.io/bc_wqg/\nGitHub Repo: https://github.com/bcgov/shinywqg\n\n\n\n\n\n\n\n157dd9794cb7decfa7193a1e961f9be8bf5bbb11\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nShinyapps.io User Guide"
+  },
+  {
+    "objectID": "03-shinyapps-io.html#welcome-key-concepts",
+    "href": "03-shinyapps-io.html#welcome-key-concepts",
+    "title": "Deploying to Shinyapps.io",
+    "section": "",
+    "text": "Learning Objective: Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.\n\n\nShiny is an R package that allows you to quickly build interactive web apps with R.\n\n\n\nShiny app with number of bins slider on the left and histogram of frequency of waiting times on the right”. Credit: Shiny.\n\n\nFrom the Shiny docs:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &gt; Shiny apps are contained in a single script called app.R. The script app.R lives in a directory (for example, newdir/) and the app can be run with runApp(\"newdir\"). app.R has three components: - a user interface (ui) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair ======= &gt; Shiny apps are contained in a single script called app.R. The script app.R lives in a directory (for example, newdir/) and the app can be run with runApp(\"newdir\").\n&gt; &gt; app.R has three components:\n&gt; - a user interface (ui) object, that controls the layout and appearance of your app\n&gt; - a server function, that contains the instructions that your computer needs to build your app\n&gt; - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11\nNote: Some apps may separate the app scripts into ui.R and server.R (such as the example app in this workshop)\nlibrary(shiny)\n\n# See above for the definitions of ui and server\nui &lt;- ...\n\nserver &lt;- ...\n\nshinyApp(ui = ui, server = server)\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nShiny: Shiny Basics\n\n\n\n\n\n\nshinyapps.io is a platform that allows you to quickly publish and share Shiny applications on the web. From their user guide:\n\nThe service runs in the cloud on shared servers that are operated by Posit. Each application is self-contained and operates on either data that is uploaded with the application, or data that the code pulls from third-party data stores, such as databases or web services.\n\nIn the Province of BC we use Shinyapps.io to run many data-heavy applications in the public cloud, and we store the source code on GitHub. Here is one example:\n\nshinywqg is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Shiny App: https://bcgov-env.shinyapps.io/bc_wqg/ GitHub Repo: https://github.com/bcgov/shinywqg ======= Shiny App: https://bcgov-env.shinyapps.io/bc_wqg/\nGitHub Repo: https://github.com/bcgov/shinywqg\n\n\n\n\n\n\n\n157dd9794cb7decfa7193a1e961f9be8bf5bbb11\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlaces to learn more\n\n\n\n\nShinyapps.io User Guide"
+  },
+  {
+    "objectID": "03-shinyapps-io.html#install-rsconnect-and-set-up-your-shinyapps.io-account",
+    "href": "03-shinyapps-io.html#install-rsconnect-and-set-up-your-shinyapps.io-account",
+    "title": "Deploying to Shinyapps.io",
+    "section": "Install rsconnect and set up your Shinyapps.io account",
+    "text": "Install rsconnect and set up your Shinyapps.io account\n\nActivity: Set up rsconnect and shinyapps.io account\n\nIt is a good idea to do this before the workshop if possible.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Installing rsconnect\n======= ##### 1. Installing rsconnect &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11 Before you start, you need to ensure you have the rsconnect R package from CRAN installed. You can run the following command in your console to check:\nlibrary(rsconnect)\nIf you get no messages or just a warning about rsconnect being built under a different R version, you should be able to proceed. Skip ahead to creating shinyapps.io account\nHowever, if you get an Error that says “there is no package called ‘rsconnect’” then you will need to do a side quest to install rsconnect.\nFirst, try to install it the usual way:\ninstall.packages(rsconnect)\nIf you get a note about needing to install Rtools, then you would need to do that before you can install rsconnect. Go to this page and select the version that corresponds with your R version. (Hint: RStudio displays your version of R in your “Console” tab, right below the tabs.) The next paragraph assumes you are using R 4.4.0 or later and will be using rtools44.\nThe easiest way to install is to use the .exe file on the page; it’s linked as “Rtools44 installer”. After you download it, run the .exe file and use all defaults, especially the install location set to C:\\rtools44.\nOnce that is done, restart RStudio and try to load the rsconnect library again.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Creating shinyapps.io account ======= ##### 2. Creating shinyapps.io account To access shinyapps.io, go to https://www.shinyapps.io/. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”. &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11\nTo access shinyapps.io, go to https://www.shinyapps.io/. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”.\nYou will have the option to create a sign-up based on your email & password, or you can create an account based using one of the three options listed below for authentication (Google, GitHub, Clever). Using your GitHub account might be the most convenient, especially if you already set it up for government use because then there will be login based on IDIR and two-factor authentication.\nIf you choose to create your own login based on email & password, we recommend using your gov.bc.ca email and then creating a distinct password (do not use the same password as any other government app, especially your IDIR password).\nNote that one single shinyapps.io account can be used to access different “domains” that can host shiny apps online. You will be asked to set up your account when you first log in and your default free domain has the same name as your account name. For example, if you choose the account name blork then your shiny apps will have the url of https://blork.shinyapps.io/app_name/.\nYou will use this same shinyapps.io account for other domains as well, such as the professional domain called bcgov-env, which is run by ENV and FOR teams. This is the domain where some of our final apps will be deployed. This is why it is good to use a government-based credential to access all of your government shiny work. You might want to create a separate account for personal shiny projects. You can run this workshop in either a work or personal use account.\nNow you have everything set up for the workshop! You will configure your rsconnect to publish to your shinyapps.io domain in one of the activities below.\n\n\n\n\n\n\nResources used\n\n\n\n\nshinyapps.io User Guide: Getting Started"
+  },
+  {
+    "objectID": "03-shinyapps-io.html#run-a-shiny-app-locally",
+    "href": "03-shinyapps-io.html#run-a-shiny-app-locally",
+    "title": "Deploying to Shinyapps.io",
+    "section": "Run a Shiny app locally",
+    "text": "Run a Shiny app locally\n\nActivity: Prepare your files, test, and run a Shiny app with RStudio\n\nYou will always want to ensure you can run your shiny app locally before you publish to the shinyapps.io platform.\nTo start, you will need to have the files for the ShinyApp ready on your local machine. We have an example ready on a branch called shiny-app, so you just need to clone the workshop repository and make sure it is up to date.\nOnce you have checked-out the shiny-app branch, open the project in RStudio and open the app folder and browse the files. See if you can run the Shiny app locally.\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Open either the ui.R or server.R file in the app folder in RStudio\n          In the top right of your file pane, click on the \"Run App\" button.\n          App opens in a RStudio dialog box. You can also open in browser (still run locally)\n          Adjust the widgets to interact with the app\n        \n      \n    \n  \n\n\n\n\n\n\n\nResources used\n\n\n\n\nShiny: Shiny Basics"
+  },
+  {
+    "objectID": "03-shinyapps-io.html#publish-using-shinyapps.io",
+    "href": "03-shinyapps-io.html#publish-using-shinyapps.io",
+    "title": "Deploying to Shinyapps.io",
+    "section": "Publish using shinyapps.io",
+    "text": "Publish using shinyapps.io\n\nActivity: Publish your Shiny app using shinyapps.io\n\nNext, we are going to publish the app to our personal Shinyapps.io accounts (i.e. the free, basic domain created earlier in this workshop). You then have to configure the rsconnect package on your local machine to publish to it by getting a token and secret from shinyaps.io which allows rsconnect to access your account. Then we will publish or “deploy” the app from RStudio.\nPosit has already provided detailed instructions, with screenshots, on how to get your shinyapps.io token and configure rsconnect to use that token to access shinyapps.io in RStudio. You can use either Method 1 or Method 2 on that page.\nYou only have to do this once per R/RStudio install on your machine.\nAfter following those steps, see if you can “Publish” your shiny app to the shinyapps.io platform.\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Open either the ui.R or server.R file in the app folde\n          In the upper right corner of your file pane, click on \"Publish\". It is to the right of the \"Run App\" button and has a blue icon\n          A dialog box appears. Fill in all the required details. Take note of the following for future reference:\n            \n              The left side allows you to choose which files to publish (or not publish)\n              Ensure you have the correct Account selected on the right side\n              You need a name that is at least 4 alphanumeric characters (no spaces). The name chosen will be part of the URL to access your app from the internet\n            \n          Click on \"Publish\"\n        \n      \n    \n  \n\nThat’s it! You’ve published a Shiny app to Shinyapps.io!\nWhen you click “Publish”, it may take some time for the deployment to complete. A new tab in your Console pane called “Deploy” will appear in the lower left. It’s a good idea to read it as it gives you an idea of all the steps it takes. You will see that behind the scenes, it is creating a unique environment on shinyapps.io server for you, installing all the required packages to run your application and then installing all the files and then runs the app!\nThis order is important: the packages are installed only on deployment (once only) before any files are run. When the app is running, it should not be able to modify its own install environment. Therefore, you cannot have install.packages() commands within your shiny app because everything must be installed before the first run. Instead, load them with library(). The deployment process looks for library() calls and installs these packages on deployment. Most apps will be able to run on shinyapps.io without much modification.\nFor more details, see this section in the Getting Started guide.\n\n\n\n\n\n\nResources used\n\n\n\n\nShinyapps.io Getting Started\n\n\n\n\nAdvanced configuration options (Demo)\nNote: this activity requires a shinyapps.io pro account so we will just demo.\nFor our purposes we will want to restrict the Shiny app to only Meteorologists, so we will make use of a feature from the Shinyapps.io pro version: Authentication, that we will demonstrate now.\nYou can navigate and see the same features with your Free account, but you will see that most options are locked. However, some features such as Metrics and Logs are available to Free users as well."
+  },
+  {
+    "objectID": "03-shinyapps-io.html#update-and-publish-cycle-with-shinyapps.io",
+    "href": "03-shinyapps-io.html#update-and-publish-cycle-with-shinyapps.io",
+    "title": "Deploying to Shinyapps.io",
+    "section": "Update and publish cycle with Shinyapps.io",
+    "text": "Update and publish cycle with Shinyapps.io\n\nActivity: Make a change and re-publish your Shiny app\n\nWhat happens if you need to make a change? We have seen this with the Quarto website for this workshop series and our workshop last week with a Quarto site. By default, once we make a change it isn’t automatically published. Let’s cover manually re-publishing.\nIf you are still running the app locally, stop running it. Make a change (it can be something small such as changing the title of the app on line 7 in ui.R) and then check to see that it runs locally. Look at the Shinyapps.io version: it hasn’t updated there. We need to re-publish the app to see those changes.\n\n  \n    \n      \n        Detailed Steps\n      \n    \n    \n      \n        \n          Make sure you are not running the app locally\n          Open the app on shinyapps.io (e.g. `https://[your-account].shinyapps.io/[app-name]/`)\n          In RStudio, for a simple edit, go to Line 7 of the `server.R` file\n          Edit the \"Iris k-means clustering\" string to something else\n          Save the file.\n          Run the app locally from RStudio. Confirm the change. Close app.\n          Refresh the shinyapps.io page in your web browser. Confirm that no change made\n          Re-publish your app to shinyapps.io. Click on the \"Republish\" button. Now you should see the change\n        \n      \n    \n  \n\nNote: After the first Publish, the “Publish” button in RStudio becomes “Republish” and will automatically use the same settings if you click it, without opening a dialog box. If you want to change deployment/publication settings (such as account or app name), then you have to use the down arrow next to the button to expand a menu for more options.\nClean up: The above edits are changes to a version-controlled file in the shiny_app branch. However, if you commit and push to the branch, it will change the same app file for everyone. So, we do not want to keep these changes. You can do nothing and your local version will just be out of sync with the GitHub, not the end of the world. If you want to reset your local to the same state as the GitHub repo, you need to discard your changes to the ui.R file:\n\nIn GitHub desktop, you will see the file listed under “Changes”. Right click ui.R and choose “Discard changes”\nIn RStudio, you can see the file listed in the Git pane (upper right). Right click ui.R and choose “Revert”. (Note: Do not choose “ignore”, this will add it to Gitignore, but keep the changes).\n\n\n\n\n\n\n\nResources used\n\n\n\n\nShinyapps.io Getting Started"
   },
   {
     "objectID": "preparation/markdown-reference.html",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GitHub Pages and Actions – Intro to GitHub and ShinyApps.io</title>
+<title>Deploying to Shinyapps.io – Intro to GitHub and ShinyApps.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-github-pages-actions.html">Workshop 2. GitHub Pages and Actions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Deploying to Shinyapps.io</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-github-pages-actions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02-github-pages-actions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workshop 2. GitHub Pages and Actions</span></a>
   </div>
 </li>
@@ -245,9 +245,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#welcome-key-concepts" id="toc-welcome-key-concepts" class="nav-link active" data-scroll-target="#welcome-key-concepts">Welcome &amp; Key Concepts</a></li>
-  <li><a href="#create-a-quarto-website" id="toc-create-a-quarto-website" class="nav-link" data-scroll-target="#create-a-quarto-website">Create a Quarto Website</a></li>
-  <li><a href="#publish-it-to-github-pages" id="toc-publish-it-to-github-pages" class="nav-link" data-scroll-target="#publish-it-to-github-pages">Publish it to GitHub Pages</a></li>
-  <li><a href="#automate-publishing-with-github-actions-advanced" id="toc-automate-publishing-with-github-actions-advanced" class="nav-link" data-scroll-target="#automate-publishing-with-github-actions-advanced">Automate publishing with GitHub Actions (Advanced)</a></li>
+  <li><a href="#install-rsconnect-and-set-up-your-shinyapps.io-account" id="toc-install-rsconnect-and-set-up-your-shinyapps.io-account" class="nav-link" data-scroll-target="#install-rsconnect-and-set-up-your-shinyapps.io-account">Install rsconnect and set up your Shinyapps.io account</a></li>
+  <li><a href="#run-a-shiny-app-locally" id="toc-run-a-shiny-app-locally" class="nav-link" data-scroll-target="#run-a-shiny-app-locally">Run a Shiny app locally</a></li>
+  <li><a href="#publish-using-shinyapps.io" id="toc-publish-using-shinyapps.io" class="nav-link" data-scroll-target="#publish-using-shinyapps.io">Publish using shinyapps.io</a></li>
+  <li><a href="#update-and-publish-cycle-with-shinyapps.io" id="toc-update-and-publish-cycle-with-shinyapps.io" class="nav-link" data-scroll-target="#update-and-publish-cycle-with-shinyapps.io">Update and publish cycle with Shinyapps.io</a></li>
   </ul>
 </nav>
     </div>
@@ -256,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GitHub Pages and Actions</h1>
+<h1 class="title">Deploying to Shinyapps.io</h1>
 </div>
 
 
@@ -275,23 +276,32 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="welcome-key-concepts" class="level2">
 <h2 class="anchored" data-anchor-id="welcome-key-concepts">Welcome &amp; Key Concepts</h2>
-<p><strong>Learning Objective:</strong> Explore GitHub Pages and Actions and how they can work together to publish website site. Practice by publishing a Quarto site using your own GitHub account.</p>
-<p><em>Note: These are advanced topics. We are hosting this give some insight into how the pieces fit together but these tasks are not indicative of what you will be required to do in the new system.</em></p>
-<section id="publishing-a-web-site" class="level4">
-<h4 class="anchored" data-anchor-id="publishing-a-web-site">Publishing a web site</h4>
-<p>We likely all browse the web and most of us have published content on it. Outside of work you probably have used social media platforms (like YouTube, Facebook, Instagram) to publish photos, posts, or videos and other media. You may even have your own blog using a service like Wordpress.com or Ghost.com.</p>
-<p>You may not have published a full web site before. It can get complex, but we want to mention provide a simple overview of parts that are typically present:</p>
-<ul>
-<li>a domain name (the human-readable address)</li>
-<li>a server or host (the place)</li>
-<li>application or files (the content of the web site itself)</li>
-</ul>
+<p><strong>Learning Objective:</strong> Understand how to deploy a Shiny app using ShinyApps.io, practice deploying an app, making a change, and registering and adjusting permissions from the dashboard.</p>
+<section id="shiny-and-shiny-applications-apps" class="level4">
+<h4 class="anchored" data-anchor-id="shiny-and-shiny-applications-apps">Shiny and Shiny applications (apps)</h4>
+<p>Shiny is an R package that allows you to quickly build interactive web apps with R.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/11/how-web-server-works-1536x584.webp" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>How a web server works. Credit: Hostinger.</figcaption>
+<p><img src="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/images/01_hello.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Shiny app with number of bins slider on the left and histogram of frequency of waiting times on the right”. Credit: Shiny.</figcaption>
 </figure>
 </div>
+<p>From the <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny docs</a>:</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD &gt; Shiny apps are contained in a single script called <code>app.R</code>. The script <code>app.R</code> lives in a directory (for example, <code>newdir/</code>) and the app can be run with <code>runApp("newdir")</code>. <code>app.R</code> has three components: - a user interface (<code>ui</code>) object, that controls the layout and appearance of your app - a server function, that contains the instructions that your computer needs to build your app - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair ======= &gt; Shiny apps are contained in a single script called <code>app.R</code>. The script <code>app.R</code> lives in a directory (for example, <code>newdir/</code>) and the app can be run with <code>runApp("newdir")</code>.<br>
+&gt; &gt; <code>app.R</code> has three components:<br>
+&gt; - a user interface (<code>ui</code>) object, that controls the layout and appearance of your app<br>
+&gt; - a server function, that contains the instructions that your computer needs to build your app<br>
+&gt; - a call to the shinyApp function, which creates Shiny app objects from an explicit UI/server pair<br>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
+<p>Note: Some apps may separate the app scripts into <code>ui.R</code> and <code>server.R</code> (such as the example app in this workshop)</p>
+<pre><code>library(shiny)
+
+# See above for the definitions of ui and server
+ui &lt;- ...
+
+server &lt;- ...
+
+shinyApp(ui = ui, server = server)</code></pre>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -303,55 +313,38 @@ Places to learn more
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website">Mozilla MDN Web Docs: Your first website</a></li>
-<li><a href="https://glitch.com/?ref=NODESK">Glitch</a>, allows you to remix (basically fork) projects to build websites from the browser</li>
-<li><a href="https://neocities.org/">Neocities</a>, also has all the tools to build a website in the browser</li>
+<li>Shiny: <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny Basics</a></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="quarto-websites" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-websites">Quarto Websites</h4>
-<p>We already know Quarto is a <em>system</em> for scientific and technical publishing. It allows you to do a lot.</p>
-<p>One thing it does is make it easy to <a href="https://quarto.org/docs/websites/">create websites</a> for <em>document</em>-focused content (like a series of statements or bulletins) and streamline some steps to publish on the web. It does not work well for other types of content (say lots of videos or images) or for web sites that are heavily interactive.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://quarto.org/docs/websites/images/rstudio-project-website-preview.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Quarto website rendered in RStudio. Credit: Posit.</figcaption>
-</figure>
-</div>
-</section>
-<section id="github-pages" class="level4">
-<h4 class="anchored" data-anchor-id="github-pages">GitHub Pages</h4>
-<p>Like Quarto, GitHub also allows you to do a lot of different collaborative activities around a repository. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub Pages</a> is a free way to publish a web sites, <em>but only for the contents of a GitHub repository</em>.</p>
-<p>It helps with all the three parts you need:</p>
-<ul>
-<li>a domain name ✔️ by default, it looks like: <code>&lt;https://[USER/ORG NAME].github.io/[REPO NAME]/&gt;</code></li>
-<li>a server or host ✔️ for free!</li>
-<li>application or files ✔️ the contents of the repository!</li>
-</ul>
-<p>Plus it also gives us the advantages of working with git and GitHub we talked about last workshop! You automatically keep a record of preious versions of the website, you can use the GitHub collaboration features to work together on changes, fixes or identify issues</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://digitalhumanities.hkust.edu.hk/wp-content/uploads/2023/10/github-page-setting-1-1536x944.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Screenshot of the GitHub Pages Settings. Credit: HKUST Digital Humanities.</figcaption>
-</figure>
-</div>
-<p>Imagine you have a big box where you keep all your drawings and stories. That box is like GitHub. You can put all sorts of things in there, like pictures, words, and even instructions for making a game.</p>
-<p>Now, imagine you want to share your drawings and stories with your friends. GitHub Pages is like a special window you can put in your box. When you put your drawings and stories behind the window, your friends can come and look at them!</p>
-<p>So, GitHub is like your big box for keeping things, and GitHub Pages is like a special window for showing your things to your friends. It’s a way to share your creations with the world!</p>
-</section>
-<section id="github-actions" class="level4">
-<h4 class="anchored" data-anchor-id="github-actions">GitHub Actions</h4>
-<p>One more of those things that GitHub provides are GitHub Actions (or workflows), these allow us to automate repeatable steps or actions also anchored to a repository.</p>
-<p>Actions are powerful and can get complex. Some other similar examples you may have encountered: Microsoft Power Automate flows, cron jobs</p>
-<p>They are sort of like recipes: you describe the ingredients you need and then actions to take with those ingredients.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://deborah-digges.github.io/static/9b744b8c9b4762772e9dae014695be59/5a190/github-action-components.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Drawing of a GitHub Action workflow. Credit: Deborah Digges.</figcaption>
-</figure>
-</div>
+<section id="shinyapps.io" class="level4">
+<h4 class="anchored" data-anchor-id="shinyapps.io">Shinyapps.io</h4>
+<p>shinyapps.io is a platform that allows you to quickly publish and share Shiny applications on the web. From their user guide:</p>
+<blockquote class="blockquote">
+<p>The service runs in the cloud on shared servers that are operated by Posit. Each application is self-contained and operates on either data that is uploaded with the application, or data that the code pulls from third-party data stores, such as databases or web services.</p>
+</blockquote>
+<p>In the Province of BC we use Shinyapps.io to run many data-heavy applications in the public cloud, and we store the source code on GitHub. Here is one example:</p>
+<blockquote class="blockquote">
+<p><strong>shinywqg</strong> is a Shiny application to run the B.C. Ambient Water Quality Guidelines. Guidelines are determined based on information from the BC Data Catalogue.</p>
+</blockquote>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Shiny App: <a href="https://bcgov-env.shinyapps.io/bc_wqg/" class="uri">https://bcgov-env.shinyapps.io/bc_wqg/</a> GitHub Repo: <a href="https://github.com/bcgov/shinywqg" class="uri">https://github.com/bcgov/shinywqg</a> ======= Shiny App: <a href="https://bcgov-env.shinyapps.io/bc_wqg/">https://bcgov-env.shinyapps.io/bc_wqg/</a><br>
+GitHub Repo: <a href="https://github.com/bcgov/shinywqg">https://github.com/bcgov/shinywqg</a></p>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -363,19 +356,59 @@ Places to learn more
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions">GitHub: Examples of deploying with GitHub Actions</a></li>
-<li><a href="https://deborah-digges.github.io/2020/10/14/Building-a-Github-action/">Deborah Digges: Building a GitHub Action</a></li>
+<li>Shinyapps.io <a href="https://docs.posit.co/shinyapps.io/guide/">User Guide</a></li>
 </ul>
 </div>
 </div>
 </section>
 </section>
-<section id="create-a-quarto-website" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-quarto-website">Create a Quarto Website</h2>
-<section id="activity-create-a-new-quarto-website-project-and-add-the-code-to-github" class="level4 mark">
-<h4 class="anchored" data-anchor-id="activity-create-a-new-quarto-website-project-and-add-the-code-to-github"><strong>Activity</strong>: Create a new Quarto website project and add the code to GitHub</h4>
+<section id="install-rsconnect-and-set-up-your-shinyapps.io-account" class="level2">
+<h2 class="anchored" data-anchor-id="install-rsconnect-and-set-up-your-shinyapps.io-account">Install rsconnect and set up your Shinyapps.io account</h2>
+<section id="activity-set-up-rsconnect-and-shinyapps.io-account" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-set-up-rsconnect-and-shinyapps.io-account"><strong>Activity</strong>: Set up rsconnect and shinyapps.io account</h4>
 </section>
-<p>To start, you will need to create your own website project, all the files for that website in a git repo, then host that repository via GitHub.</p>
+<p>It is a good idea to do this before the workshop if possible.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Installing rsconnect</p>
+<p>======= ##### 1. Installing rsconnect &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11 Before you start, you need to ensure you have the <code>rsconnect</code> R package from CRAN installed. You can run the following command in your console to check:</p>
+<pre><code>library(rsconnect)</code></pre>
+<p>If you get no messages or just a warning about <code>rsconnect</code> being built under a different R version, you should be able to proceed. Skip ahead to creating shinyapps.io account</p>
+<p>However, if you get an Error that says “there is no package called ‘rsconnect’” then you will need to do a side quest to install <code>rsconnect</code>.</p>
+<p>First, try to install it the usual way:</p>
+<pre><code>install.packages(rsconnect)</code></pre>
+<p>If you get a note about needing to install Rtools, then you would need to do that before you can install <code>rsconnect</code>. Go to <a href="https://cran.r-project.org/bin/windows/Rtools/">this page</a> and select the version that corresponds with your R version. (Hint: RStudio displays your version of R in your “Console” tab, right below the tabs.) The next paragraph assumes you are using R 4.4.0 or later and will be using <code>rtools44</code>.</p>
+<p>The easiest way to install is to use the <code>.exe</code> file on the page; it’s linked as “Rtools44 installer”. After you download it, run the <code>.exe</code> file and use all defaults, especially the install location set to <code>C:\rtools44</code>.</p>
+<p>Once that is done, restart RStudio and try to load the rsconnect library again.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ##### Creating shinyapps.io account ======= ##### 2. Creating shinyapps.io account To access shinyapps.io, go to <a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”. &gt;&gt;&gt;&gt;&gt;&gt;&gt; 157dd9794cb7decfa7193a1e961f9be8bf5bbb11</p>
+<p>To access shinyapps.io, go to <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a>. If you already have an account, you can just click Log in on the top right. Otherwise, click on “Sign Up”.</p>
+<p>You will have the option to create a sign-up based on your email &amp; password, or you can create an account based using one of the three options listed below for authentication (Google, GitHub, Clever). Using your GitHub account might be the most convenient, especially if you already set it up for government use because then there will be login based on IDIR and two-factor authentication.</p>
+<p>If you choose to create your own login based on email &amp; password, we recommend using your gov.bc.ca email and then creating a distinct password (do not use the same password as any other government app, especially your IDIR password).</p>
+<p>Note that one single shinyapps.io account can be used to access different “domains” that can host shiny apps online. You will be asked to set up your account when you first log in and your default free domain has the same name as your account name. For example, if you choose the account name <code>blork</code> then your shiny apps will have the url of <code>https://blork.shinyapps.io/app_name/</code>.</p>
+<p>You will use this same shinyapps.io account for other domains as well, such as the professional domain called <code>bcgov-env</code>, which is run by ENV and FOR teams. This is the domain where some of our final apps will be deployed. This is why it is good to use a government-based credential to access all of your government shiny work. You might want to create a separate account for personal shiny projects. You can run this workshop in either a work or personal use account.</p>
+<p>Now you have everything set up for the workshop! You will configure your <code>rsconnect</code> to publish to your shinyapps.io domain in one of the activities below.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resources used
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>shinyapps.io User Guide: <a href="https://docs.posit.co/shinyapps.io/guide/getting_started/">Getting Started</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="run-a-shiny-app-locally" class="level2">
+<h2 class="anchored" data-anchor-id="run-a-shiny-app-locally">Run a Shiny app locally</h2>
+<section id="activity-prepare-your-files-test-and-run-a-shiny-app-with-rstudio" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-prepare-your-files-test-and-run-a-shiny-app-with-rstudio"><strong>Activity</strong>: Prepare your files, test, and run a Shiny app with RStudio</h4>
+</section>
+<p>You will always want to ensure you can run your shiny app locally before you publish to the shinyapps.io platform.</p>
+<p>To start, you will need to have the files for the ShinyApp ready on your local machine. We have an example ready on a branch called <code>shiny-app</code>, so you just need to clone the workshop repository and make sure it is up to date.</p>
+<p>Once you have checked-out the <code>shiny-app</code> branch, open the project in RStudio and open the app folder and browse the files. See if you can run the Shiny app locally.</p>
 <div class="accordion">
   <div class="accordion-item">
     <h2 class="accordion-header anchored" id="heading1">
@@ -386,17 +419,15 @@ Places to learn more
     <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li>Using RStudio: Select New Project and follow the wizard to select "Quarto Website"</li>
-          <li>Enter a directory name <em>and create a git repository</em></li>
-          <li>Make the website your own, you can change the text or title of a page</li>
-          <li>Click the render button to preview the website locally and ensure you are happy with it</li>
-          <li>Switch to GitHub Desktop (or from RStudio) commit all those files and push them to GitHub.</li>
+          <li>Open either the <code>ui.R</code> or <code>server.R</code> file in the <code>app</code> folder in RStudio</li>
+          <li>In the top right of your file pane, click on the "Run App" button.</li>
+          <li>App opens in a RStudio dialog box. You can also open in browser (still run locally)</li>
+          <li>Adjust the widgets to interact with the app</li>
         </ol>
       </div>
     </div>
   </div>
 </div>
-<p>Alternatively, if you want to skip this step, you can go to this template: <a href="https://github.com/dawnbcgov/example-website">https://github.com/dawnbcgov/example-website</a> and make a copy or <strong>fork</strong> the repo</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -408,19 +439,20 @@ Resources used
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Quarto: <a href="https://quarto.org/docs/websites/">Creating a Website</a></li>
+<li>Shiny: <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny Basics</a></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="publish-it-to-github-pages" class="level2">
-<h2 class="anchored" data-anchor-id="publish-it-to-github-pages">Publish it to GitHub Pages</h2>
-<p>There is more than one way to publish a website using Quarto to GitHub Pages. Today we’re going to use a mix of the built-in <code>publish</code> command and GitHub Actions to automate ongoing updates.</p>
-<section id="activity-use-publish-to-publish-a-new-site-for-the-first-time" class="level4 mark">
-<h4 class="anchored" data-anchor-id="activity-use-publish-to-publish-a-new-site-for-the-first-time"><strong>Activity</strong>: Use <code>publish</code> to publish a new site for the first time</h4>
+<section id="publish-using-shinyapps.io" class="level2">
+<h2 class="anchored" data-anchor-id="publish-using-shinyapps.io">Publish using shinyapps.io</h2>
+<section id="activity-publish-your-shiny-app-using-shinyapps.io" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-publish-your-shiny-app-using-shinyapps.io"><strong>Activity</strong>: Publish your Shiny app using shinyapps.io</h4>
 </section>
-<p>The <code>quarto publish</code> command is an easy way to publish locally rendered documents and websites. First we have to enable some GitHub Pages options from the browser, so start at: <code>&lt;https://github.com/[USER NAME]/[REPO NAME]/settings/pages&gt;</code> (this URL will be specific to your repository)</p>
-<p>After that, we are going to set up GitHub Pages to render all the site contents from our <code>main</code> branch into a website that is served from the <code>gh-pages</code> branch! (The name <code>gh-pages</code> is a convention used because “gh” is short for GitHub I guess).</p>
+<p>Next, we are going to publish the app to our <strong>personal</strong> Shinyapps.io accounts (i.e.&nbsp;the free, basic domain created earlier in this workshop). You then have to configure the <code>rsconnect</code> package on your local machine to publish to it by getting a token and secret from shinyaps.io which allows <code>rsconnect</code> to access your account. Then we will publish or “deploy” the app from RStudio.</p>
+<p>Posit has already provided <a href="https://docs.posit.co/shinyapps.io/guide/getting_started/#configure-rsconnect">detailed instructions</a>, with screenshots, on how to get your shinyapps.io token and configure <code>rsconnect</code> to use that token to access shinyapps.io in RStudio. You can use either Method 1 or Method 2 on that page.</p>
+<p>You only have to do this once per R/RStudio install on your machine.</p>
+<p>After following those steps, see if you can “Publish” your shiny app to the shinyapps.io platform.</p>
 <div class="accordion">
   <div class="accordion-item">
     <h2 class="accordion-header anchored" id="heading2">
@@ -431,16 +463,24 @@ Resources used
     <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li>Follow <a href="https://quarto.org/docs/publishing/github-pages.html#publish-command">the instructions from Quarto</a> to set the <em>source branch</em> to <code>gh-pages</code> and the site directory to <em>root (/)</em></li>
-          <li>Add the output directory of your project (/_site/) to <code>.gitignore</code> so you don't accidentally commit all of the site output files to the main branch you are working in. (we can chat more about this)</li>
-          <li>From RStudio open a terminal (Tools &gt; Terminal &gt; New Terminal) and type <code>quarto publish gh-pages</code>.</li>
-          <li>Follow the command line prompts, you may be prompted to log-in to GitHub before it publishes.</li>
+          <li>Open either the <code>ui.R</code> or <code>server.R</code> file in the <code>app</code> folde</li>
+          <li>In the upper right corner of your file pane, click on "Publish". It is to the right of the "Run App" button and has a blue icon</li>
+          <li>A dialog box appears. Fill in all the required details. Take note of the following for future reference:</li>
+            <ul>
+              <li>The left side allows you to choose which files to publish (or not publish)</li>
+              <li>Ensure you have the correct Account selected on the right side</li>
+              <li>You need a name that is at least 4 alphanumeric characters (no spaces). The name chosen will be part of the URL to access your app from the internet</li>
+            </ul>
+          <li>Click on "Publish"</li>
         </ol>
       </div>
     </div>
   </div>
 </div>
-<p>Great! Now after every change we can manually publish an updated version of the site! What about if we want to not worry about this step? We can use an action to automate it.</p>
+<p>That’s it! You’ve published a Shiny app to Shinyapps.io!</p>
+<p>When you click “Publish”, it may take some time for the deployment to complete. A new tab in your Console pane called “Deploy” will appear in the lower left. It’s a good idea to read it as it gives you an idea of all the steps it takes. You will see that behind the scenes, it is creating a unique environment on shinyapps.io server for you, installing all the required packages to run your application and then installing all the files and then runs the app!</p>
+<p>This order is important: the packages are installed only on deployment (once only) before any files are run. When the app is running, it should not be able to modify its own install environment. Therefore, you cannot have <code>install.packages()</code> commands within your shiny app because everything must be installed before the first run. Instead, load them with <code>library()</code>. The deployment process looks for <code>library()</code> calls and installs these packages on deployment. Most apps will be able to run on shinyapps.io without much modification.</p>
+<p>For more details, see <a href="https://docs.posit.co/shinyapps.io/guide/getting_started/#using-your-r-packages-in-the-cloud">this section</a> in the Getting Started guide.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -452,20 +492,24 @@ Resources used
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Quarto: <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing &gt; GitHub Pages</a></li>
-<li>HKUST Digital Humanities: <a href="https://digitalhumanities.hkust.edu.hk/tutorials/how-to-host-your-website-on-github-page/">How to host your website on GitHub Page</a></li>
+<li>Shinyapps.io <a href="https://docs.posit.co/shinyapps.io/guide/getting_started/">Getting Started</a></li>
 </ul>
 </div>
 </div>
+<section id="advanced-configuration-options-demo" class="level4">
+<h4 class="anchored" data-anchor-id="advanced-configuration-options-demo">Advanced configuration options (Demo)</h4>
+<p><em>Note: this activity requires a shinyapps.io pro account so we will just demo.</em></p>
+<p>For our purposes we will want to restrict the Shiny app to only Meteorologists, so we will make use of a feature from the Shinyapps.io pro version: Authentication, that we will demonstrate now.</p>
+<p>You can navigate and see the same features with your Free account, but you will see that most options are locked. However, some features such as Metrics and Logs are available to Free users as well.</p>
 </section>
-<section id="automate-publishing-with-github-actions-advanced" class="level2">
-<h2 class="anchored" data-anchor-id="automate-publishing-with-github-actions-advanced">Automate publishing with GitHub Actions (Advanced)</h2>
-<section id="activity-add-a-github-action-so-it-automagically-updates-on-every-change-advanced" class="level4 mark">
-<h4 class="anchored" data-anchor-id="activity-add-a-github-action-so-it-automagically-updates-on-every-change-advanced"><strong>Activity</strong>: Add a GitHub Action so it automagically updates on every change (Advanced)</h4>
 </section>
-<p>Once we have run that <code>publish</code> action locally once, we can set up an Action to re-publish (or re-build) the site as soon as a simple change was made.</p>
-<p>Remember how in the first workshop you only had to commit your change to the <code>main</code> branch and refresh the website to see the change show up in the sidebar? That was because an action in the background was re-building the site!</p>
-<p><em>Note: this is an advanced activity so it is okay to just follow along</em></p>
+<section id="update-and-publish-cycle-with-shinyapps.io" class="level2">
+<h2 class="anchored" data-anchor-id="update-and-publish-cycle-with-shinyapps.io">Update and publish cycle with Shinyapps.io</h2>
+<section id="activity-make-a-change-and-re-publish-your-shiny-app" class="level4 mark">
+<h4 class="anchored" data-anchor-id="activity-make-a-change-and-re-publish-your-shiny-app"><strong>Activity</strong>: Make a change and re-publish your Shiny app</h4>
+</section>
+<p>What happens if you need to make a change? We have seen this with the Quarto website for this workshop series and our workshop last week with a Quarto site. By default, once we make a change it isn’t automatically published. Let’s cover manually re-publishing.</p>
+<p>If you are still running the app locally, stop running it. Make a change (it can be something small such as changing the title of the app on line 7 in <code>ui.R</code>) and then check to see that it runs locally. Look at the Shinyapps.io version: it hasn’t updated there. We need to re-publish the app to see those changes.</p>
 <div class="accordion">
   <div class="accordion-item">
     <h2 class="accordion-header anchored" id="heading3">
@@ -476,15 +520,25 @@ Resources used
     <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample" style="">
       <div class="accordion-body">
         <ol>
-          <li>Make sure you have run <code>quarto publish gh-pages</code> locally, once (you should have done this in the previous step).</li>
-          <li>Add a GitHub Action to your GitHub repo and project by creating a file at: <code>.github/workflows/publish.yml</code> (note the dot in the first folder, you will probably need to create those folders too!)</li>
-          <li>Copy the contents from the Quarto docs for the <a href="https://quarto.org/docs/publishing/github-pages.html#publish-action">Publish Action file</a></li>
-          <li>Afterwords, move to GitHub Desktop and add or check-in all the new files or changed files. Commit those, and push to GitHub.</li>
+          <li>Make sure you are not running the app locally</li>
+          <li>Open the app on shinyapps.io (e.g. `https://[your-account].shinyapps.io/[app-name]/`)
+          </li><li>In RStudio, for a simple edit, go to Line 7 of the `server.R` file</li>
+          <li>Edit the "Iris k-means clustering" string to something else</li>
+          <li>Save the file.</li>
+          <li>Run the app locally from RStudio. Confirm the change. Close app.</li>
+          <li>Refresh the shinyapps.io page in your web browser. Confirm that no change made</li>
+          <li>Re-publish your app to shinyapps.io. Click on the "Republish" button. Now you should see the change</li>
         </ol>
       </div>
     </div>
   </div>
 </div>
+<p><em>Note: After the first Publish, the “Publish” button in RStudio becomes “Republish” and will automatically use the same settings if you click it, without opening a dialog box. If you want to change deployment/publication settings (such as account or app name), then you have to use the down arrow next to the button to expand a menu for more options.</em></p>
+<p><strong>Clean up:</strong> The above edits are changes to a version-controlled file in the <code>shiny_app</code> branch. However, if you commit and push to the branch, it will change the same app file for everyone. So, we do not want to keep these changes. You can do nothing and your local version will just be out of sync with the GitHub, not the end of the world. If you want to reset your local to the same state as the GitHub repo, you need to <em>discard</em> your changes to the <code>ui.R</code> file:</p>
+<ul>
+<li>In GitHub desktop, you will see the file listed under “Changes”. Right click <code>ui.R</code> and choose “Discard changes”</li>
+<li>In RStudio, you can see the file listed in the Git pane (upper right). Right click <code>ui.R</code> and choose “Revert”. (Note: Do not choose “ignore”, this will add it to Gitignore, but keep the changes).</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -496,7 +550,7 @@ Resources used
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Quarto: <a href="https://quarto.org/docs/publishing/github-pages.html">Publishing &gt; GitHub Pages</a></li>
+<li>Shinyapps.io <a href="https://docs.posit.co/shinyapps.io/guide/getting_started/">Getting Started</a></li>
 </ul>
 </div>
 </div>

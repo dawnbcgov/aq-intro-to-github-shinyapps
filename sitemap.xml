@@ -2,78 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/01-github-collaboration-workflows.html</loc>
-    <lastmod>2025-02-27T18:48:50.365Z</lastmod>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
   </url>
   <url>
     <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/preparation/index.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/sakshi.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/pr_review_practice_file.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/James.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/henry.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/muntaseer.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/sahil.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/dawn.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/index.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/ben.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/index.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/Gaelle.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/vickie.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/gail.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/another.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/jeremy.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
   </url>
   <url>
     <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/02-github-pages-actions.html</loc>
-    <lastmod>2025-02-27T18:48:50.366Z</lastmod>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/jeremy.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/another.html</loc>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/gail.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/vickie.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/Gaelle.html</loc>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/index.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/ben.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/index.html</loc>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/dawn.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/sahil.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/muntaseer.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/henry.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/James.html</loc>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/pr_review_practice_file.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/practice/sakshi.html</loc>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/03-shinyapps-io.html</loc>
+    <lastmod>2025-03-10T23:22:49.938Z</lastmod>
   </url>
   <url>
     <loc>https://dawnbcgov.github.io/aq-intro-to-github-shinyapps/preparation/markdown-reference.html</loc>
-    <lastmod>2025-02-27T18:48:50.367Z</lastmod>
+    <lastmod>2025-03-10T23:22:49.939Z</lastmod>
   </url>
 </urlset>
