@@ -12,7 +12,9 @@ website:
       - text: "Workshop 1. GitHub Collaboration Workflows"  
         href: 01-github-collaboration-workflows.qmd        
       - text: "Workshop 2. GitHub Pages and Actions"  
-        href: 02-github-pages-actions.qmd     
+        href: 02-github-pages-actions.qmd
+      - text: "Workshop 3. Deploying to Shinyapps.io"  
+        href: 03-shinyapps-io.qmd
       - section: "Resources"
         contents:
         - text: "Preparation and installation instructions"
