@@ -1,3 +1,5 @@
+# ARCHIVED. Please see https://github.com/bcgov/intro-to-github-shinyapps and https://bcgov.github.io/intro-to-github-shinyapps/ for the latest version.
+
 <!--[![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)-->
 
 ### Workshop Series: GitHub, GitHub Actions (with Quarto) and ShinyApps.io
